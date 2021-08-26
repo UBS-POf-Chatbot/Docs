@@ -10,8 +10,8 @@ Die `IntentFinder` hat folgende Funktionen:
 
 1. [`search()`](#methode-searchstring-input-boolean-affectstatistics) Eine Methode um die Antwort auf einen String zu  
    Finden
-2. [`findAnswer()`](#methode-searchstring-input-boolean-affectstatistics) Ein WebService um die `search()` Methode in
-   JavaScript zu fetchen
+2. [`findAnswer()`](#methode-findanswerqueryparamq-string-input) Ein WebService um die `search()` Methode in JavaScript
+   zu fetchen
 
 ---
 
