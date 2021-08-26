@@ -6,7 +6,7 @@
   
 ## Fragen Algorithmus `IntentFinder.java`  
   
-Die `IntentFinder` hat folgende Funktionen:  
+Die `IntentFinder` Klasse hat folgende Funktionen:  
   
 1. [`search()`](#methode-searchstring-input-boolean-affectstatistics) Eine Methode um die Antwort auf einen String zu  
    Finden  
@@ -42,6 +42,7 @@ erstellt.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUxOTg1MDc0LDczNzk0MzgwNCwzODMyMz
-E2MjAsLTMyMzUwNDY4MiwtMTcwOTI3NTQ4M119
+eyJoaXN0b3J5IjpbLTE0Nzc5MzE2NTksOTUxOTg1MDc0LDczNz
+k0MzgwNCwzODMyMzE2MjAsLTMyMzUwNDY4MiwtMTcwOTI3NTQ4
+M119
 -->
