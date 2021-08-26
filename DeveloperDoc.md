@@ -13,6 +13,8 @@ Die `IntentFinder` hat folgende Funktionen:
 2. [`findAnswer()`](#methode-searchstring-input-boolean-affectstatistics) Ein WebService um die `search()` Methode in
    JavaScript zu fetchen
 
+---
+
 ### Methode `search(String input, boolean affectStatistics)`
 
 #### Parameter:
@@ -53,6 +55,8 @@ als `UnansweredQuestion` gespeichert, und mit dem JSON String einer Antwort retu
 Ausserdem werden falls `affectStatistics == true` ist, werden die alle Statistiken in der Datenbank erhöht;
 
 Zum Schluss wird noch mit dem JSON String der `bestAnswer` returned.
+
+---
 
 ### Methode `findAnswer(@QueryParam("q") String input)`
 
