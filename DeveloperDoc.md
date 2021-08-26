@@ -18,7 +18,7 @@ Die `IntentFinder` Klasse hat folgende Funktionen:
   
 1. **input**: Ist der String, für welchen die Antwort gesucht wird.  
 2. **affectStatistics**: ein boolean, welcher bestimmt ob die Statistiken in der Datenbank beeinflusst werden sollen.
-Zu den Statistiken gehören beantwortete und unbeantwortete Fragen und der Zähler wie viele Antworten geschickt w
+Zu den Statistiken gehören beantwortete und unbeantwortete Fragen und der Zähler wie viele Antworten geschickt wurden.
   
 #### Beschreibung:  
   
@@ -43,7 +43,7 @@ erstellt.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4MDg1MTQ5MSw5NTE5ODUwNzQsNzM3OT
+eyJoaXN0b3J5IjpbMTU2Mzk4ODA5NSw5NTE5ODUwNzQsNzM3OT
 QzODA0LDM4MzIzMTYyMCwtMzIzNTA0NjgyLC0xNzA5Mjc1NDgz
 XX0=
 -->
