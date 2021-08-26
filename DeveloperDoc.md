@@ -1,9 +1,5 @@
 # Chatbot  
   
-Zwazel worktime  
-  
-[![wakatime](https://wakatime.com/badge/github/UBS-POf-Chatbot/chatbot.svg)](https://wakatime.com/badge/github/UBS-POf-Chatbot/chatbot)  
-  
 ## Dokumentation  
   
 1. [Algorithmus](#fragen-algorithmus-intentfinderjava)  
@@ -44,5 +40,5 @@ erstellt.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDkyNzU0ODNdfQ==
+eyJoaXN0b3J5IjpbLTMyMzUwNDY4MiwtMTcwOTI3NTQ4M119
 -->
