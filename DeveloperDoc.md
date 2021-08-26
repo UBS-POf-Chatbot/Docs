@@ -13,7 +13,8 @@ Die `IntentFinder` hat folgende Funktionen:
 2. `findAnswer()` Ein WebService um die `search()` Methode in JavaScript zu fetchen  
   
 ### Methode `search(String input, boolean affectStatistics)`  
-  
+![](https://via.placeholder.com/350x150)  
+
 #### Parameter:  
   
 1. **input**: Ist der String, für welchen die Antwort gesucht wird.  
@@ -40,7 +41,8 @@ erstellt.
 
 
 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzgzMjMxNjIwLC0zMjM1MDQ2ODIsLTE3MD
-kyNzU0ODNdfQ==
+eyJoaXN0b3J5IjpbNzM3OTQzODA0LDM4MzIzMTYyMCwtMzIzNT
+A0NjgyLC0xNzA5Mjc1NDgzXX0=
 -->
