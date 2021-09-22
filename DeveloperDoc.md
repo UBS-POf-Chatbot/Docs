@@ -7,7 +7,7 @@ Dieses Dokument wird in zwei Hauptteile aufgeteilt. Einmal der Chatbot an sich u
 1. [Einleitung](#chatbot-introduction)
 
 ## [Adminbereich](#admintool-section-start)
-1. [Einleitung](#amdintool-introduction)
+1. [Einleitung](#admintool-introduction)
 
 # Chatbot <a name="chatbot-section-start"></a>
 ## Einleitung <a name="chatbot-introduction"></a>
@@ -16,6 +16,6 @@ Der Chatbot Teil ist die Hauptfunktion dieses Projektes. Es ist die erste Seite 
 # Adminbereich <a name="admintool-section-start"></a>
 ## Einleitung <a name="admintool-introduction"></a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4MTI1ODAxNiwtNDkyMDg0Njk4LDUzMD
-YyOTI3NCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMjAyMDAxNjgyLDE2ODEyNTgwMTYsLTQ5Mj
+A4NDY5OCw1MzA2MjkyNzQsLTIwODg3NDY2MTJdfQ==
 -->
