@@ -23,7 +23,9 @@ Wir zählen auf was für Technologien wir verwenden, welche bekannte Probleme es
 ### Technologien <a name="technologies"></a>
 In diesem Abschnitt zählen wir die einzelnen Technologien auf damit klar ist was benötigt wird um starten zu können.
 #### Java und anderes
-Wir haben das Projekt in der Java Version
+- Java 16
+- Maven
+- 
 
 ### Bekannte Fehler / Probleme
 
@@ -63,10 +65,10 @@ Um den Status zu überprüfen verwenden wir unseren Service  [<code>getStatus()<
 ### Einleitung <a name="admintool-introduction"></a>
 In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjIxODc0NTYsLTIzNzg2MzQ5OSwtNj
-UwMDI0NjUsLTY5MTUwMDYwMSwxNjA2MzM5NTc4LDIwNTY0NTkz
-MzUsLTE0MzUwMDY2MzUsMzIyOTQ2ODYyLDE3NjA1OTY1NjIsLT
-IxOTgzOTc3MywtMTgxMjUxMzkzNSw2OTExODYzOTYsNjU2OTgx
-ODY3LC03ODM0NTY5ODYsMTY4MTI1ODAxNiwtNDkyMDg0Njk4LD
-UzMDYyOTI3NCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbMTIzNjM2OTIwNiwtMTQ2MjE4NzQ1NiwtMj
+M3ODYzNDk5LC02NTAwMjQ2NSwtNjkxNTAwNjAxLDE2MDYzMzk1
+NzgsMjA1NjQ1OTMzNSwtMTQzNTAwNjYzNSwzMjI5NDY4NjIsMT
+c2MDU5NjU2MiwtMjE5ODM5NzczLC0xODEyNTEzOTM1LDY5MTE4
+NjM5Niw2NTY5ODE4NjcsLTc4MzQ1Njk4NiwxNjgxMjU4MDE2LC
+00OTIwODQ2OTgsNTMwNjI5Mjc0LC0yMDg4NzQ2NjEyXX0=
 -->
