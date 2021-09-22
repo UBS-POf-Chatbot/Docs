@@ -39,7 +39,7 @@ TODO: persistence und c3po erklären
 ##### Verbindung mit Datenbank herstellen
 TODO: entity manager open und close sachen
 ##### Datenbank abfragen
-TODO
+TODO: DAOs erklären, kleiner einblick in createQuery()
 
 ## Chatbot <a name="chatbot-section-start"></a>
 ### Einleitung <a name="chatbot-introduction"></a>
@@ -72,10 +72,10 @@ TODO ALLES DANACH
 ### Einleitung <a name="admintool-introduction"></a>
 In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxNDk2MDA0LC0xNDYyMTg3NDU2LC0yMz
-c4NjM0OTksLTY1MDAyNDY1LC02OTE1MDA2MDEsMTYwNjMzOTU3
-OCwyMDU2NDU5MzM1LC0xNDM1MDA2NjM1LDMyMjk0Njg2MiwxNz
-YwNTk2NTYyLC0yMTk4Mzk3NzMsLTE4MTI1MTM5MzUsNjkxMTg2
-Mzk2LDY1Njk4MTg2NywtNzgzNDU2OTg2LDE2ODEyNTgwMTYsLT
-Q5MjA4NDY5OCw1MzA2MjkyNzQsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMTAyOTA1NjM1NSwtMTQ2MjE4NzQ1NiwtMj
+M3ODYzNDk5LC02NTAwMjQ2NSwtNjkxNTAwNjAxLDE2MDYzMzk1
+NzgsMjA1NjQ1OTMzNSwtMTQzNTAwNjYzNSwzMjI5NDY4NjIsMT
+c2MDU5NjU2MiwtMjE5ODM5NzczLC0xODEyNTEzOTM1LDY5MTE4
+NjM5Niw2NTY5ODE4NjcsLTc4MzQ1Njk4NiwxNjgxMjU4MDE2LC
+00OTIwODQ2OTgsNTMwNjI5Mjc0LC0yMDg4NzQ2NjEyXX0=
 -->
