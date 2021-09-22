@@ -25,7 +25,7 @@ Folgend wird beschrieben was beim laden der Seite in welcher Reihenfolge passier
 Wenn der Chatbot geöffnet wird wird als erstes eine Test Abfrage zum Server geschickt und auf seine Antwort gewartet. Solange auf die Antwort gewartet wird, zeigt der Chatbot eine Nachricht an mit der Information das die "Verbindung zum Server aufgebaut wird".
 ![Checking state of server](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/checkStatus.jpg)
 
-Um den Status zu überprüfen verwenden wir unseren Service  <code>getStatus()</code> im package <code>com.ubs.backend.services.Get</code> ([JavaDoc](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#getStatus())). Diese Methode ruft folgende Methoden auf.
+Um den Status zu überprüfen verwenden wir unseren Service  [<code>getStatus()</code>]() ([JavaDoc](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#getStatus())). Diese Methode ruft folgende Methoden auf.
 1. <code>questionSuggestions(String amountQuestionsString)</code>, package <code>com.ubs.backend.services.Get</code>. ([JavaDoc](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#questionSuggestions(java.lang.String)))
 2. <code>search(String input, boolean affectStatistics)</code>, package <code>com.ubs.backend.services.IntentFinderNew</code>. ([JavaDoc](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/IntentFinderNew.html#search(java.lang.String,boolean)))
 
@@ -38,9 +38,9 @@ Um den Status zu überprüfen verwenden wir unseren Service  <code>getStatus()</
 ## Adminbereich <a name="admintool-section-start"></a>
 ### Einleitung <a name="admintool-introduction"></a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTMzMTYxMzgsMTYwNjMzOTU3OCwyMD
-U2NDU5MzM1LC0xNDM1MDA2NjM1LDMyMjk0Njg2MiwxNzYwNTk2
-NTYyLC0yMTk4Mzk3NzMsLTE4MTI1MTM5MzUsNjkxMTg2Mzk2LD
-Y1Njk4MTg2NywtNzgzNDU2OTg2LDE2ODEyNTgwMTYsLTQ5MjA4
-NDY5OCw1MzA2MjkyNzQsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbMTg1ODE2MTkwMywxNjA2MzM5NTc4LDIwNT
+Y0NTkzMzUsLTE0MzUwMDY2MzUsMzIyOTQ2ODYyLDE3NjA1OTY1
+NjIsLTIxOTgzOTc3MywtMTgxMjUxMzkzNSw2OTExODYzOTYsNj
+U2OTgxODY3LC03ODM0NTY5ODYsMTY4MTI1ODAxNiwtNDkyMDg0
+Njk4LDUzMDYyOTI3NCwtMjA4ODc0NjYxMl19
 -->
