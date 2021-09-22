@@ -6,9 +6,8 @@ Dieses Dokument wird in zwei Hauptteile aufgeteilt. Einmal der Chatbot an sich u
 ### [Chatbot](#chatbot-section-start)<a name="tableofcontent-chatbot"></a>
  1. [Einleitung](#chatbot-introduction)
  2. [Den Status überprüfen](#check-state)
- 3. [Wörter Vorschläge laden](#load-tag-suggestions)
- 4. [Char counter laden](#load-char-counter)
- 5. [Den Chatbot initialisieren](#init-chatbot)
+ 3. [Char counter laden](#load-char-counter)
+ 4. [Den Chatbot initialisieren](#init-chatbot)
 
 ### [Adminbereich](#admintool-section-start)<a name="tableofcontent-admintool"></a>
 1. [Einleitung](#admintool-introduction)
@@ -19,9 +18,8 @@ Der Chatbot ist die Hauptfunktion dieses Projektes. Es ist die erste Seite die e
 
 Folgend wird beschrieben was beim laden der Seite in welcher Reihenfolge passiert.
 1. [Den Status überprüfen](#check-state)
-2. [Wörter Vorschläge laden](#load-tag-suggestions)
-3. [Char counter laden](#load-char-counter)
-4. [Den Chatbot initialisieren](#init-chatbot)
+2. [Char counter laden](#load-char-counter)
+3. [Den Chatbot initialisieren](#init-chatbot)
 
 ### Status überprüfen <a name="check-state"></a>
 Wenn der Chatbot geöffnet wird wird als erstes eine Test Abfrage zum Server geschickt und auf seine Antwort gewartet. Solange auf die Antwort gewartet wird, zeigt der Chatbot eine Nachricht an mit der Information das die "Verbindung zum Server aufgebaut wird".
@@ -29,15 +27,14 @@ Wenn der Chatbot geöffnet wird wird als erstes eine Test Abfrage zum Server ges
 #### Guter Status
 
 
-### Wörter Vorschläge laden<a name="load-tag-suggestions"></a>
 ### Char counter laden<a name="load-char-counter"></a>
 ### Chatbot initialisieren<a name="init-chatbot"></a>
 
 ## Adminbereich <a name="admintool-section-start"></a>
 ### Einleitung <a name="admintool-introduction"></a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIyOTQ2ODYyLDE3NjA1OTY1NjIsLTIxOT
-gzOTc3MywtMTgxMjUxMzkzNSw2OTExODYzOTYsNjU2OTgxODY3
-LC03ODM0NTY5ODYsMTY4MTI1ODAxNiwtNDkyMDg0Njk4LDUzMD
-YyOTI3NCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTE0MzUwMDY2MzUsMzIyOTQ2ODYyLDE3Nj
+A1OTY1NjIsLTIxOTgzOTc3MywtMTgxMjUxMzkzNSw2OTExODYz
+OTYsNjU2OTgxODY3LC03ODM0NTY5ODYsMTY4MTI1ODAxNiwtND
+kyMDg0Njk4LDUzMDYyOTI3NCwtMjA4ODc0NjYxMl19
 -->
