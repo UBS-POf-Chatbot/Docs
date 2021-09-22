@@ -19,7 +19,7 @@ Dieses Dokument wird in drei Hauptteile aufgeteilt. Einmal allgemein, der Chatbo
 ## Allgemein <a name="general-section-start"></a>
 ### Einleitung <a name="general-introduction"></a>
 In diesem Abschnitt des Dokumentes beschreiben wir das Projekt allgemein.
-Wir zählen auf was für Technologien wir verwenden, welche bekannte Probleme es noch gibt
+Wir zählen auf was für Technologien wir verwenden, welche bekannte Probleme es noch gibt und welche Ideen wir aus Zeitlichen Gründen nicht mehr umsetzen konnten.
 ### Technologien <a name="technologies"></a>
 
 ## Chatbot <a name="chatbot-section-start"></a>
@@ -56,10 +56,10 @@ Um den Status zu überprüfen verwenden wir unseren Service  [<code>getStatus()<
 ### Einleitung <a name="admintool-introduction"></a>
 In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjY5NTUyMzgsLTY1MDAyNDY1LC02OT
-E1MDA2MDEsMTYwNjMzOTU3OCwyMDU2NDU5MzM1LC0xNDM1MDA2
-NjM1LDMyMjk0Njg2MiwxNzYwNTk2NTYyLC0yMTk4Mzk3NzMsLT
-E4MTI1MTM5MzUsNjkxMTg2Mzk2LDY1Njk4MTg2NywtNzgzNDU2
-OTg2LDE2ODEyNTgwMTYsLTQ5MjA4NDY5OCw1MzA2MjkyNzQsLT
-IwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTMyMDk4MDI0LC02NTAwMjQ2NSwtNjkxNT
+AwNjAxLDE2MDYzMzk1NzgsMjA1NjQ1OTMzNSwtMTQzNTAwNjYz
+NSwzMjI5NDY4NjIsMTc2MDU5NjU2MiwtMjE5ODM5NzczLC0xOD
+EyNTEzOTM1LDY5MTE4NjM5Niw2NTY5ODE4NjcsLTc4MzQ1Njk4
+NiwxNjgxMjU4MDE2LC00OTIwODQ2OTgsNTMwNjI5Mjc0LC0yMD
+g4NzQ2NjEyXX0=
 -->
