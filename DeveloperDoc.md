@@ -18,11 +18,13 @@ Dieses Dokument wird in drei Hauptteile aufgeteilt. Einmal allgemein, der Chatbo
 
 ## Allgemein <a name="general-section-start"></a>
 ### Einleitung <a name="general-introduction"></a>
+In diesem Abschnitt des Dokumentes beschreiben wir das Projekt allgemein.
+Wir zählen auf was für Technologien wir verwenden, welche bekannte Probleme es noch gibt
 ### Technologien <a name="technologies"></a>
 
 ## Chatbot <a name="chatbot-section-start"></a>
 ### Einleitung <a name="chatbot-introduction"></a>
-In diesem Teil des Dokumentes beschreiben wir wie der Chatbot funktioniert.
+In diesem Abschnitt des Dokumentes beschreiben wir wie der Chatbot funktioniert.
 Der Chatbot ist die Hauptfunktion dieses Projektes. Es ist die erste Seite die ein Admin sieht und die einzige Seite die ein normaler Benutzer sehen soll.
 
 Folgend wird beschrieben was beim laden der Seite in welcher Reihenfolge passiert.
@@ -52,12 +54,12 @@ Um den Status zu überprüfen verwenden wir unseren Service  [<code>getStatus()<
 
 ## Adminbereich <a name="admintool-section-start"></a>
 ### Einleitung <a name="admintool-introduction"></a>
-In diesem Teil des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
+In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1MDAyNDY1LC02OTE1MDA2MDEsMTYwNj
-MzOTU3OCwyMDU2NDU5MzM1LC0xNDM1MDA2NjM1LDMyMjk0Njg2
-MiwxNzYwNTk2NTYyLC0yMTk4Mzk3NzMsLTE4MTI1MTM5MzUsNj
-kxMTg2Mzk2LDY1Njk4MTg2NywtNzgzNDU2OTg2LDE2ODEyNTgw
-MTYsLTQ5MjA4NDY5OCw1MzA2MjkyNzQsLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbLTIwNjY5NTUyMzgsLTY1MDAyNDY1LC02OT
+E1MDA2MDEsMTYwNjMzOTU3OCwyMDU2NDU5MzM1LC0xNDM1MDA2
+NjM1LDMyMjk0Njg2MiwxNzYwNTk2NTYyLC0yMTk4Mzk3NzMsLT
+E4MTI1MTM5MzUsNjkxMTg2Mzk2LDY1Njk4MTg2NywtNzgzNDU2
+OTg2LDE2ODEyNTgwMTYsLTQ5MjA4NDY5OCw1MzA2MjkyNzQsLT
+IwODg3NDY2MTJdfQ==
 -->
