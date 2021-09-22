@@ -21,6 +21,8 @@ Dieses Dokument wird in drei Hauptteile aufgeteilt. Einmal allgemein, der Chatbo
 In diesem Abschnitt des Dokumentes beschreiben wir das Projekt im allgemeinen.
 Wir zählen auf was für Technologien wir verwenden, welche bekannte Probleme es noch gibt und welche Ideen wir aus Zeitlichen Gründen nicht mehr umsetzen konnten.
 ### Technologien <a name="technologies"></a>
+In diesem Abschnitt zählen wir die einzelnen Technologien auf damit klar ist was benötigt wird um starten zu können.
+#### Java und anderes
 
 ## Chatbot <a name="chatbot-section-start"></a>
 ### Einleitung <a name="chatbot-introduction"></a>
@@ -56,10 +58,10 @@ Um den Status zu überprüfen verwenden wir unseren Service  [<code>getStatus()<
 ### Einleitung <a name="admintool-introduction"></a>
 In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDMwMTA0MzksLTY1MDAyNDY1LC02OT
-E1MDA2MDEsMTYwNjMzOTU3OCwyMDU2NDU5MzM1LC0xNDM1MDA2
-NjM1LDMyMjk0Njg2MiwxNzYwNTk2NTYyLC0yMTk4Mzk3NzMsLT
-E4MTI1MTM5MzUsNjkxMTg2Mzk2LDY1Njk4MTg2NywtNzgzNDU2
-OTg2LDE2ODEyNTgwMTYsLTQ5MjA4NDY5OCw1MzA2MjkyNzQsLT
-IwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTIzNzg2MzQ5OSwtNjUwMDI0NjUsLTY5MT
+UwMDYwMSwxNjA2MzM5NTc4LDIwNTY0NTkzMzUsLTE0MzUwMDY2
+MzUsMzIyOTQ2ODYyLDE3NjA1OTY1NjIsLTIxOTgzOTc3MywtMT
+gxMjUxMzkzNSw2OTExODYzOTYsNjU2OTgxODY3LC03ODM0NTY5
+ODYsMTY4MTI1ODAxNiwtNDkyMDg0Njk4LDUzMDYyOTI3NCwtMj
+A4ODc0NjYxMl19
 -->
