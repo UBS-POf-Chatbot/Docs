@@ -12,19 +12,21 @@ Dieses Dokument wird in zwei Hauptteile aufgeteilt. Einmal der Chatbot an sich u
 ## Chatbot <a name="chatbot-section-start"></a>
 ### Einleitung <a name="chatbot-introduction"></a>
 Der Chatbot Teil ist die Hauptfunktion dieses Projektes. Es ist die erste Seite die ein Admin sieht und die einzige Seite die ein normaler Benutzer sieht.
-Folgend wird beschrieben was beim laden der Seite in wann passiert.
+Folgend wird beschrieben was beim laden der Seite in welcher Reihenfolge passiert.
 1. [Den Status überprüfen](#check-state)
 2. [Wörter Vorschläge laden](#load-tag-suggestions)
 3. [Char counter laden](#load-char-counter)
+4. [Den Chatbot initialisieren](#init-chatbot)
 
 #### Status überprüfen <a name="check-state"></a>
 #### Wörter Vorschläge laden<a name="load-tag-suggestions"></a>
 #### Char counter laden<a name="load-char-counter"></a>
+#### Chatbot initialisieren<a name="init-chatbot"></a>
 
 ## Adminbereich <a name="admintool-section-start"></a>
 ### Einleitung <a name="admintool-introduction"></a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4ODEwNTY2NiwtMTgxMjUxMzkzNSw2OT
-ExODYzOTYsNjU2OTgxODY3LC03ODM0NTY5ODYsMTY4MTI1ODAx
-NiwtNDkyMDg0Njk4LDUzMDYyOTI3NCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTU0MjU5MjM4LC0xODEyNTEzOTM1LDY5MT
+E4NjM5Niw2NTY5ODE4NjcsLTc4MzQ1Njk4NiwxNjgxMjU4MDE2
+LC00OTIwODQ2OTgsNTMwNjI5Mjc0LC0yMDg4NzQ2NjEyXX0=
 -->
