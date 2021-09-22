@@ -13,13 +13,13 @@ Dieses Dokument wird in zwei Hauptteile aufgeteilt. Einmal der Chatbot an sich u
 ### Einleitung <a name="chatbot-introduction"></a>
 Der Chatbot Teil ist die Hauptfunktion dieses Projektes. Es ist die erste Seite die ein Admin sieht und die einzige Seite die ein normaler Benutzer sieht.
 Folgendes passiert wenn die Seite geöffnet wird.
-1. 
+1.  dwada
 
 
 ## Adminbereich <a name="admintool-section-start"></a>
 ### Einleitung <a name="admintool-introduction"></a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjkxMTg2Mzk2LDY1Njk4MTg2NywtNzgzND
-U2OTg2LDE2ODEyNTgwMTYsLTQ5MjA4NDY5OCw1MzA2MjkyNzQs
-LTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbLTE4MTI1MTM5MzUsNjkxMTg2Mzk2LDY1Nj
+k4MTg2NywtNzgzNDU2OTg2LDE2ODEyNTgwMTYsLTQ5MjA4NDY5
+OCw1MzA2MjkyNzQsLTIwODg3NDY2MTJdfQ==
 -->
