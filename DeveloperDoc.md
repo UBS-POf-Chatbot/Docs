@@ -12,14 +12,14 @@ Dieses Dokument wird in zwei Hauptteile aufgeteilt. Einmal der Chatbot an sich u
 ## Chatbot <a name="chatbot-section-start"></a>
 ### Einleitung <a name="chatbot-introduction"></a>
 Der Chatbot Teil ist die Hauptfunktion dieses Projektes. Es ist die erste Seite die ein Admin sieht und die einzige Seite die ein normaler Benutzer sieht.
-Folgendes passiert 
+Folgendes passiert wenn die Seite geöffnet wird.
 1. 
 
 
 ## Adminbereich <a name="admintool-section-start"></a>
 ### Einleitung <a name="admintool-introduction"></a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NTE3MTQ4OSw2NTY5ODE4NjcsLTc4Mz
-Q1Njk4NiwxNjgxMjU4MDE2LC00OTIwODQ2OTgsNTMwNjI5Mjc0
-LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbNjkxMTg2Mzk2LDY1Njk4MTg2NywtNzgzND
+U2OTg2LDE2ODEyNTgwMTYsLTQ5MjA4NDY5OCw1MzA2MjkyNzQs
+LTIwODg3NDY2MTJdfQ==
 -->
