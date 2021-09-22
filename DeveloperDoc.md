@@ -19,22 +19,23 @@ Dieses Dokument wird in drei Hauptteile aufgeteilt. Einmal allgemein, der Chatbo
 ## Allgemein <a name="general-section-start"></a>
 ### Einleitung <a name="general-introduction"></a>
 In diesem Abschnitt des Dokumentes beschreiben wir das Projekt im allgemeinen.
-Wir zählen auf was für Technologien wir verwenden und wie man verschiedene Dinge macht, wie zum Beispiel wie man eine Datenbankverbindung aufbaut. Zudem schreiben wir noch 
+Wir zählen auf was für Technologien wir verwenden und wie man verschiedene Dinge macht, wie zum Beispiel wie man eine Datenbankverbindung aufbaut. Zudem schreiben wir noch auf was wir machen wollten, aber wegen zu weniger Zeit nicht machen konnten.
 ### Technologien <a name="technologies"></a>
 In diesem Abschnitt zählen wir die einzelnen Technologien auf damit klar ist was benötigt wird um starten zu können.
 #### Projekt allgemein
-- Github
+- GitHub
 - Maven als build tool
 #### Backend
 - Java 16
 - Hibernate für DB Connection und abfragen
-- Typescript für frontend
-- 
+#### Frontend
+- Typescript
 ### Für die Zukunft
 
 ### Allgemeine wichtige Informationen
 #### Datenbank
 ##### Datenbank konfigurieren
+note: persistence und c3
 ##### Verbindung mit Datenbank herstellen
 note: entity manager open und close sachen
 ##### Datenbank abfragen
@@ -74,7 +75,7 @@ Um den Status zu überprüfen verwenden wir unseren Service  [<code>getStatus()<
 ### Einleitung <a name="admintool-introduction"></a>
 In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTM5OTE1NzQsLTE0NjIxODc0NTYsLT
+eyJoaXN0b3J5IjpbLTE4OTQzNTQ1OTgsLTE0NjIxODc0NTYsLT
 IzNzg2MzQ5OSwtNjUwMDI0NjUsLTY5MTUwMDYwMSwxNjA2MzM5
 NTc4LDIwNTY0NTkzMzUsLTE0MzUwMDY2MzUsMzIyOTQ2ODYyLD
 E3NjA1OTY1NjIsLTIxOTgzOTc3MywtMTgxMjUxMzkzNSw2OTEx
