@@ -1,8 +1,10 @@
 # Entwickler Dokumentation
 In diesem Dokument wird beschrieben wie der Chatbot funktioniert und wo was zu finden ist, damit zukünftige Entwickler ohne Probleme den Chatbot weiterentwickeln können.
-Dieses Dokument wird in zwei Hauptteile aufgeteilt. Einmal der Chatbot an sich und einmal den Adminbereich.
+Dieses Dokument wird in drei Hauptteile aufgeteilt. Einmal allgemein, der Chatbot an sich und den Adminbereich.
 
 ## Inhaltsverzeichnis
+### [Allgemein]()
+
 ### [Chatbot](#chatbot-section-start)<a name="tableofcontent-chatbot"></a>
  1. [Einleitung](#chatbot-introduction)
  2. [Den Status überprüfen](#check-state)
@@ -12,8 +14,13 @@ Dieses Dokument wird in zwei Hauptteile aufgeteilt. Einmal der Chatbot an sich u
 ### [Adminbereich](#admintool-section-start)<a name="tableofcontent-admintool"></a>
 1. [Einleitung](#admintool-introduction)
 
+## Allgemein
+### Einleitung
+
+
 ## Chatbot <a name="chatbot-section-start"></a>
 ### Einleitung <a name="chatbot-introduction"></a>
+In diesem Teil des Dokumentes beschreiben wir wie der Chatbot funktioniert.
 Der Chatbot ist die Hauptfunktion dieses Projektes. Es ist die erste Seite die ein Admin sieht und die einzige Seite die ein normaler Benutzer sehen soll.
 
 Folgend wird beschrieben was beim laden der Seite in welcher Reihenfolge passiert.
@@ -43,11 +50,12 @@ Um den Status zu überprüfen verwenden wir unseren Service  [<code>getStatus()<
 
 ## Adminbereich <a name="admintool-section-start"></a>
 ### Einleitung <a name="admintool-introduction"></a>
+In diesem Teil des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTA5NDY4ODEsLTY5MTUwMDYwMSwxNj
-A2MzM5NTc4LDIwNTY0NTkzMzUsLTE0MzUwMDY2MzUsMzIyOTQ2
-ODYyLDE3NjA1OTY1NjIsLTIxOTgzOTc3MywtMTgxMjUxMzkzNS
-w2OTExODYzOTYsNjU2OTgxODY3LC03ODM0NTY5ODYsMTY4MTI1
-ODAxNiwtNDkyMDg0Njk4LDUzMDYyOTI3NCwtMjA4ODc0NjYxMl
-19
+eyJoaXN0b3J5IjpbLTg3MjQyODE5MSwtNjkxNTAwNjAxLDE2MD
+YzMzk1NzgsMjA1NjQ1OTMzNSwtMTQzNTAwNjYzNSwzMjI5NDY4
+NjIsMTc2MDU5NjU2MiwtMjE5ODM5NzczLC0xODEyNTEzOTM1LD
+Y5MTE4NjM5Niw2NTY5ODE4NjcsLTc4MzQ1Njk4NiwxNjgxMjU4
+MDE2LC00OTIwODQ2OTgsNTMwNjI5Mjc0LC0yMDg4NzQ2NjEyXX
+0=
 -->
