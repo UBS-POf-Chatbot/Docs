@@ -35,7 +35,7 @@ In diesem Abschnitt zählen wir die einzelnen Technologien auf damit klar ist wa
 ### Allgemeine wichtige Informationen
 #### Datenbank
 ##### Datenbank konfigurieren
-note: persistence und c3
+note: persistence und c3po erklären
 ##### Verbindung mit Datenbank herstellen
 note: entity manager open und close sachen
 ##### Datenbank abfragen
@@ -75,7 +75,7 @@ Um den Status zu überprüfen verwenden wir unseren Service  [<code>getStatus()<
 ### Einleitung <a name="admintool-introduction"></a>
 In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTQzNTQ1OTgsLTE0NjIxODc0NTYsLT
+eyJoaXN0b3J5IjpbLTEwNjY2MDIyNjQsLTE0NjIxODc0NTYsLT
 IzNzg2MzQ5OSwtNjUwMDI0NjUsLTY5MTUwMDYwMSwxNjA2MzM5
 NTc4LDIwNTY0NTkzMzUsLTE0MzUwMDY2MzUsMzIyOTQ2ODYyLD
 E3NjA1OTY1NjIsLTIxOTgzOTc3MywtMTgxMjUxMzkzNSw2OTEx
