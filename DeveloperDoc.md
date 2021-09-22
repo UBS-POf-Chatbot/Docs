@@ -19,7 +19,7 @@ Dieses Dokument wird in drei Hauptteile aufgeteilt. Einmal allgemein, der Chatbo
 ## Allgemein <a name="general-section-start"></a>
 ### Einleitung <a name="general-introduction"></a>
 In diesem Abschnitt des Dokumentes beschreiben wir das Projekt im allgemeinen.
-Wir zählen auf was für Technologien wir verwenden, welche bekannte Probleme es noch gibt und welche Ideen wir aus Zeitlichen Gründen nicht mehr umsetzen konnten.
+Wir zählen auf was für Technologien wir verwenden und wie man verschiedene Dinge macht, wie zum Beispiel wie man eine Datenbankverbindung aufbaut. Zudem schreiben wir noch 
 ### Technologien <a name="technologies"></a>
 In diesem Abschnitt zählen wir die einzelnen Technologien auf damit klar ist was benötigt wird um starten zu können.
 #### Projekt allgemein
@@ -30,16 +30,14 @@ In diesem Abschnitt zählen wir die einzelnen Technologien auf damit klar ist wa
 - Hibernate für DB Connection und abfragen
 - Typescript für frontend
 - 
-
-### Bekannte Fehler / Probleme
-
 ### Für die Zukunft
 
-### Allgemeine Wichtige Informationen
-#### 
-#### Verbindung mit Datenbank herstellen
+### Allgemeine wichtige Informationen
+#### Datenbank
+##### Datenbank konfigurieren
+##### Verbindung mit Datenbank herstellen
 note: entity manager open und close sachen
-#### Datenbank abfragen
+##### Datenbank abfragen
 
 
 ## Chatbot <a name="chatbot-section-start"></a>
@@ -76,10 +74,10 @@ Um den Status zu überprüfen verwenden wir unseren Service  [<code>getStatus()<
 ### Einleitung <a name="admintool-introduction"></a>
 In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5NTM3MjQ2MiwtMTQ2MjE4NzQ1NiwtMj
-M3ODYzNDk5LC02NTAwMjQ2NSwtNjkxNTAwNjAxLDE2MDYzMzk1
-NzgsMjA1NjQ1OTMzNSwtMTQzNTAwNjYzNSwzMjI5NDY4NjIsMT
-c2MDU5NjU2MiwtMjE5ODM5NzczLC0xODEyNTEzOTM1LDY5MTE4
-NjM5Niw2NTY5ODE4NjcsLTc4MzQ1Njk4NiwxNjgxMjU4MDE2LC
-00OTIwODQ2OTgsNTMwNjI5Mjc0LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTExNTM5OTE1NzQsLTE0NjIxODc0NTYsLT
+IzNzg2MzQ5OSwtNjUwMDI0NjUsLTY5MTUwMDYwMSwxNjA2MzM5
+NTc4LDIwNTY0NTkzMzUsLTE0MzUwMDY2MzUsMzIyOTQ2ODYyLD
+E3NjA1OTY1NjIsLTIxOTgzOTc3MywtMTgxMjUxMzkzNSw2OTEx
+ODYzOTYsNjU2OTgxODY3LC03ODM0NTY5ODYsMTY4MTI1ODAxNi
+wtNDkyMDg0Njk4LDUzMDYyOTI3NCwtMjA4ODc0NjYxMl19
 -->
