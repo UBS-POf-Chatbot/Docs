@@ -30,8 +30,8 @@ Um den Status zu überprüfen verwenden wir unseren Service  <code>getStatus()</
 2. <code>search(String input, boolean affectStatistics)</code>, package <code>com.ubs.backend.services.IntentFinderNew</code>
 
 ##### JavaDoc zu den erwähnten Methoden
-1. <code>[getStatus()](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#getStatus()){:target="\_blank"}</code>
-2.  <code>[questionSuggestions(String amountQuestionsString)](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#questionSuggestions(java.lang.String))</code>
+1. [getStatus()](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#getStatus()){:target="\_blank"}
+2.  [questionSuggestions(String amountQuestionsString)](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#questionSuggestions(java.lang.String))</code>
 3. <code>[search(String input, boolean affectStatistics)](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/IntentFinderNew.html#search(java.lang.String,boolean))</code>
 
 #### Guter Status
@@ -43,9 +43,9 @@ Um den Status zu überprüfen verwenden wir unseren Service  <code>getStatus()</
 ## Adminbereich <a name="admintool-section-start"></a>
 ### Einleitung <a name="admintool-introduction"></a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDQ0NzQyMzMsMjA1NjQ1OTMzNSwtMT
-QzNTAwNjYzNSwzMjI5NDY4NjIsMTc2MDU5NjU2MiwtMjE5ODM5
-NzczLC0xODEyNTEzOTM1LDY5MTE4NjM5Niw2NTY5ODE4NjcsLT
-c4MzQ1Njk4NiwxNjgxMjU4MDE2LC00OTIwODQ2OTgsNTMwNjI5
-Mjc0LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbNTQzMjEzNjY5LDIwNTY0NTkzMzUsLTE0Mz
+UwMDY2MzUsMzIyOTQ2ODYyLDE3NjA1OTY1NjIsLTIxOTgzOTc3
+MywtMTgxMjUxMzkzNSw2OTExODYzOTYsNjU2OTgxODY3LC03OD
+M0NTY5ODYsMTY4MTI1ODAxNiwtNDkyMDg0Njk4LDUzMDYyOTI3
+NCwtMjA4ODc0NjYxMl19
 -->
