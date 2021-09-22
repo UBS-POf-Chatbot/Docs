@@ -4,7 +4,8 @@ Dieses Dokument wird in zwei Hauptteile aufgeteilt. Einmal der Chatbot an sich u
 
 ## Inhaltsverzeichnis
 ### [Chatbot](#chatbot-section-start)<a name="tableofcontent-chatbot"></a>
-1. [Einleitung](#chatbot-introduction)
+ 1. [Einleitung](#chatbot-introduction)
+	 1.  
 
 ### [Adminbereich](#admintool-section-start)<a name="tableofcontent-admintool"></a>
 1. [Einleitung](#admintool-introduction)
@@ -18,7 +19,7 @@ Folgend wird beschrieben was beim laden der Seite in welcher Reihenfolge passier
 3. [Char counter laden](#load-char-counter)
 4. [Den Chatbot initialisieren](#init-chatbot)
 
-#### Status überprüfen <a name="check-state"></a>
+### Status überprüfen <a name="check-state"></a>
 #### Wörter Vorschläge laden<a name="load-tag-suggestions"></a>
 #### Char counter laden<a name="load-char-counter"></a>
 #### Chatbot initialisieren<a name="init-chatbot"></a>
@@ -26,7 +27,8 @@ Folgend wird beschrieben was beim laden der Seite in welcher Reihenfolge passier
 ## Adminbereich <a name="admintool-section-start"></a>
 ### Einleitung <a name="admintool-introduction"></a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MjU5MjM4LC0xODEyNTEzOTM1LDY5MT
-E4NjM5Niw2NTY5ODE4NjcsLTc4MzQ1Njk4NiwxNjgxMjU4MDE2
-LC00OTIwODQ2OTgsNTMwNjI5Mjc0LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTEyOTI5Mjc2OTYsLTE4MTI1MTM5MzUsNj
+kxMTg2Mzk2LDY1Njk4MTg2NywtNzgzNDU2OTg2LDE2ODEyNTgw
+MTYsLTQ5MjA4NDY5OCw1MzA2MjkyNzQsLTIwODg3NDY2MTJdfQ
+==
 -->
