@@ -23,6 +23,8 @@ Folgend wird beschrieben was beim laden der Seite in welcher Reihenfolge passier
 4. [Den Chatbot initialisieren](#init-chatbot)
 
 ### Status überprüfen <a name="check-state"></a>
+Wenn der Chatbot geöffnet wird wird als erstes eine Test Abfrage zum Server geschickt und auf seine Antwort gewartet. Solange auf die Antwort gewartet wird, zeigt der Chatbot eine Nachricht an mit der Information das die "Verbindung zum Server aufgebaut wird".
+
 ### Wörter Vorschläge laden<a name="load-tag-suggestions"></a>
 ### Char counter laden<a name="load-char-counter"></a>
 ### Chatbot initialisieren<a name="init-chatbot"></a>
@@ -30,8 +32,7 @@ Folgend wird beschrieben was beim laden der Seite in welcher Reihenfolge passier
 ## Adminbereich <a name="admintool-section-start"></a>
 ### Einleitung <a name="admintool-introduction"></a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjY2NTQ3MjIsLTE4MTI1MTM5MzUsNj
-kxMTg2Mzk2LDY1Njk4MTg2NywtNzgzNDU2OTg2LDE2ODEyNTgw
-MTYsLTQ5MjA4NDY5OCw1MzA2MjkyNzQsLTIwODg3NDY2MTJdfQ
-==
+eyJoaXN0b3J5IjpbLTIxOTgzOTc3MywtMTgxMjUxMzkzNSw2OT
+ExODYzOTYsNjU2OTgxODY3LC03ODM0NTY5ODYsMTY4MTI1ODAx
+NiwtNDkyMDg0Njk4LDUzMDYyOTI3NCwtMjA4ODc0NjYxMl19
 -->
