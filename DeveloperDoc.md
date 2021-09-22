@@ -29,11 +29,6 @@ Um den Status zu überprüfen verwenden wir unseren Service  <code>getStatus()</
 1. <code>questionSuggestions(String amountQuestionsString)</code>, package <code>com.ubs.backend.services.Get</code>. ([JavaDoc](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#questionSuggestions(java.lang.String)))
 2. <code>search(String input, boolean affectStatistics)</code>, package <code>com.ubs.backend.services.IntentFinderNew</code>. ([JavaDoc](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/IntentFinderNew.html#search(java.lang.String,boolean)))
 
-##### JavaDoc zu den erwähnten Methoden
-1. 
-2.  
-3. 
-
 #### Guter Status
 
 
@@ -43,9 +38,9 @@ Um den Status zu überprüfen verwenden wir unseren Service  <code>getStatus()</
 ## Adminbereich <a name="admintool-section-start"></a>
 ### Einleitung <a name="admintool-introduction"></a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM3NTEzOTc0LDE2MDYzMzk1NzgsMjA1Nj
-Q1OTMzNSwtMTQzNTAwNjYzNSwzMjI5NDY4NjIsMTc2MDU5NjU2
-MiwtMjE5ODM5NzczLC0xODEyNTEzOTM1LDY5MTE4NjM5Niw2NT
-Y5ODE4NjcsLTc4MzQ1Njk4NiwxNjgxMjU4MDE2LC00OTIwODQ2
-OTgsNTMwNjI5Mjc0LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTE5OTMzMTYxMzgsMTYwNjMzOTU3OCwyMD
+U2NDU5MzM1LC0xNDM1MDA2NjM1LDMyMjk0Njg2MiwxNzYwNTk2
+NTYyLC0yMTk4Mzk3NzMsLTE4MTI1MTM5MzUsNjkxMTg2Mzk2LD
+Y1Njk4MTg2NywtNzgzNDU2OTg2LDE2ODEyNTgwMTYsLTQ5MjA4
+NDY5OCw1MzA2MjkyNzQsLTIwODg3NDY2MTJdfQ==
 -->
