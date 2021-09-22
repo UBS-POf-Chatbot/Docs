@@ -23,6 +23,11 @@ Wir zählen auf was für Technologien wir verwenden, welche bekannte Probleme es
 ### Technologien <a name="technologies"></a>
 In diesem Abschnitt zählen wir die einzelnen Technologien auf damit klar ist was benötigt wird um starten zu können.
 #### Java und anderes
+Wir haben das Projekt in der Java Version
+
+### Bekannte Fehler / Probleme
+
+### Für die Zukunft
 
 ## Chatbot <a name="chatbot-section-start"></a>
 ### Einleitung <a name="chatbot-introduction"></a>
@@ -58,10 +63,10 @@ Um den Status zu überprüfen verwenden wir unseren Service  [<code>getStatus()<
 ### Einleitung <a name="admintool-introduction"></a>
 In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNzg2MzQ5OSwtNjUwMDI0NjUsLTY5MT
-UwMDYwMSwxNjA2MzM5NTc4LDIwNTY0NTkzMzUsLTE0MzUwMDY2
-MzUsMzIyOTQ2ODYyLDE3NjA1OTY1NjIsLTIxOTgzOTc3MywtMT
-gxMjUxMzkzNSw2OTExODYzOTYsNjU2OTgxODY3LC03ODM0NTY5
-ODYsMTY4MTI1ODAxNiwtNDkyMDg0Njk4LDUzMDYyOTI3NCwtMj
-A4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTE0NjIxODc0NTYsLTIzNzg2MzQ5OSwtNj
+UwMDI0NjUsLTY5MTUwMDYwMSwxNjA2MzM5NTc4LDIwNTY0NTkz
+MzUsLTE0MzUwMDY2MzUsMzIyOTQ2ODYyLDE3NjA1OTY1NjIsLT
+IxOTgzOTc3MywtMTgxMjUxMzkzNSw2OTExODYzOTYsNjU2OTgx
+ODY3LC03ODM0NTY5ODYsMTY4MTI1ODAxNiwtNDkyMDg0Njk4LD
+UzMDYyOTI3NCwtMjA4ODc0NjYxMl19
 -->
