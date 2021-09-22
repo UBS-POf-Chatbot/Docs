@@ -25,13 +25,13 @@ Folgend wird beschrieben was beim laden der Seite in welcher Reihenfolge passier
 Wenn der Chatbot geöffnet wird wird als erstes eine Test Abfrage zum Server geschickt und auf seine Antwort gewartet. Solange auf die Antwort gewartet wird, zeigt der Chatbot eine Nachricht an mit der Information das die "Verbindung zum Server aufgebaut wird".
 ![Checking state of server](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/checkStatus.jpg)
 
-Um den Status zu überprüfen verwenden wir unseren Service  <code>getStatus()</code> im package <code>com.ubs.backend.services.Get</code>. In dieser Methode werden zwei weitere Methoden überprüft.
-1. <code>questionSuggestions(String amountQuestionsString)</code>, package <code>com.ubs.backend.services.Get</code>
+Um den Status zu überprüfen verwenden wir unseren Service  <code>getStatus()</code> im package <code>com.ubs.backend.services.Get</code>, [JavaDoc](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#getStatus()){:target="\_blank"}. Diese Methode ruft folgende Methoden auf.
+1. <code>questionSuggestions(String amountQuestionsString)</code>, package <code>com.ubs.backend.services.Get</code>. ([JavaDoc](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#questionSuggestions(java.lang.String)))
 2. <code>search(String input, boolean affectStatistics)</code>, package <code>com.ubs.backend.services.IntentFinderNew</code>
 
 ##### JavaDoc zu den erwähnten Methoden
-1. [getStatus()](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#getStatus()){:target="\_blank"}
-2.  [questionSuggestions(String amountQuestionsString)](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#questionSuggestions(java.lang.String))
+1. 
+2.  
 3. [search(String input, boolean affectStatistics)](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/IntentFinderNew.html#search(java.lang.String,boolean))
 
 #### Guter Status
@@ -43,9 +43,9 @@ Um den Status zu überprüfen verwenden wir unseren Service  <code>getStatus()</
 ## Adminbereich <a name="admintool-section-start"></a>
 ### Einleitung <a name="admintool-introduction"></a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNjMzOTU3OCwyMDU2NDU5MzM1LC0xND
-M1MDA2NjM1LDMyMjk0Njg2MiwxNzYwNTk2NTYyLC0yMTk4Mzk3
-NzMsLTE4MTI1MTM5MzUsNjkxMTg2Mzk2LDY1Njk4MTg2NywtNz
-gzNDU2OTg2LDE2ODEyNTgwMTYsLTQ5MjA4NDY5OCw1MzA2Mjky
-NzQsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbODA5MDEwNjk5LDE2MDYzMzk1NzgsMjA1Nj
+Q1OTMzNSwtMTQzNTAwNjYzNSwzMjI5NDY4NjIsMTc2MDU5NjU2
+MiwtMjE5ODM5NzczLC0xODEyNTEzOTM1LDY5MTE4NjM5Niw2NT
+Y5ODE4NjcsLTc4MzQ1Njk4NiwxNjgxMjU4MDE2LC00OTIwODQ2
+OTgsNTMwNjI5Mjc0LC0yMDg4NzQ2NjEyXX0=
 -->
