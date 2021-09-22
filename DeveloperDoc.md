@@ -35,11 +35,11 @@ In diesem Abschnitt zählen wir die einzelnen Technologien auf damit klar ist wa
 ### Allgemeine wichtige Informationen
 #### Datenbank
 ##### Datenbank konfigurieren
-note: persistence und c3po erklären
+TODO: persistence und c3po erklären
 ##### Verbindung mit Datenbank herstellen
-note: entity manager open und close sachen
+TODO: entity manager open und close sachen
 ##### Datenbank abfragen
-
+TODO
 
 ## Chatbot <a name="chatbot-section-start"></a>
 ### Einleitung <a name="chatbot-introduction"></a>
@@ -54,16 +54,13 @@ Folgend wird beschrieben was beim laden der Seite in welcher Reihenfolge passier
 ### Status überprüfen <a name="check-state"></a>
 Wenn der Chatbot geöffnet wird wird als erstes eine Test Abfrage zum Server geschickt und auf seine Antwort gewartet. Solange auf die Antwort gewartet wird, zeigt der Chatbot eine Nachricht an mit der Information das die "Verbindung zum Server aufgebaut wird".
 ![Checking state of server](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/checkStatus.jpg)
-
-# NICHT FERTIG -@ZWAZEL
-
 Um den Status zu überprüfen verwenden wir unseren Service  [<code>getStatus()</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#getStatus()). Diese Methode rufen wir über eine Rest Schnittstelle auf. Der Path zu dieser Schnittstelle ist <code>services/get/status</code>.
 
 [<code>getStatus()</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#getStatus()) ruft folgende weitere Methoden auf.
 1. [<code>questionSuggestions(String amountQuestionsString)</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#questionSuggestions(java.lang.String))
 2. [<code>search(String input, boolean affectStatistics)</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/IntentFinderNew.html#search(java.lang.String,boolean))
 
-
+TODO ALLES DANACH
 
 #### Guter Status
 
@@ -75,10 +72,10 @@ Um den Status zu überprüfen verwenden wir unseren Service  [<code>getStatus()<
 ### Einleitung <a name="admintool-introduction"></a>
 In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjY2MDIyNjQsLTE0NjIxODc0NTYsLT
-IzNzg2MzQ5OSwtNjUwMDI0NjUsLTY5MTUwMDYwMSwxNjA2MzM5
-NTc4LDIwNTY0NTkzMzUsLTE0MzUwMDY2MzUsMzIyOTQ2ODYyLD
-E3NjA1OTY1NjIsLTIxOTgzOTc3MywtMTgxMjUxMzkzNSw2OTEx
-ODYzOTYsNjU2OTgxODY3LC03ODM0NTY5ODYsMTY4MTI1ODAxNi
-wtNDkyMDg0Njk4LDUzMDYyOTI3NCwtMjA4ODc0NjYxMl19
+eyJoaXN0b3J5IjpbLTgxNDk2MDA0LC0xNDYyMTg3NDU2LC0yMz
+c4NjM0OTksLTY1MDAyNDY1LC02OTE1MDA2MDEsMTYwNjMzOTU3
+OCwyMDU2NDU5MzM1LC0xNDM1MDA2NjM1LDMyMjk0Njg2MiwxNz
+YwNTk2NTYyLC0yMTk4Mzk3NzMsLTE4MTI1MTM5MzUsNjkxMTg2
+Mzk2LDY1Njk4MTg2NywtNzgzNDU2OTg2LDE2ODEyNTgwMTYsLT
+Q5MjA4NDY5OCw1MzA2MjkyNzQsLTIwODg3NDY2MTJdfQ==
 -->
