@@ -25,7 +25,7 @@ Folgend wird beschrieben was beim laden der Seite in welcher Reihenfolge passier
 Wenn der Chatbot geöffnet wird wird als erstes eine Test Abfrage zum Server geschickt und auf seine Antwort gewartet. Solange auf die Antwort gewartet wird, zeigt der Chatbot eine Nachricht an mit der Information das die "Verbindung zum Server aufgebaut wird".
 ![Checking state of server](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/checkStatus.jpg)
 
-Um den Status zu überprüfen rufen wir die 
+Um den Status zu überprüfen verwenden wir unseren Service  <code>getStatus()</code> im package <code></code>
 
 #### Guter Status
 
@@ -36,7 +36,7 @@ Um den Status zu überprüfen rufen wir die
 ## Adminbereich <a name="admintool-section-start"></a>
 ### Einleitung <a name="admintool-introduction"></a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk3MTQxMDA4NSwtMTQzNTAwNjYzNSwzMj
+eyJoaXN0b3J5IjpbMTQxOTMxMzM0OSwtMTQzNTAwNjYzNSwzMj
 I5NDY4NjIsMTc2MDU5NjU2MiwtMjE5ODM5NzczLC0xODEyNTEz
 OTM1LDY5MTE4NjM5Niw2NTY5ODE4NjcsLTc4MzQ1Njk4NiwxNj
 gxMjU4MDE2LC00OTIwODQ2OTgsNTMwNjI5Mjc0LC0yMDg4NzQ2
