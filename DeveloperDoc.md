@@ -22,9 +22,13 @@ In diesem Abschnitt des Dokumentes beschreiben wir das Projekt im allgemeinen.
 Wir zählen auf was für Technologien wir verwenden, welche bekannte Probleme es noch gibt und welche Ideen wir aus Zeitlichen Gründen nicht mehr umsetzen konnten.
 ### Technologien <a name="technologies"></a>
 In diesem Abschnitt zählen wir die einzelnen Technologien auf damit klar ist was benötigt wird um starten zu können.
-#### Java und anderes
+#### Projekt allgemein
+- Github
+- Maven als build tool
+#### Backend
 - Java 16
-- Maven
+- Hibernate für DB Connection
+- Typescript für frontend
 - 
 
 ### Bekannte Fehler / Probleme
@@ -65,10 +69,10 @@ Um den Status zu überprüfen verwenden wir unseren Service  [<code>getStatus()<
 ### Einleitung <a name="admintool-introduction"></a>
 In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzNjM2OTIwNiwtMTQ2MjE4NzQ1NiwtMj
-M3ODYzNDk5LC02NTAwMjQ2NSwtNjkxNTAwNjAxLDE2MDYzMzk1
-NzgsMjA1NjQ1OTMzNSwtMTQzNTAwNjYzNSwzMjI5NDY4NjIsMT
-c2MDU5NjU2MiwtMjE5ODM5NzczLC0xODEyNTEzOTM1LDY5MTE4
-NjM5Niw2NTY5ODE4NjcsLTc4MzQ1Njk4NiwxNjgxMjU4MDE2LC
-00OTIwODQ2OTgsNTMwNjI5Mjc0LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTkxMjgwNTUxLC0xNDYyMTg3NDU2LC0yMz
+c4NjM0OTksLTY1MDAyNDY1LC02OTE1MDA2MDEsMTYwNjMzOTU3
+OCwyMDU2NDU5MzM1LC0xNDM1MDA2NjM1LDMyMjk0Njg2MiwxNz
+YwNTk2NTYyLC0yMTk4Mzk3NzMsLTE4MTI1MTM5MzUsNjkxMTg2
+Mzk2LDY1Njk4MTg2NywtNzgzNDU2OTg2LDE2ODEyNTgwMTYsLT
+Q5MjA4NDY5OCw1MzA2MjkyNzQsLTIwODg3NDY2MTJdfQ==
 -->
