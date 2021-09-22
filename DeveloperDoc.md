@@ -25,7 +25,7 @@ Folgend wird beschrieben was beim laden der Seite in welcher Reihenfolge passier
 Wenn der Chatbot geöffnet wird wird als erstes eine Test Abfrage zum Server geschickt und auf seine Antwort gewartet. Solange auf die Antwort gewartet wird, zeigt der Chatbot eine Nachricht an mit der Information das die "Verbindung zum Server aufgebaut wird".
 ![Checking state of server](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/checkStatus.jpg)
 
-
+# NICHT FERTIG -@ZWAZEL
 
 Um den Status zu überprüfen verwenden wir unseren Service  [<code>getStatus()</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#getStatus()). Diese Methode rufen wir über eine Rest Schnittstelle auf. Der Path zu dieser Schnittstelle ist <code>services/get/status</code>.
 
@@ -44,10 +44,10 @@ Um den Status zu überprüfen verwenden wir unseren Service  [<code>getStatus()<
 ## Adminbereich <a name="admintool-section-start"></a>
 ### Einleitung <a name="admintool-introduction"></a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTMxNDU0MSwtNjkxNTAwNjAxLDE2MD
-YzMzk1NzgsMjA1NjQ1OTMzNSwtMTQzNTAwNjYzNSwzMjI5NDY4
-NjIsMTc2MDU5NjU2MiwtMjE5ODM5NzczLC0xODEyNTEzOTM1LD
-Y5MTE4NjM5Niw2NTY5ODE4NjcsLTc4MzQ1Njk4NiwxNjgxMjU4
-MDE2LC00OTIwODQ2OTgsNTMwNjI5Mjc0LC0yMDg4NzQ2NjEyXX
-0=
+eyJoaXN0b3J5IjpbLTE3MTA5NDY4ODEsLTY5MTUwMDYwMSwxNj
+A2MzM5NTc4LDIwNTY0NTkzMzUsLTE0MzUwMDY2MzUsMzIyOTQ2
+ODYyLDE3NjA1OTY1NjIsLTIxOTgzOTc3MywtMTgxMjUxMzkzNS
+w2OTExODYzOTYsNjU2OTgxODY3LC03ODM0NTY5ODYsMTY4MTI1
+ODAxNiwtNDkyMDg0Njk4LDUzMDYyOTI3NCwtMjA4ODc0NjYxMl
+19
 -->
