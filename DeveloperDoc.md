@@ -13,13 +13,16 @@ Dieses Dokument wird in zwei Hauptteile aufgeteilt. Einmal der Chatbot an sich u
 ### Einleitung <a name="chatbot-introduction"></a>
 Der Chatbot Teil ist die Hauptfunktion dieses Projektes. Es ist die erste Seite die ein Admin sieht und die einzige Seite die ein normaler Benutzer sieht.
 Folgendes passiert wenn die Seite geöffnet wird.
-1.  dwada
+1.  [Den Status überprüfen](#check-state)
+2. [W
+
+#### Status überprüfen <a name="check-state"></a>
 
 
 ## Adminbereich <a name="admintool-section-start"></a>
 ### Einleitung <a name="admintool-introduction"></a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTI1MTM5MzUsNjkxMTg2Mzk2LDY1Nj
-k4MTg2NywtNzgzNDU2OTg2LDE2ODEyNTgwMTYsLTQ5MjA4NDY5
-OCw1MzA2MjkyNzQsLTIwODg3NDY2MTJdfQ==
+eyJoaXN0b3J5IjpbNDYxNTU5MjYyLC0xODEyNTEzOTM1LDY5MT
+E4NjM5Niw2NTY5ODE4NjcsLTc4MzQ1Njk4NiwxNjgxMjU4MDE2
+LC00OTIwODQ2OTgsNTMwNjI5Mjc0LC0yMDg4NzQ2NjEyXX0=
 -->
