@@ -5,7 +5,7 @@ Dieses Dokument wird in drei Hauptteile aufgeteilt. Einmal allgemein, der Chatbo
 ## Inhaltsverzeichnis
 ### [Allgemein](#general-section-start)
 1. [Einleitung](#general-introduction)
-2. [Technologien](#technolo
+2. [Technologien](#technologies)
 
 ### [Chatbot](#chatbot-section-start)<a name="tableofcontent-chatbot"></a>
  1. [Einleitung](#chatbot-introduction)
@@ -18,7 +18,7 @@ Dieses Dokument wird in drei Hauptteile aufgeteilt. Einmal allgemein, der Chatbo
 
 ## Allgemein <a name="general-section-start"></a>
 ### Einleitung <a name="general-introduction"></a>
-
+### Technologien <a name="technologies"></a>
 
 ## Chatbot <a name="chatbot-section-start"></a>
 ### Einleitung <a name="chatbot-introduction"></a>
@@ -54,10 +54,10 @@ Um den Status zu überprüfen verwenden wir unseren Service  [<code>getStatus()<
 ### Einleitung <a name="admintool-introduction"></a>
 In diesem Teil des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyOTU2MzkyNSwtNjkxNTAwNjAxLDE2MD
-YzMzk1NzgsMjA1NjQ1OTMzNSwtMTQzNTAwNjYzNSwzMjI5NDY4
-NjIsMTc2MDU5NjU2MiwtMjE5ODM5NzczLC0xODEyNTEzOTM1LD
-Y5MTE4NjM5Niw2NTY5ODE4NjcsLTc4MzQ1Njk4NiwxNjgxMjU4
-MDE2LC00OTIwODQ2OTgsNTMwNjI5Mjc0LC0yMDg4NzQ2NjEyXX
-0=
+eyJoaXN0b3J5IjpbLTY1MDAyNDY1LC02OTE1MDA2MDEsMTYwNj
+MzOTU3OCwyMDU2NDU5MzM1LC0xNDM1MDA2NjM1LDMyMjk0Njg2
+MiwxNzYwNTk2NTYyLC0yMTk4Mzk3NzMsLTE4MTI1MTM5MzUsNj
+kxMTg2Mzk2LDY1Njk4MTg2NywtNzgzNDU2OTg2LDE2ODEyNTgw
+MTYsLTQ5MjA4NDY5OCw1MzA2MjkyNzQsLTIwODg3NDY2MTJdfQ
+==
 -->
