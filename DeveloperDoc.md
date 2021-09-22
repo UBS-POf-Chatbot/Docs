@@ -13,16 +13,18 @@ Dieses Dokument wird in zwei Hauptteile aufgeteilt. Einmal der Chatbot an sich u
 ### Einleitung <a name="chatbot-introduction"></a>
 Der Chatbot Teil ist die Hauptfunktion dieses Projektes. Es ist die erste Seite die ein Admin sieht und die einzige Seite die ein normaler Benutzer sieht.
 Folgendes passiert wenn die Seite geöffnet wird.
-1.  [Den Status überprüfen](#check-state)
-2. [W
+1. [Den Status überprüfen](#check-state)
+2. [Wörter Vorschläge laden](#load-tag-suggestions)
+3. 
 
 #### Status überprüfen <a name="check-state"></a>
-
+#### Wörter Vorschläge laden<a name="load-tag-suggestions"></a>
 
 ## Adminbereich <a name="admintool-section-start"></a>
 ### Einleitung <a name="admintool-introduction"></a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYxNTU5MjYyLC0xODEyNTEzOTM1LDY5MT
-E4NjM5Niw2NTY5ODE4NjcsLTc4MzQ1Njk4NiwxNjgxMjU4MDE2
-LC00OTIwODQ2OTgsNTMwNjI5Mjc0LC0yMDg4NzQ2NjEyXX0=
+eyJoaXN0b3J5IjpbLTE0OTUyOTk1NDYsLTE4MTI1MTM5MzUsNj
+kxMTg2Mzk2LDY1Njk4MTg2NywtNzgzNDU2OTg2LDE2ODEyNTgw
+MTYsLTQ5MjA4NDY5OCw1MzA2MjkyNzQsLTIwODg3NDY2MTJdfQ
+==
 -->
