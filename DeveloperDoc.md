@@ -26,8 +26,8 @@ Wenn der Chatbot geöffnet wird wird als erstes eine Test Abfrage zum Server ges
 ![Checking state of server](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/checkStatus.jpg)
 
 Um den Status zu überprüfen verwenden wir unseren Service  [<code>getStatus()</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#getStatus()). Diese Methode ruft folgende Methoden auf.
-1. [<code>questionSuggestions(String amountQuestionsString)</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#questionSuggestions(java.lang.String)).
-2. [<code>search(String input, boolean affectStatistics)</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/IntentFinderNew.html#search(java.lang.String,boolean)))
+1. [<code>questionSuggestions(String amountQuestionsString)</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#questionSuggestions(java.lang.String))
+2. [<code>search(String input, boolean affectStatistics)</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/IntentFinderNew.html#search(java.lang.String,boolean))
 
 
 
@@ -40,7 +40,7 @@ Um den Status zu überprüfen verwenden wir unseren Service  [<code>getStatus()<
 ## Adminbereich <a name="admintool-section-start"></a>
 ### Einleitung <a name="admintool-introduction"></a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyMzYyMzQ0NiwxNjA2MzM5NTc4LDIwNT
+eyJoaXN0b3J5IjpbLTY5MTUwMDYwMSwxNjA2MzM5NTc4LDIwNT
 Y0NTkzMzUsLTE0MzUwMDY2MzUsMzIyOTQ2ODYyLDE3NjA1OTY1
 NjIsLTIxOTgzOTc3MywtMTgxMjUxMzkzNSw2OTExODYzOTYsNj
 U2OTgxODY3LC03ODM0NTY5ODYsMTY4MTI1ODAxNiwtNDkyMDg0
