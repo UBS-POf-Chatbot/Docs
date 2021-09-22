@@ -3,7 +3,9 @@ In diesem Dokument wird beschrieben wie der Chatbot funktioniert und wo was zu f
 Dieses Dokument wird in drei Hauptteile aufgeteilt. Einmal allgemein, der Chatbot an sich und den Adminbereich.
 
 ## Inhaltsverzeichnis
-### [Allgemein]()
+### [Allgemein](#general-section-start)
+1. [Einleitung](#general-introduction)
+2. [Technologien](#technolo
 
 ### [Chatbot](#chatbot-section-start)<a name="tableofcontent-chatbot"></a>
  1. [Einleitung](#chatbot-introduction)
@@ -14,8 +16,8 @@ Dieses Dokument wird in drei Hauptteile aufgeteilt. Einmal allgemein, der Chatbo
 ### [Adminbereich](#admintool-section-start)<a name="tableofcontent-admintool"></a>
 1. [Einleitung](#admintool-introduction)
 
-## Allgemein
-### Einleitung
+## Allgemein <a name="general-section-start"></a>
+### Einleitung <a name="general-introduction"></a>
 
 
 ## Chatbot <a name="chatbot-section-start"></a>
@@ -52,7 +54,7 @@ Um den Status zu überprüfen verwenden wir unseren Service  [<code>getStatus()<
 ### Einleitung <a name="admintool-introduction"></a>
 In diesem Teil des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MjQyODE5MSwtNjkxNTAwNjAxLDE2MD
+eyJoaXN0b3J5IjpbMTMyOTU2MzkyNSwtNjkxNTAwNjAxLDE2MD
 YzMzk1NzgsMjA1NjQ1OTMzNSwtMTQzNTAwNjYzNSwzMjI5NDY4
 NjIsMTc2MDU5NjU2MiwtMjE5ODM5NzczLC0xODEyNTEzOTM1LD
 Y5MTE4NjM5Niw2NTY5ODE4NjcsLTc4MzQ1Njk4NiwxNjgxMjU4
