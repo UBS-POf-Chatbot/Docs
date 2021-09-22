@@ -1,6 +1,5 @@
 # Entwickler Dokumentation
-In diesem Dokument wird beschrieben wie der Chatbot funktioniert damit zukünftige Entwickler ohne Probleme den Chatbot weiterentwickeln können.
-
+In diesem Dokument wird beschrieben wie der Chatbot funktioniert und wo was zu finden ist, damit zukünftige Entwickler ohne Probleme den Chatbot weiterentwickeln können.
 Dieses Dokument wird in zwei Hauptteile aufgeteilt. Einmal der Chatbot an sich und einmal den Adminbereich.
 
 ## Inhaltsverzeichnis
@@ -20,7 +19,7 @@ Folgende sachen passieren auf dieser Seite wenn sie geöffnet wird
 ## Adminbereich <a name="admintool-section-start"></a>
 ### Einleitung <a name="admintool-introduction"></a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5MzE5OTE2LC03ODM0NTY5ODYsMTY4MT
+eyJoaXN0b3J5IjpbNjU2OTgxODY3LC03ODM0NTY5ODYsMTY4MT
 I1ODAxNiwtNDkyMDg0Njk4LDUzMDYyOTI3NCwtMjA4ODc0NjYx
 Ml19
 -->
