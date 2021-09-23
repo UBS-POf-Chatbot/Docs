@@ -3,7 +3,7 @@ In diesem Dokument wird beschrieben wie der Chatbot funktioniert und wo was zu f
 Dieses Dokument wird in drei Hauptteile aufgeteilt. Einmal allgemein, der Chatbot an sich und den Adminbereich.
 
 ## Inhaltsverzeichnis
-### [Allgemein](#general-section-start)
+### [Allgemein](#general-section-start)<a name="tableofcontent-general"></a>
 1. [Einleitung](#general-introduction)
 2. [Technologien](#technologies)
 
@@ -76,11 +76,11 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6WzE0MDA4NTg0NzUsNzE3ODc3MzYxLC0xNDYy
-MTg3NDU2LC0yMzc4NjM0OTksLTY1MDAyNDY1LC02OTE1MDA2MD
-EsMTYwNjMzOTU3OCwyMDU2NDU5MzM1LC0xNDM1MDA2NjM1LDMy
-Mjk0Njg2MiwxNzYwNTk2NTYyLC0yMTk4Mzk3NzMsLTE4MTI1MT
-M5MzUsNjkxMTg2Mzk2LDY1Njk4MTg2NywtNzgzNDU2OTg2LDE2
-ODEyNTgwMTYsLTQ5MjA4NDY5OCw1MzA2MjkyNzQsLTIwODg3ND
-Y2MTJdfQ==
+wiaGlzdG9yeSI6WzkxODU1OTY2MywxNDAwODU4NDc1LDcxNzg3
+NzM2MSwtMTQ2MjE4NzQ1NiwtMjM3ODYzNDk5LC02NTAwMjQ2NS
+wtNjkxNTAwNjAxLDE2MDYzMzk1NzgsMjA1NjQ1OTMzNSwtMTQz
+NTAwNjYzNSwzMjI5NDY4NjIsMTc2MDU5NjU2MiwtMjE5ODM5Nz
+czLC0xODEyNTEzOTM1LDY5MTE4NjM5Niw2NTY5ODE4NjcsLTc4
+MzQ1Njk4NiwxNjgxMjU4MDE2LC00OTIwODQ2OTgsNTMwNjI5Mj
+c0XX0=
 -->
