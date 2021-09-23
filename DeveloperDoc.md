@@ -30,7 +30,6 @@ In diesem Abschnitt zählen wir die einzelnen Technologien auf damit klar ist wa
 - Hibernate für DB Connection und abfragen
 #### Frontend
 - Typescript
-### Für die Zukunft
 
 ### Allgemeine wichtige Informationen
 #### Datenbank
@@ -40,7 +39,8 @@ TODO: persistence und c3po erklären
 TODO: entity manager open und close sachen
 ##### Datenbank abfragen
 TODO: DAOs erklären, kleiner einblick in createQuery()
-#### 
+
+### Ideen für weiterentwicklung
 
 ## Chatbot <a name="chatbot-section-start"></a>
 ### Einleitung <a name="chatbot-introduction"></a>
@@ -76,7 +76,7 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6WzkxODU1OTY2MywxNDAwODU4NDc1LDcxNzg3
+wiaGlzdG9yeSI6WzYwMTM3OTQ1OCwxNDAwODU4NDc1LDcxNzg3
 NzM2MSwtMTQ2MjE4NzQ1NiwtMjM3ODYzNDk5LC02NTAwMjQ2NS
 wtNjkxNTAwNjAxLDE2MDYzMzk1NzgsMjA1NjQ1OTMzNSwtMTQz
 NTAwNjYzNSwzMjI5NDY4NjIsMTc2MDU5NjU2MiwtMjE5ODM5Nz
