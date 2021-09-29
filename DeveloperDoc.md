@@ -217,7 +217,7 @@ Auf folgendes sollte geachtet werden.
 <sup>[1] Wir empfehlen es auf <code>create</code> zu stellen, da es zuerst alles löscht und danach neu erstellt. Mit <code>update</code>, kriegt man doppelte Daten.</sup>
 
 <sup>[2] In C3PO haben wir eine Zeit definiert mit welcher wir bestimmen wie lange eine einzelne Verbindung zur Datenbank bestehen kann.
-Bei Online Datenbanken kann es teilweise länger dauern diese zu befüllen, als was wir der Verbindung Zeit geben. Falls das der Fall ist, müssen wie C3PO kurz anpassen.
+Bei Online Datenbanken kann es teilweise länger dauern diese zu befüllen, als was wir der Verbindung Zeit geben. Falls das der Fall ist, müssen wir C3PO kurz anpassen.
 Gehe dazu zum Abschnitt [C3PO konfigurieren](#c3po-konfigurieren).</sup>
 
 Wenn das **Persistence** entsprechend angepasst wurde, kann man jetzt <code>CreateDB</code> ausführen und warten bis es fertig ist mit dem befüllen der Datenbank.
