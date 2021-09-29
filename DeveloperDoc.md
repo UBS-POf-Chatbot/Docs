@@ -164,7 +164,7 @@ Das fertige Persistence würde jetzt also wie folgt aussehen.
 
 ---
 
-Mehr zu Hibernate kann man [hier](https://hibernate.org/orm/documentation/) finden
+Mehr zu Hibernate kann man [hier](https://hibernate.org/orm/documentation/) finden.
 
 ##### C3PO konfigurieren
 
