@@ -12,6 +12,17 @@ der Chatbot an sich und den Adminbereich.
 
 1. [Einleitung](#general-introduction)
 2. [Technologien](#technologies)
+   1. [Allgemein](#projekt-allgemein)
+   2. [Backend](#backend)
+   3. [Frontend](#frontend)
+3. [Allgemein wichtige Informationen](#allgemeine-wichtige-informationen)
+   1. [Datenbank](#datenbank)
+      1. [Hibernate konfigurieren](#hibernate-konfigurieren)
+      2. [C3PO konfigurieren](#c3po-konfigurieren)
+      3. [Datenbank Abfragen](#datenbank-abfragen)
+   2. [Ideen für die Weiterentwicklung](#ideen-fr-weiterentwicklung)
+
+---
 
 ### [Chatbot](#chatbot-section-start)<a name="tableofcontent-chatbot"></a>
 
@@ -19,6 +30,8 @@ der Chatbot an sich und den Adminbereich.
 2. [Den Status überprüfen](#check-state)
 3. [Char counter laden](#load-char-counter)
 4. [Den Chatbot initialisieren](#init-chatbot)
+
+---
 
 ### [Adminbereich](#admintool-section-start)<a name="tableofcontent-admintool"></a>
 
@@ -60,9 +73,9 @@ In unserem Projekt verwenden wir [**Hibernate**](#hibernate-konfigurieren) für 
 Abfragen. Für das connection pooling und sicherstellen das connections wieder geschlossen werden benutzen wir [**
 C3PO**](#c3po-konfigurieren).
 
-##### Hibernate konfigurieren <a name="hibernate-konfigurieren"></a>
+##### Hibernate konfigurieren
 
-Im POM haben wir Hibernate eingebunden, wir verwenden die Version 5.4.29.
+Im **pom.xml** haben wir Hibernate eingebunden, wir verwenden die Version 5.4.29.
 
 ```xml
 <dependency>
@@ -135,13 +148,13 @@ Ein Beispiel für das Einbinden eines MySQL Treibers.
 <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
 ```
 
-##### C3PO konfigurieren <a name="c3po-konfigurieren"></a>
+##### C3PO konfigurieren
 
 ##### Datenbank abfragen
 
 TODO: DAOs erklären, kleiner einblick in createQuery()
 
-### Ideen für weiterentwicklung
+#### Ideen für weiterentwicklung
 
 ---
 
@@ -191,4 +204,5 @@ TODO ALLES DANACH
 
 In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
 
+---
 <sup>Autor: Tim Irmler</sup>
