@@ -72,15 +72,3 @@ TODO ALLES DANACH
 ## Adminbereich <a name="admintool-section-start"></a>
 ### Einleitung <a name="admintool-introduction"></a>
 In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
-<!--stackedit_data:
-eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
-1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
-LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6WzYwMTM3OTQ1OCwxNDAwODU4NDc1LDcxNzg3
-NzM2MSwtMTQ2MjE4NzQ1NiwtMjM3ODYzNDk5LC02NTAwMjQ2NS
-wtNjkxNTAwNjAxLDE2MDYzMzk1NzgsMjA1NjQ1OTMzNSwtMTQz
-NTAwNjYzNSwzMjI5NDY4NjIsMTc2MDU5NjU2MiwtMjE5ODM5Nz
-czLC0xODEyNTEzOTM1LDY5MTE4NjM5Niw2NTY5ODE4NjcsLTc4
-MzQ1Njk4NiwxNjgxMjU4MDE2LC00OTIwODQ2OTgsNTMwNjI5Mj
-c0XX0=
--->
