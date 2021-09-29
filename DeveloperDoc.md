@@ -78,11 +78,13 @@ C3PO**](#c3po-konfigurieren).
 Im **pom.xml** haben wir Hibernate eingebunden, wir verwenden die Version 5.4.29.
 
 ```xml
-<dependency>
-    <groupId>org.hibernate</groupId>
-    <artifactId>hibernate-core</artifactId>
-    <version>5.4.29.Final</version>
-</dependency>
+<dependencies>
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>5.4.29.Final</version>
+    </dependency>
+</dependencies>
 ```
 
 ---
