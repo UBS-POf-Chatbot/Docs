@@ -109,5 +109,3 @@ Sie können auch nach Wörter suchen.
 ### Frage<a name="admintool-question"></a>
 ### Einstellung<a name="admintool-setting"></a>
 ### Abmelden<a name="admintool-exit"></a>
-
-<sup>Autor: Sarah Ambi</sup>
