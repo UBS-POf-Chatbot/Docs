@@ -4,6 +4,8 @@ In diesem Dokument wird beschrieben wie der Chatbot funktioniert und wo was zu f
 ohne Probleme den Chatbot weiterentwickeln können. Dieses Dokument wird in drei Hauptteile aufgeteilt. Einmal allgemein,
 der Chatbot an sich und den Adminbereich.
 
+---
+
 ## Inhaltsverzeichnis
 
 ### [Allgemein](#general-section-start)<a name="tableofcontent-general"></a>
@@ -21,6 +23,8 @@ der Chatbot an sich und den Adminbereich.
 ### [Adminbereich](#admintool-section-start)<a name="tableofcontent-admintool"></a>
 
 1. [Einleitung](#admintool-introduction)
+
+---
 
 ## Allgemein <a name="general-section-start"></a>
 
@@ -52,19 +56,94 @@ In diesem Abschnitt zählen wir die einzelnen Technologien auf damit klar ist wa
 
 #### Datenbank
 
-##### Datenbank konfigurieren
+In unserem Projekt verwenden wir [**Hibernate**](#hibernate-konfigurieren) für die Datenbank verbindung und alle
+Abfragen. Für das connection pooling und sicherstellen das connections wieder geschlossen werden benutzen wir [**
+C3PO**](#c3po-konfigurieren).
 
-TODO: persistence und c3po erklären
+##### Hibernate konfigurieren <a name="hibernate-konfigurieren"></a>
 
-##### Verbindung mit Datenbank herstellen
+Im POM haben wir Hibernate eingebunden, wir verwenden die Version 5.4.29.
 
-TODO: entity manager open und close sachen
+```xml
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>5.4.29.Final</version>
+</dependency>
+```
+
+---
+Hibernate wird dazu verwendet in den verschiedenen Dialekten, ohne Probleme eine verbindung zur Datenbank zu
+gewährleisten. Dies ermöglichte es, ohne viel Code zu ändern in verschiedenen Umgebungen zu arbeiten.
+
+So konnten wir zum Beispiel lokal auf unseren Rechner **MySQL** verwenden während wir auf unserer
+Testumgebung, [Heroku](https://www.heroku.com/), **PostgreSQL** und auf unserer Production in der UBS Umgebung
+**Microsoft SQL Server** verwenden.
+
+###### Verbindung zu Datenbank
+Um die Verbindung zur Datenbank einzustellen, müssen folgende Stellen im Persistence abgeändert werden.
+
+```xml
+<properties>
+    <property name="hibernate.dialect" value=""/>
+    <property name="javax.persistence.jdbc.url" value=""/>
+    <property name="javax.persistence.jdbc.user" value=""/>
+    <property name="javax.persistence.jdbc.password" value=""/>
+    <property name="javax.persistence.jdbc.driver" value=""/>
+</properties>
+```
+---
+In der ersten Linie konfiguriert man den Dialekt. Also welche Datenbank Sprache man verwendet.
+Eine Liste mit möglichen Dialekten findet man [hier](https://www.javatpoint.com/dialects-in-hibernate).
+
+Ein Beispiel für MySQL 8 wäre folgend.
+
+```xml
+<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+```
+---
+
+In der zweiten Linie konfiguriert man die URL. Die URL erklärt Hibernate wo die Datenbank zu finden ist und noch einige weitere optionale Informationen kann man hinzufügen.
+Eine URL ist immer ein wenig anders, abhängig von eurem gewählten Dialekt. Euer Datenbank Anbieter sollte im Normalfall direkt die korrekte URL anzeigen, 
+welche ihr nur noch kopieren müsst.
+
+Ein Beispiel für eine Verbindung zu einer lokalen MySQL Datenbank.
+```XML
+<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/db"/>
+```
+
+---
+
+Die nächsten zwei Linien konfiguriert man den Benutzer, mit welchem man die Datenbank verwenden will.
+Zuerst schreibt man den Namen des Users und danach das Passwort. Falls der Benutzer kein Passwort hat, kann man es einfach leer lassen.
+
+Bedenke das Hibernate nur sachen machen darf welche der Benutzer darf. Wenn also der Benutzer nur leserechte hat, kann hibernate auch nur lesen.
+
+Ein Beispiel für einen Benutzer ohne Passwort.
+```xml
+<property name="javax.persistence.jdbc.user" value="root"/>
+<property name="javax.persistence.jdbc.password" value=""/>
+```
+
+---
+
+In der letzten Linie definiert man den Treiber mit welchem Hibernate die Abfragen zur Datenbank macht. Im normalfall gibt es für jede Datenbank einen offiziellen Treiber. 
+Sobald ein geeigneter Treiber gefunden wurde diesen Herunterladen und in das Projekt einbinden, bevorzugt ist es hier das über **Maven** zu machen. Einfach ein Dependency in das **pom.xml** tun.
+
+Ein Beispiel für das Einbinden eines MySQL Treibers.
+```xml
+<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+```
+
+##### C3PO konfigurieren <a name="c3po-konfigurieren"></a>
 
 ##### Datenbank abfragen
 
 TODO: DAOs erklären, kleiner einblick in createQuery()
 
 ### Ideen für weiterentwicklung
+
+---
 
 ## Chatbot <a name="chatbot-section-start"></a>
 
@@ -103,6 +182,8 @@ TODO ALLES DANACH
 ### Char counter laden<a name="load-char-counter"></a>
 
 ### Chatbot initialisieren<a name="init-chatbot"></a>
+
+---
 
 ## Adminbereich <a name="admintool-section-start"></a>
 
