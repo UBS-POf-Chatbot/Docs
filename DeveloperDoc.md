@@ -151,6 +151,18 @@ Ein Beispiel für das Einbinden eines MySQL Treibers.
 ```
 
 ---
+Das fertige Persistence würde jetzt also wie folgt aussehen.
+```xml
+<properties>
+    <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+    <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/db"/>
+    <property name="javax.persistence.jdbc.user" value="root"/>
+    <property name="javax.persistence.jdbc.password" value=""/>
+    <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+</properties>
+```
+
+---
 
 Mehr zu Hibernate kann man [hier](https://hibernate.org/orm/documentation/) finden
 
@@ -211,4 +223,4 @@ TODO ALLES DANACH
 In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
 
 ---
-<sup>Autor: Tim Irmler</sup>
+<sup>Autor: [Tim Irmler](https://github.com/zwazel) </sup>
