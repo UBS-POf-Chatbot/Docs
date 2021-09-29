@@ -109,3 +109,5 @@ TODO ALLES DANACH
 ### Einleitung <a name="admintool-introduction"></a>
 
 In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
+
+<sup>Autor: Tim Irmler</sup>
