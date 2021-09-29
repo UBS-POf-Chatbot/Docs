@@ -1,4 +1,4 @@
-#Benutzer Dokumentation
+# Benutzer Dokumentation
 In diesem Dokument wird beschrieben, wo man was findet, damit der Benutzer mit der Seite umgehen kann.
 Dieses Dokument wird in zwei Hauptteile aufgeteilt. Einmal Chatbot an sich selbst und den Adminbereich.
 
@@ -20,7 +20,7 @@ Dieses Dokument wird in zwei Hauptteile aufgeteilt. Einmal Chatbot an sich selbs
 10. [Einstellung](#admintool-setting)
 11. [Abmelden](#admintool-exit)
 
-##Chatbot<a name="chatbot"></a>
+## Chatbot<a name="chatbot"></a>
 ### Einleitung<a name="chatbot-introduction"></a>
 In diesem Abschnitt des Dokumentes beschreiben wir, was alles der Chatbot an sich machen kann.
 Wir zählen die Funktionen auf und wie man die benutzt.
@@ -29,12 +29,12 @@ Wir zählen die Funktionen auf und wie man die benutzt.
 Wenn Sie Chatbot öffnen, sehen Sie dieses Bild.
 ![chatbot with function](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/chatbot.JPG)
 
-####Vorschläge
+#### Vorschläge
 Als Erstes sehen Sie eine Begrüssung von Chatbot mit Vorschlagfragen.
 Diese Vorschläge werden anhand von den heute meist beliebte Fragen angezeigt.
 Die Fragestellung können Sie in Adminbereich ändern, dies werden Sie in einem späteren Zeit sehen.
 
-####Chatverlauf
+#### Chatverlauf
 Rechts von Stima den Namen des Chatbot, sehen Sie ein Pfeil, der nach unten zeigt.
 Das ist Knopf, der den Chatverlauf in Textdatei herunterladen.
 Falls die Datei brauchen, können Sie es speichern.
@@ -42,14 +42,14 @@ Bei der Öffnung der Datei sehen Sie das Datum mit den genaueren Uhrzeiten und
 wer geschrieben hat und was geschrieben wurde.
 Darauf sehen Sie, wann und was der Chatbot geantwortet mit der genauen Zeit.
 
-####Autovervollständigung
+#### Autovervollständigung
 Wir haben den Autovervollständigung eingrichtet wie auf dem Bild zu erkennen ist.
 Wenn man in das Feld "ab" schreibt, werden zwei Vorschläge angezeigt.
 Also sobald Sie auf das Eingabefeld anfangen zu schreiben, sehen Sie automatisch Fragen, die passen würden.
 Die können Sie wählen und es gibt Ihnen eine Antwort dazu. Falls ein Wort nicht da ist, können Sie es späteren in Adminbereich hinzufügen.
 
-##Adminbereich<a name="admintool"></a>
-###Einleitung<a name="admintool-introduction"></a>
+## Adminbereich<a name="admintool"></a>
+### Einleitung<a name="admintool-introduction"></a>
 In diesem Abschnitt des Dokumentes beschreiben, dass Adminbereich.
 Damit Sie sich mit dem Adminbereich zurechtkommen.
 
@@ -61,7 +61,7 @@ Mit dem Klick auf dem Link werden Sie dort gelangen.
 Nach der Anmeldung können mit dem Adminbereich arbeiten.
 Bevor Sie das machen, geben Sie ihre Email-Adresse und das Passwort.
 
-###Übersicht<a name="admintool-home"></a>
+### Übersicht<a name="admintool-home"></a>
 Den Admintool werden mit Statistiken begrüsst.
 Sie sehen wie viel Antwort der Chatbot gegeben hat.
 Diese in Tagen, Wochen, Monate, Jahren oder seit der letzten Anmeldung.
@@ -70,7 +70,7 @@ Auf der linken Seite sehen Sie die Menüleiste.
 Wenn sie mit der Maus durchstreifen sehen Sie, was die Icons alles bedeuten.
 Das erste ist Home → als der Übersicht mit Statistiken.
 
-###Antworten<a name="admintool-tag"></a>
+### Antworten<a name="admintool-tag"></a>
 In zweite Seite ist für die Antworten zuständig.
 Sie können hier Antworten hinzufügen, bearbeiten, löschen.
 Wenn Sie auf Antworten hinzufügen klicken, zeigt das Hinzufügen Formular an.
@@ -102,10 +102,10 @@ Sie sehen der Knopf verändert Sie zu darunter.
 Wenn Sie alle Antworten, die unvollständig sind, anzeigen wollen, können Sie auf Antwort ohne Tags.
 Das sind Antworten, die keine Schlagwörter hat.
 Sie können auch nach Wörter suchen.
-###Schlagwörter<a name="admintool-tag"></a>
-###Matches<a name="admintool-match"></a>
-###Blacklist<a name="admintool-blacklist"></a>
-###Datei<a name="admintool-file"></a>
-###Frage<a name="admintool-question"></a>
-###Einstellung<a name="admintool-setting"></a>
-###Abmelden<a name="admintool-exit"></a>
+### Schlagwörter<a name="admintool-tag"></a>
+### Matches<a name="admintool-match"></a>
+### Blacklist<a name="admintool-blacklist"></a>
+### Datei<a name="admintool-file"></a>
+### Frage<a name="admintool-question"></a>
+### Einstellung<a name="admintool-setting"></a>
+### Abmelden<a name="admintool-exit"></a>
