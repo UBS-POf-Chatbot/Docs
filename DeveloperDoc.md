@@ -129,7 +129,7 @@ Ein Beispiel für eine Verbindung zu einer lokalen MySQL Datenbank.
 
 ---
 
-Die nächsten zwei Linien konfiguriert man den Benutzer, mit welchem man die Datenbank verwenden will.
+In den nächsten zwei Linien konfiguriert man den Benutzer, mit welchem man die Datenbank verwenden will.
 Zuerst schreibt man den Namen des Users und danach das Passwort. Falls der Benutzer kein Passwort hat, kann man es einfach leer lassen.
 
 Bedenke das Hibernate nur sachen machen darf welche der Benutzer darf. Wenn also der Benutzer nur leserechte hat, kann hibernate auch nur lesen.
@@ -149,6 +149,10 @@ Ein Beispiel für das Einbinden eines MySQL Treibers.
 ```xml
 <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
 ```
+
+---
+
+Mehr zu Hibernate kann man [hier](https://hibernate.org/orm/documentation/) finden
 
 ##### C3PO konfigurieren
 
