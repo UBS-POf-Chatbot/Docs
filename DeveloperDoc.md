@@ -18,9 +18,12 @@ der Chatbot an sich und den Adminbereich.
 3. [Allgemein wichtige Informationen](#allgemeine-wichtige-informationen)
    1. [Datenbank](#datenbank)
       1. [Hibernate konfigurieren](#hibernate-konfigurieren)
+         1. [Verbindung zu Datenbank](#verbindung-zu-datenbank)
       2. [C3PO konfigurieren](#c3po-konfigurieren)
       3. [Datenbank Abfragen](#datenbank-abfragen)
-   2. [Ideen für die Weiterentwicklung](#ideen-fr-weiterentwicklung)
+   2. [Datenbank mit Testdaten befüllen](#datenbank-mit-testdaten-befllen)
+      1. [Testdaten ändern oder hinzufügen](#testdaten-ndern-oder-hinzufgen)
+   3. [Ideen für die Weiterentwicklung](#ideen-fr-weiterentwicklung)
 
 ---
 
@@ -161,18 +164,72 @@ Das fertige Persistence würde jetzt also wie folgt aussehen.
     <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
 </properties>
 ```
+---
+###### Weitere Konfigurationen
+Nach der Konfiguration der Verbindung zur Datenbank haben wir noch zwei weitere Linien
+```xml
+<property name="hibernate.show_sql" value=""/>
+<property name="hibernate.hbm2ddl.auto" value=""/>
+```
+
+---
+
+<code>show_sql</code> kann einen Wert von entweder <code>true</code> oder <code>false</code> nehmen.
+
+Wenn man diesen auf <code>true</code> setzt, gibt Hibernate alle SQL Befehle in die Konsole aus.
+
+---
+<code>hbm2ddl.auto</code> definiert die Art und Weise wie Hibernate mit Änderungen in der Datenbank umgehen soll.
+Folgende Werte können verwendet werden.
+- <code>validate</code>: Validiert das Schema, macht keine Änderungen an der Datenbank
+- <code>update</code>: Fügt neue Tabellen und Spalten hinzu, löscht aber nie etwas.
+- <code>create</code>: Löscht immer das ganze Schema zuerst und erstellt es dann neu.
+- <code>create-drop</code>: Zuerst gleich wie <code>create</code>, danach löscht es das ganze Schema sobald das <code>SessionFactory</code> Objekt geschlossen wurde. Typischerweise, sobald das Programm beendet wird.
+- <code>none</code>: Macht nichts.
 
 ---
 
 Mehr zu Hibernate kann man [hier](https://hibernate.org/orm/documentation/) finden.
 
+---
+
 ##### C3PO konfigurieren
+
+TODO: c3po selber erstmal versuchen zu verstehen und dann ein wenig darüber reden.... :)
+
+---
 
 ##### Datenbank abfragen
 
 TODO: DAOs erklären, kleiner einblick in createQuery()
 
+---
+
+#### Datenbank mit Testdaten befüllen
+Um das Programm zu Testen möchte man vermutlich eine Datenbank mit Testdaten haben. Für diesen Zweck haben wir die Datei 
+<code>com/ubs/backend/demo/CreateDB.java</code> für das tatsächliche befüllen der Datenbank und die Datei <code>com/ubs/backend/demo/DBData.java</code> mit den Daten die wir in die Datenbank laden wollen.
+
+Wir empfehlen vor dem Ausführen der Datei <code>CreateDB</code> die **Persistence** konfiguration zu überprüfen und womöglich zu ändern.
+Auf folgendes sollte geachtet werden.
+- Ist **Persistence** mit der *richtigen* Datenbank verbunden?
+- Ist <code>hbm2ddl.auto</code> auf <code>update</code> oder </code> create? Wir empfehlen es auf <code>create</code> zu stellen, da es zuerst alles löscht und danach neu erstellt. Mit <code>update</code>, kriegt man doppelte Daten.
+- Ist die Datenbank lokal oder online? [1]
+
+<sup>[1] In C3PO haben wir eine Zeit definiert mit welcher wir bestimmen wie lange eine einzelne Verbindung zur Datenbank bestehen kann.
+Bei Online Datenbanken kann es teilweise länger dauern diese zu befüllen, als was wir der Verbindung Zeit geben. Falls das der Fall ist, müssen wie C3PO kurz anpassen.
+Gehe dazu zum Abschnitt [C3PO konfigurieren](#c3po-konfigurieren).<sup>
+
+Wenn das **Persistence** entsprechend angepasst wurde, kann man jetzt <code>CreateDB</code> ausführen und warten bis es fertig ist mit dem befüllen der Datenbank.
+
+---
+
+##### Testdaten ändern oder hinzufügen
+In der Datei <code>com/ubs/backend/demo/DBData.java</code> sind alle Testdaten welche nachher in die Datenbank gespeichert werden.
+In dieser Datei müssen jetzt nur noch Inhalte gelöscht, bearbeitet oder hinzugefügt werden.
+
 #### Ideen für weiterentwicklung
+
+TODO
 
 ---
 
