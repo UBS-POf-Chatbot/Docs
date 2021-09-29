@@ -189,7 +189,7 @@ Folgende Werte können verwendet werden.
 
 ---
 
-Mehr zu Hibernate kann man [hier](https://hibernate.org/orm/documentation/) finden.
+Mehr zu Hibernate allgemein kann man [hier](https://hibernate.org/orm/documentation/) finden.
 
 ---
 
