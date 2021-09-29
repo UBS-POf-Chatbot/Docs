@@ -53,7 +53,7 @@ Die können Sie wählen und es gibt Ihnen eine Antwort dazu. Falls ein Wort nich
 In diesem Abschnitt des Dokumentes beschreiben, dass Adminbereich.
 Damit Sie sich mit dem Adminbereich zurechtkommen.
 
-###Anmelden<a name="admintool-logIn"></a>
+### Anmelden<a name="admintool-logIn"></a>
 Zuerst einmal müssen Sie wissen, wie man zum Adminbereich hinkommt.
 Eine ganz einfach Frage, Sie müssen einfach in Chatbot Admintool oder Admin eingeben.
 Mit dem Klick auf dem Link werden Sie dort gelangen.
