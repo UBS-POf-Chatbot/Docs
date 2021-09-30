@@ -57,17 +57,17 @@ Zuerst einmal wie kommt man zum Adminbereich hin.
 Sie fragen den Chatbot nach Admintool oder Admin.
 Mit dem Klick auf dem Link werden Sie dort gelangen.
 Bevor Sie mit Adminbereich arbeiten, melden Sie sich an,
-geben Sie ihre Email-Adresse und das Passwort.
+geben Sie ihre Email-Adresse und das Passwort ein.
 ![logIn-site](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/anmeldung.JPG)
 
 ### Übersicht<a name="admintool-home"></a>
 Den Adminbereich begrüsst Sie mit Statistiken.
-Eine Statistik zeigt an, wie viele Anwort der Chatbot zurückgegeben hat 
-in Tagen, Wochen, Monate, Jahren und seit der eltzten Anmeldung.
-Ebenfalls sehen Sie die Anzahl der beantwortete Antworten und die Menge von unbeantwortet Antworten.
+Eine Statistik zeigt an, wie viele Antworten der Chatbot zurückgegeben hat 
+in Tagen, Wochen, Monate, Jahren und seit der letzten Anmeldung.
+Ebenfalls sehen Sie die Anzahl der beantworteten Antworten und die Menge von unbeantwortet Antworten.
 Links davon sehen Sie die Menüleiste.
 Wenn Sie mit der Maus durch die Menüleiste durchstreifen, sehen Sie, was die Icons bedeuten.
-Das erste ist Home → die Übersicht mit Statistiken.
+Das erste ist Home die Übersicht mit Statistiken.
 
 ### Antworten<a name="admintool-tag"></a>
 Bei der zweiten Seite ist für die Antworten zuständig.
@@ -83,7 +83,7 @@ Bei Tags hinzufügen können Sie die Schlagwörter schreiben, die zur Antwort pa
 Sie können Schlagwörter benutzen, die es gibt.
 Wenn ihr Schlagwort nicht angezeigt wird, speichert es als ein neues Schlagwort.
 
-Es gibt drei Antworttyp, einmal der Typ Normal, den Typ Witz und den Typ Facts.
+Es gibt drei Antworttypen, einmal der Typ Normal, den Typ Witz und den Typ Facts.
 Der Typ Witz werden alle Witze gespeichert, der Typ Facts sind alle Informationen zum Chatbot.
 Der Typ Normal sind die restlichen, üblichen Fragen.
 
@@ -105,12 +105,17 @@ Sobald es ein Upvotes gibt, wird es 100% und umgekehrt, wenn es Downvotes, gibt 
 Aufrufe ist, wie viel es aufgerufen wurde, also wie viel Mal es gefragt wurde.
 Sie können auch filtern, ob Sie alle Typen anzeigen wollen, oder ein Bestimmtes.
 Ebenfalls können Sie die Bewertung filtern.
-Wenn Sie jetzt Bewertung filter auf 4 haben, wird alle Bewertung unter 4 angezeigt.
+Wenn Sie jetzt das Bewertungsfilter auf vier haben, wird alle Bewertung unter 4 angezeigt.
 Falls Sie alle Bewertung über 4 anschauen wollen, klicken Sie einfach auf den darüber Knopf.
 Sie sehen, der Knopf verändert Sie zu darunter.
 Sie können auch nach Antworten suchen.
 Wenn Sie alle unvollständige Antworten anzeigen wollen, können Sie auf Antwort ohne Tags ein Häkchen setzen.
 Das sind Antworten, die keine Schlagwörter hat.
+![answerpage](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/answerpage.JPG)
+Wie Sie auf dem Bild sehen, wird Vouchen als Typ Normal beschrieben. Da es kein Facts und Witz ist.
+Darunter sehen Sie die Schlagwörter, die dann die Antwort von Vouchen zurückgibt. 
+Ebenfalls sehen Sie vouchen und bürgen wurde am meisten verwendet bei der Suche.
+Rechts davon sehen Sie Anzahl Aufrufe und die Bewertung.
 
 ### Tags<a name="admintool-tag"></a>
 Auf die dritte Seite werden Schlagwörter hinzugefügt, bearbeitet und gelöscht.
@@ -125,12 +130,16 @@ Sie können auch nach Schlagwörter suchen.
 Auf der Matches-Seite können Sie Matches zurücksetzen, nicht übersetzen, blacklisten.
 Was genau ist ein Matches, wenn man Feren schreibt anstatt Ferien 
 wird es trotzdem verstehen, dass die Person nach Ferien sucht.
+![matches](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/matches.JPG)
 Doch wenn Wörter sind, die nicht richtig verstanden wird, können Sie auf nicht übersetzen klicken.
-Wenn Sie nach buchen suchen und Chatbot gibt die Antwort zu vouchen. Dann können Sie auf nicht übersetzen drücken.
-Wenn es Wörter sind, welche man nicht in Datenbank als Tag speichern will, kann man es zur Blacklist hinzufügen.
-Wenn Sie zurücksetzen werden die Upvotes und Downvotes auf null gesetzt.
-Matches setzt man zurück, wenn es nicht als Upvotes und Downvotes zählen sollten.
-Hier können Sie ebenfalls nach sortieren nach Name und Bewertung.
+Wie zum Beispiel Sie suchen nach buchen, aber Chatbot gibt die Antwort zu vouchen. Dann können Sie auf nicht übersetzen drücken.
+
+Wenn es Wörter sind, welche man nicht auf dem Chatbot speichern will, kann man es zur Blacklist hinzufügen.
+
+Wenn Sie zurücksetzen, werden die Upvotes und Downvotes auf null gesetzt.
+Matches setzt man zurück, wenn es falsch Upvotes und Downvotes gezählt wurde.
+
+Hier können Sie ebenfalls nach Name und Bewertung aufsteigend absteigend sortieren.
 Die Suchfunktion ist beim Matches auch verfügbar.
  
 ### Blacklist<a name="admintool-blacklist"></a>
@@ -153,10 +162,16 @@ Dasselbe bei unbeantwortete Fragen.
 
 ### Einstellung<a name="admintool-setting"></a>
 Bei der Einstellungen können Sie Ihr Passwort ändern.  Wenn Sie die Berechtigung haben Benutzer zu erstellen, können Sie Benutzer erstellen.
-Sie können auch ein Häkchen setzen, wenn die erstellte Benutzer auch Benutzer erstellen darf.
+Sie können auch ein Häkchen setzen, wenn die erstellte Benutzer auch das Recht zum Benutzer erstellen hat.
 Ganz unten sehen Sie alle Benutzer mit Daten, ob er Nutzer erstellen kann, wann er zuletzt angemeldet war.
+Wenn Sie auf eine Benutzer klicken, sehen Sie dieses Bild mit dem Namen. Hier haben wir es ausgeblendet.
+![setting-details](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/benutzer_bearbeiten.JPG)
 Sie können Benutzer löschen oder auch das Passwort zurücksetzen.
+Das Recht zum Benutzer erstellen können Sie auch wegnehmen.
 Dies können Sie nur machen, wenn Sie ein Admin sind.
+
+Was man noch beachten muss, man ist eingeschränkt, wenn es um die Bearbeitung um sich selbst geht.
+Sie können sich selber kein Recht geben oder nehmen und Ihr Passwort können Sie selber nicht zurücksetzen.
 
 ### Ausloggen<a name="admintool-exit"></a>
 Wenn Sie ausloggen, werden Sie direkt auf der Anmeldungsseite geleitet.
