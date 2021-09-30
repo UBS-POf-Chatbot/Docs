@@ -19,6 +19,7 @@ der Chatbot an sich und den Adminbereich.
    1. [Datenbank](#datenbank)
       1. [Hibernate konfigurieren](#hibernate-konfigurieren)
          1. [Verbindung zu Datenbank](#verbindung-zu-datenbank)
+         2. [Weitere Konfigurationen](#weitere-konfigurationen)
       2. [C3PO konfigurieren](#c3po-konfigurieren)
       3. [Datenbank Abfragen](#datenbank-abfragen)
    2. [Datenbank mit Testdaten befüllen](#datenbank-mit-testdaten-befüllen)
