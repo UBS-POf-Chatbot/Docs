@@ -230,13 +230,12 @@ Wenn man also eine Methode oder eine Abfrage ausführt, die länger braucht, kan
 
 ##### Datenbank abfragen
 
-Wir haben für Interaktionen mit der Datenbank eine generische Java Klasse namens <code>DAO</code>, zu finden in <code>[src/main/java/com/ubs/backend/classes/database/dao/DAO.java](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/dao/DAO.html) </code>.
-Diese Klasse wird für standard Befehle in der Datenbank wie z.B. <code>[select](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/dao/DAO.html#select()) </code>, <code>[insert](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/dao/DAO.html#insert(T)) </code> und <code>[remove](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/dao/DAO.html#remove(long)) </code>.
+Wir haben für Interaktionen mit der Datenbank eine generische Java Klasse namens <code>DAO</code>, zu finden in [<code>src/main/java/com/ubs/backend/classes/database/dao/DAO.java</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/dao/DAO.html).
+Diese Klasse wird für standard Befehle in der Datenbank wie z.B. [<code>select</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/dao/DAO.html#select()), [<code>insert</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/dao/DAO.html#insert(T)) und [<code>remove</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/dao/DAO.html#remove(long)).
 <br>
 Für weitere Befehle, welche Klassenspezifisch sind haben wir jeweils ein eigenes DAO für die Datenklasse erstellt.
 
-Wenn man eine Abfrage mit der Tabelle <code>Answers</code> interagieren möchte erstellt man eine Instanz der Klasse <code>[AnswerDao](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/dao/AnswerDAO.html) </code> und verwendet ihre Methoden.
-
+Wenn man eine Abfrage mit der Tabelle <code>Answers</code> interagieren möchte erstellt man eine Instanz der Klasse [<code>AnswerDao</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/dao/AnswerDAO.html) und verwendet ihre Methoden.
 Als Beispiel, wenn man alle Antworten aus der Datenbank holen möchte würde das wie folgt aussehen.
 ```java
 AnswerDAO answerDAO = new AnswerDAO();
