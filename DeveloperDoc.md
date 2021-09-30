@@ -187,6 +187,8 @@ Folgende Werte können verwendet werden.
 - <code>create-drop</code>: Zuerst gleich wie <code>create</code>, danach löscht es das ganze Schema sobald das <code>SessionFactory</code> Objekt geschlossen wurde. Typischerweise, sobald das Programm beendet wird.
 - <code>none</code>: Macht nichts.
 
+Es wird empfohlen in einer Testumgebung <code>update</code> zu verwenden und in der Production <code>none</code> zu verwenden.
+
 ---
 
 Mehr zu Hibernate allgemein kann man [hier](https://hibernate.org/orm/documentation/) finden.
@@ -195,7 +197,32 @@ Mehr zu Hibernate allgemein kann man [hier](https://hibernate.org/orm/documentat
 
 ##### C3PO konfigurieren
 
-TODO: c3po selber erstmal versuchen zu verstehen und dann ein wenig darüber reden.... :)
+C3PO ist ein Tool, mit welchem man Connection-pooling besser unterstützen kann als mit Hibernate selber. 
+
+###### Die Grösse des pools definieren
+Mit den Linien 21 - 23 können wir den pool konfigurieren.
+
+```xml
+<property name="hibernate.c3po.min_size" value="10"/>
+<property name="hibernate.c3p0.max_size" value="100"/>
+<property name="hibernate.c3p0.acquire_increment" value="5"/>
+```
+
+Die erste Linie definiert wie viele connections es im pool mindestens hat, die zweite wie viele es maximal haben kann.
+Mit der dritten Linie geben wir an um wie viel sich die aktuelle grösse des pools erhöht.
+
+Beispiel. <br>
+Wir haben im Moment 10 verbundene connections und eine weitere möchte sich verbinden, increment ist auf 5 gestellt, das bedeutet die aktuelle grösse des pools wäre jetzt 15.
+
+###### Debug
+```xml
+<property name="hibernate.c3p0.unreturnedConnectionTimeout" value="30"/>
+<property name="hibernate.c3po.debugUnreturnedConnectionStackTraces" value="true"/>
+```
+
+Die erste Linie definiert, wie lange eine Connection im Ganzen am Leben sein kann. In der aktuellen Konfiguration heisst das also das jede Verbindung maximal 30 Sekunden überlebt.
+<br>
+Wenn man also eine Methode oder eine Abfrage ausführt, die länger braucht, kann es sein das diese nicht vollendet werden kann, in diesem Fall die Zeit höher stellen.
 
 ---
 
@@ -219,7 +246,7 @@ Auf folgendes sollte geachtet werden.
 
 <sup>[2] In C3PO haben wir eine Zeit definiert mit welcher wir bestimmen wie lange eine einzelne Verbindung zur Datenbank bestehen kann.
 Bei Online Datenbanken kann es teilweise länger dauern diese zu befüllen, als was wir der Verbindung Zeit geben. Falls das der Fall ist, müssen wir C3PO kurz anpassen.
-Gehe dazu zum Abschnitt [C3PO konfigurieren](#c3po-konfigurieren).</sup>
+Gehe dazu zum Abschnitt [C3PO konfigurieren - Debug](#debug).</sup>
 
 Wenn das **Persistence** entsprechend angepasst wurde, kann man jetzt <code>CreateDB</code> ausführen und warten bis es fertig ist mit dem befüllen der Datenbank.
 
