@@ -21,6 +21,8 @@ der Chatbot an sich und den Adminbereich.
          1. [Verbindung zu Datenbank](#verbindung-zu-datenbank)
          2. [Weitere Konfigurationen](#weitere-konfigurationen)
       2. [C3PO konfigurieren](#c3po-konfigurieren)
+         1. [Grösse des Pools](#die-grösse-des-pools-definieren)
+         2. [Debug](#debug)
       3. [Datenbank Abfragen](#datenbank-abfragen)
    2. [Datenbank mit Testdaten befüllen](#datenbank-mit-testdaten-befüllen)
       1. [Testdaten ändern oder hinzufügen](#testdaten-ändern-oder-hinzufügen)
