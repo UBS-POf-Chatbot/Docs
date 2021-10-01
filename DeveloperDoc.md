@@ -337,6 +337,8 @@ Bei einem schlechten Status geben wir einen Fehler aus.
 Das Textfeld bleibt deaktiviert und es passiert nichts mehr.
 
 ### Char counter laden<a name="load-char-counter"></a>
+Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir den Char counter.
+
 
 ### Chatbot initialisieren<a name="init-chatbot"></a>
 
@@ -354,7 +356,7 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wzc2NjcwNTAwOCwtNzI1OTI1NDYzLC0xMDQ5
-ODIyOTc0LDg3MDI3NjgxMSwtMzQzNzQzMDIyLC00NjEwMTEzMT
-BdfQ==
+wiaGlzdG9yeSI6WzE1MTYzMzA5NzgsLTcyNTkyNTQ2MywtMTA0
+OTgyMjk3NCw4NzAyNzY4MTEsLTM0Mzc0MzAyMiwtNDYxMDExMz
+EwXX0=
 -->
