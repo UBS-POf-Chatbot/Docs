@@ -277,7 +277,10 @@ Hier werden Ideen aufgelistet welche wir noch für den Chatbot hatten aber nicht
 	- Die aktuellen vorgeschlagenen Fragen direkt auf der Startseite anzeigen lassen, wenn eine Frage neu vorgeschlagen wird (neu = seit dem letzten login) hat die Frage ein "neu" label
 - Nach dem löschen eines Tags checken ob eine beantwortete Frage nicht mehr beantwortet werden kann und entsprechend als unbeantwortet markieren
 - Im moment wird bei den vorschlage Fragen nicht verhindert das Fragen mit der selben Antwort angezeigt werden. Idee ist es die besten Fragen einer Antwort zu zeigen, so wird garantiert das man 3 unterschiedliche Fragen als Vorschlag hat
-- Dateien, vor
+- Dateien, vorallem Bilder sind sehr gross und man kann leicht den Text der Nachricht übersehen. Man könnte es so machen das alle Dateien ausklapbar sind und anfangs zuerst eingeklappt sind.
+- Ein Darkmode für das Admintool
+- Wenn der Bot eine längere Nachricht schickt diese automatisch unterteilen in kleinere einzelne Nachrichten, sieht besser/übersichtlicher aus
+- 
 
 ---
 
@@ -333,5 +336,5 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy0xMjU5OTYxMDI4XX0=
+wiaGlzdG9yeSI6Wzg0MzgzOTYwXX0=
 -->
