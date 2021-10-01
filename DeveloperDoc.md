@@ -368,7 +368,9 @@ Einfach erklärt sagen wir hibernate es soll eine neue Instanz der Klasse [<code
 Wir selektieren also alle [<code>AnsweredQuestionTimesResult</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/questions/AnsweredQuestionTimesResult.html) bei welchen das Jahr und der Monat der selbe ist wie bei der [<code>StatistikTimes</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/statistik/times/StatistikTimes.html) die wir übergeben und gruppieren dann alle gefundene Einträge mit der Frage an sich und sortieren sie nach den Upvotes.
 Wir müssen dann nur noch den Monat und das Jahr sowie die maximal zu findenden Einträge setzen und schon fertig.
 
-Es kann sein das es in der Datenbank nicht genügend Fragen die 
+Es kann sein das es in der Datenbank nicht genügend Fragen hat, bei denen die Kriterien zutreffen. In diesem Fall werden die fehlenden Plätzen mit den [<code>Standardfragen</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/questions/DefaultQuestion.html) gefüllt.
+
+Beispiel: In der Datenbank existiert nur eine
 
 ### Char counter laden<a name="load-char-counter"></a>
 Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir den Char counter.
@@ -401,8 +403,8 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy0xMTEwODkyMDUwLDM5MzE1MzQ5NCwxOTYz
-ODgwODgsMTM4OTIxODYwMywxNTE2MzMwOTc4LC03MjU5MjU0Nj
-MsLTEwNDk4MjI5NzQsODcwMjc2ODExLC0zNDM3NDMwMjIsLTQ2
-MTAxMTMxMF19
+wiaGlzdG9yeSI6WzIwNjIwMTcwOTUsMzkzMTUzNDk0LDE5NjM4
+ODA4OCwxMzg5MjE4NjAzLDE1MTYzMzA5NzgsLTcyNTkyNTQ2My
+wtMTA0OTgyMjk3NCw4NzAyNzY4MTEsLTM0Mzc0MzAyMiwtNDYx
+MDExMzEwXX0=
 -->
