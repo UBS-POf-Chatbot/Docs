@@ -352,7 +352,19 @@ Im Service werden zuerst die aktuell im Monat best bewerteten Benutzer Fragen ge
 List<TempAnsweredQuestionTimesResult> answeredQuestions = answeredQuestionTimesResultDAO.selectMonthlyOrderedByUpvotes(new StatistikTimes(new Date()), amountQuestions);
 ```
 Übergeben wird dabei eine [<code>StatistikTimes</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/statistik/times/StatistikTimes.html) welche dem jetzigen Datum entspricht und die vorab definierte Anzahl an Fragen.
-
+Der HQL Befehl für die Abfrage sieht wie folgt aus:
+```java
+List<AnsweredQuestionTimesResult> answeredQuestionTimesResults = em.createQuery("select new AnsweredQuestionTimesResult(aqtr.answeredQuestionStatistik, aqtr.answeredQuestionResult, sum(aqtr.upvote), sum(aqtr.downvote)) from AnsweredQuestionTimesResult aqtr " +  
+                        "where aqtr.answeredQuestionStatistik.statistikTimes.month.myDate = :month" +  
+                        " and aqtr.answeredQuestionStatistik.statistikTimes.year.myDate = :year " +  
+                        " and aqtr.answeredQuestionStatistik.answeredQuestion.isHidden = false" +  
+                        " group by aqtr.answeredQuestionStatistik.answeredQuestion" +  
+                        " order by sum(aqtr.upvote) desc",  
+  AnsweredQuestionTimesResult.class)  
+  .setParameter("month", month)  
+  .setParameter("year", year).setMaxResults(max).getResultList();
+```
+Einfach erklärt sagen wir hibernate es soll eine neue Instanz der Klasse [<code></code>
 
 ### Char counter laden<a name="load-char-counter"></a>
 Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir den Char counter.
@@ -385,8 +397,8 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6WzExNzg1MjQ5MzIsMzkzMTUzNDk0LDE5NjM4
-ODA4OCwxMzg5MjE4NjAzLDE1MTYzMzA5NzgsLTcyNTkyNTQ2My
-wtMTA0OTgyMjk3NCw4NzAyNzY4MTEsLTM0Mzc0MzAyMiwtNDYx
-MDExMzEwXX0=
+wiaGlzdG9yeSI6WzExMTk0MjY0NSwzOTMxNTM0OTQsMTk2Mzg4
+MDg4LDEzODkyMTg2MDMsMTUxNjMzMDk3OCwtNzI1OTI1NDYzLC
+0xMDQ5ODIyOTc0LDg3MDI3NjgxMSwtMzQzNzQzMDIyLC00NjEw
+MTEzMTBdfQ==
 -->
