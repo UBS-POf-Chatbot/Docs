@@ -27,7 +27,8 @@ Einmal allgemein, der Chatbot an sich und den Adminbereich.
       3. [Datenbank Abfragen](#datenbank-abfragen)
    2. [Datenbank mit Testdaten befüllen](#datenbank-mit-testdaten-befüllen)
       1. [Testdaten ändern oder hinzufügen](#testdaten-ändern-oder-hinzufügen)
-   3. [Ideen für die Weiterentwicklung](#ideen-für-weiterentwicklung)
+   3. 
+   4. [Ideen für die Weiterentwicklung](#ideen-für-weiterentwicklung)
 
 ---
 
@@ -39,7 +40,6 @@ Einmal allgemein, der Chatbot an sich und den Adminbereich.
     2. [Schlechter Status](#schlechter-status)
 3.  [Vorschlage Fragen laden](#vorschlage-fragen-laden)
 4.  [Char counter laden](#load-char-counter)
-5.  [Den Chatbot initialisieren](#init-chatbot)
 
 ---
 
@@ -545,8 +545,6 @@ gebraucht wird.
 Im Service konstruieren wir jetzt noch ein JSON und geben dieses zurück. In
 TypeScript wird das JSON ausgelesen und in HTML umgewandelt.
 
-### Chatbot initialisieren<a name="init-chatbot"></a>
-
 ## Chatbot Server Adresse definieren
 
 Ein Beispiel, die Adresse zum Chatbot sieht wie folgt aus:
@@ -591,9 +589,9 @@ anzeigen:
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy0xOTk1ODU3MjM2LC0xMjk0MTY5MjM2LC05
-MTcwODUxNzIsLTE4NjMxMjcwODEsMzkzMTUzNDk0LDE5NjM4OD
-A4OCwxMzg5MjE4NjAzLDE1MTYzMzA5NzgsLTcyNTkyNTQ2Mywt
-MTA0OTgyMjk3NCw4NzAyNzY4MTEsLTM0Mzc0MzAyMiwtNDYxMD
-ExMzEwXX0=
+wiaGlzdG9yeSI6Wy0xNDI3Njg3NDczLC0xOTk1ODU3MjM2LC0x
+Mjk0MTY5MjM2LC05MTcwODUxNzIsLTE4NjMxMjcwODEsMzkzMT
+UzNDk0LDE5NjM4ODA4OCwxMzg5MjE4NjAzLDE1MTYzMzA5Nzgs
+LTcyNTkyNTQ2MywtMTA0OTgyMjk3NCw4NzAyNzY4MTEsLTM0Mz
+c0MzAyMiwtNDYxMDExMzEwXX0=
 -->
