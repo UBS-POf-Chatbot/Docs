@@ -269,8 +269,7 @@ In der Datei <code>com/ubs/backend/demo/DBData.java</code> sind alle Testdaten w
 In dieser Datei müssen jetzt nur noch Inhalte gelöscht, bearbeitet oder hinzugefügt werden.
 
 #### Ideen für weiterentwicklung
-
-TODO
+Hier werden Ideen aufgelistet welche wir n
 
 ---
 
@@ -322,3 +321,9 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 
 ---
 <sup>Autor: [Tim Irmler](https://github.com/zwazel) </sup>
+<!--stackedit_data:
+eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
+1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
+LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
+wiaGlzdG9yeSI6Wy0zMzg2MjkzNjFdfQ==
+-->
