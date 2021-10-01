@@ -346,7 +346,7 @@ let response = await fetch(`${server}/services/get/questionSuggestions?amountQue
 ```
 Die Variable <code>server</code> ist unser gesetzter Servername. Mehr dazu im Abschnitt [Chatbot Server Adresse definieren](#chatbot-server-adresse-definieren) 
 Dieser Service erwartet einen Parameter, <code>amountQuestions</code>. Dieser Parameter definiert wieviele Fragen wir laden wollen, in diesem Fall sind es 3.
-Die Java Klasse ist hier zu finden: 
+Der Service ist hier zu finden: <code>com.ubs.backend.services.Get#questionSuggestions</code>
 
 ### Char counter laden<a name="load-char-counter"></a>
 Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir den Char counter.
@@ -379,8 +379,8 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy0yMDMzODkwMDYwLDM5MzE1MzQ5NCwxOTYz
-ODgwODgsMTM4OTIxODYwMywxNTE2MzMwOTc4LC03MjU5MjU0Nj
-MsLTEwNDk4MjI5NzQsODcwMjc2ODExLC0zNDM3NDMwMjIsLTQ2
-MTAxMTMxMF19
+wiaGlzdG9yeSI6WzEyMzI5NjQ0MTcsMzkzMTUzNDk0LDE5NjM4
+ODA4OCwxMzg5MjE4NjAzLDE1MTYzMzA5NzgsLTcyNTkyNTQ2My
+wtMTA0OTgyMjk3NCw4NzAyNzY4MTEsLTM0Mzc0MzAyMiwtNDYx
+MDExMzEwXX0=
 -->
