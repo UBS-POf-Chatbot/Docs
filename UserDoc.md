@@ -18,8 +18,8 @@ Sie können die Dokumentation jederzeit auch in Adminbereich öffnen.
 7. [Blacklist](#admintool-blacklist)
 8. [Dateien](#admintool-file)
 9. [Fragen](#admintool-question)
-10. [Einstellung](#admintool-setting)
-11. [Ausloggen](#admintool-exit)
+10.[Einstellung](#admintool-setting)
+11.[Ausloggen](#admintool-exit)
 
 ## Chatbot<a name="chatbot"></a>
 ### Einleitung<a name="chatbot-introduction"></a>
@@ -180,8 +180,10 @@ Da sehen Sie, es wurde eingeteilt in Stunde, heute, Woche, Monat, Jahr, alle und
 Dasselbe bei unbeantwortete Fragen.
 
 ### Einstellung<a name="admintool-setting"></a>
+![change-password](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/passwort_aendern.JPG)
 Wenn Sie keine Berechtigung zum Benutzer erstellen haben, sehen Sie nur die Funktion um Passwort zu ändern.
-Bei der Einstellungen können Sie Ihr Passwort ändern.  
+Bei der Einstellungen können Sie Ihr Passwort ändern, Sie geben das gegebene Passwort und ändern mit Ihren neuen Passwort.
+Sie müssen wegen Sicherheit, dass Passwort ein zweites Mal eingeben für die Bestätigung.
 
 Wenn Sie die Berechtigung haben Benutzer zu erstellen, können Sie Benutzer erstellen.
 Sie können auch ein Häkchen setzen, wenn die erstellte Benutzer auch das Recht zum Benutzer erstellen hat.
@@ -190,8 +192,7 @@ Wenn Sie auf einen Benutzer klicken, sehen Sie dieses Bild mit dem Namen. Hier h
 ![setting-details](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/benutzer_bearbeiten.JPG)
 Sie können Benutzer löschen oder auch das Passwort zurücksetzen.
 Das Recht zum Benutzer erstellen können Sie auch wegnehmen.
-Dies können Sie nur machen, wenn Sie ein Admin sind.
-
+Dies können Sie nur machen, wenn Sie die Berechtigung haben.
 
 Was man noch beachten muss, man ist eingeschränkt, wenn es um die Bearbeitung um sich selbst geht.
 Sie können sich selber kein Recht geben oder nehmen und Ihr Passwort können Sie selber nicht zurücksetzen.
