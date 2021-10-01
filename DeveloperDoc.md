@@ -322,7 +322,7 @@ folgende weitere Methoden auf.
 1. [<code>questionSuggestions(String amountQuestionsString)</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#questionSuggestions(java.lang.String))
 2. [<code>search(String input, boolean affectStatistics)</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/IntentFinderNew.html#search(java.lang.String,boolean))
 
-Der Aufruf der b
+Der Aufruf der beiden Methoden ist in einem try catch Block. Sobald wir einen Fehler bekommen, wissen wir das wir ein Problem haben und kriegen einen schlechten Status. Wenn wir kein Fehler haben kriegen wir einen guten Status
 
 #### Guter Status
 
@@ -344,6 +344,6 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6WzIzNzcyMzU3MywtMzQzNzQzMDIyLC00NjEw
+wiaGlzdG9yeSI6Wy02NDM4MjQ3MiwtMzQzNzQzMDIyLC00NjEw
 MTEzMTBdfQ==
 -->
