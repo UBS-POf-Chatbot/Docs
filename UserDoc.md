@@ -50,7 +50,6 @@ Falls ein Wort nicht da ist, können Sie es später in Adminbereich hinzufügen.
 
 #### Upvotes und Downvotes
 ![upvotes-downvotes](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/upvotes_downvotes.JPG)
-
 Nachdem Sie eine Frage gestellt haben, wird Ihnen eine Antwort geliefert. 
 Falls die Antwort behilflich war, können Sie einen Daumen hochdrücken.
 Wenn es die falsche Antwort gibt, können Sie einen Daumen runterklicken.
@@ -110,6 +109,7 @@ Nachdem Sie hinzugefügt haben, leitet es Sie direkt zur Bearbeitungsseite, fall
 Sonst können Sie auf der Menüleiste auf Antworten klicken.
 Sie können auch die  Daten löschen, indem Sie auf die Antwort klicken und nach unten scrollt und es löschen.
 ![answer-statistik](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/antwort_statistik.JPG)
+
 Die Daten können Sie bearbeiten, wenn Sie auf die Antwort klicken und Änderungen vornehmen.
 Sie können auch dort direkt auf einem Tag klicken und dies bearbeiten. 
 Bei der Bearbeitung von Antworten können Sie auch Statistik sehen, darin steht alle Fragen, die gestellt wurden um diese Antworten zu bekommen.
