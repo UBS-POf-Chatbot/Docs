@@ -333,7 +333,8 @@ Danach geht es weiter.
 
 #### Schlechter Status
 Bei einem schlechten Status geben wir einen Fehler aus.
-
+![Good State welcome](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/badStateError.jpg)
+Das Textfeld bleibt deaktiviert und es passiert nichts mehr.
 
 ### Char counter laden<a name="load-char-counter"></a>
 
@@ -353,6 +354,7 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy03MjU5MjU0NjMsLTEwNDk4MjI5NzQsODcw
-Mjc2ODExLC0zNDM3NDMwMjIsLTQ2MTAxMTMxMF19
+wiaGlzdG9yeSI6Wzc2NjcwNTAwOCwtNzI1OTI1NDYzLC0xMDQ5
+ODIyOTc0LDg3MDI3NjgxMSwtMzQzNzQzMDIyLC00NjEwMTEzMT
+BdfQ==
 -->
