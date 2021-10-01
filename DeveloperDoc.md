@@ -327,6 +327,8 @@ folgende weitere Methoden auf.
 Der Aufruf der beiden Methoden ist in einem try catch Block. Sobald wir einen Fehler bekommen, wissen wir das wir ein Problem haben und kriegen einen schlechten Status. Wenn wir kein Fehler haben kriegen wir einen guten Status-
 
 #### Guter Status
+Bei einem guten Status ändern wir die Nachricht des Bots zu einer Begrüssung.
+
 #### Schlechter Status
 
 ### Char counter laden<a name="load-char-counter"></a>
@@ -347,6 +349,6 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6WzU4NDM3NjM5NSwtMzQzNzQzMDIyLC00NjEw
+wiaGlzdG9yeSI6Wzg3MDI3NjgxMSwtMzQzNzQzMDIyLC00NjEw
 MTEzMTBdfQ==
 -->
