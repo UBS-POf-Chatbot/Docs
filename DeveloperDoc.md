@@ -281,6 +281,7 @@ Hier werden Ideen aufgelistet welche wir noch für den Chatbot hatten aber nicht
 		- Wie oft um welche zeit wurde diese Antwort versendet
 		- wie viele gute vs schlechte bewertungen
 		- ...
+	- Bei einem Tag alle matches anzeigen die zu diesem Tag übersetzt werden
 - Nach dem löschen eines Tags checken ob eine beantwortete Frage nicht mehr beantwortet werden kann und entsprechend als unbeantwortet markieren
 - Im moment wird bei den vorschlage Fragen nicht verhindert das Fragen mit der selben Antwort angezeigt werden. Idee ist es die besten Fragen einer Antwort zu zeigen, so wird garantiert das man 3 unterschiedliche Fragen als Vorschlag hat
 - Dateien, vorallem Bilder sind sehr gross und man kann leicht den Text der Nachricht übersehen. Man könnte es so machen das alle Dateien ausklapbar sind und anfangs zuerst eingeklappt sind.
@@ -356,7 +357,7 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6WzE1MTYzMzA5NzgsLTcyNTkyNTQ2MywtMTA0
-OTgyMjk3NCw4NzAyNzY4MTEsLTM0Mzc0MzAyMiwtNDYxMDExMz
-EwXX0=
+wiaGlzdG9yeSI6WzEzODkyMTg2MDMsMTUxNjMzMDk3OCwtNzI1
+OTI1NDYzLC0xMDQ5ODIyOTc0LDg3MDI3NjgxMSwtMzQzNzQzMD
+IyLC00NjEwMTEzMTBdfQ==
 -->
