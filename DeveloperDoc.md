@@ -72,7 +72,7 @@ In diesem Abschnitt zählen wir die einzelnen Technologien auf damit klar ist wa
 
 #### Frontend
 
-- Typescript
+- TypeScript
 
 ### Allgemeine wichtige Informationen
 
@@ -418,8 +418,8 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy05MTcwODUxNzIsLTE4NjMxMjcwODEsMzkz
-MTUzNDk0LDE5NjM4ODA4OCwxMzg5MjE4NjAzLDE1MTYzMzA5Nz
-gsLTcyNTkyNTQ2MywtMTA0OTgyMjk3NCw4NzAyNzY4MTEsLTM0
-Mzc0MzAyMiwtNDYxMDExMzEwXX0=
+wiaGlzdG9yeSI6Wy0xMDg5MDc1MTU2LC05MTcwODUxNzIsLTE4
+NjMxMjcwODEsMzkzMTUzNDk0LDE5NjM4ODA4OCwxMzg5MjE4Nj
+AzLDE1MTYzMzA5NzgsLTcyNTkyNTQ2MywtMTA0OTgyMjk3NCw4
+NzAyNzY4MTEsLTM0Mzc0MzAyMiwtNDYxMDExMzEwXX0=
 -->
