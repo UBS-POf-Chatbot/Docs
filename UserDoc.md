@@ -62,19 +62,25 @@ In diesem Abschnitt des Dokumentes beschreiben wir das Adminbereich.
 Damit Sie sich mit dem Adminbereich zurechtkommen.
 
 ### Anmelden<a name="admintool-logIn"></a>
+![logIn-site](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/anmeldung.JPG)
+
 Zuerst einmal wie kommt man zum Adminbereich hin.
 Sie fragen den Chatbot nach Admintool oder Admin.
 Mit dem Klick auf dem Link werden Sie dort gelangen.
 Bevor Sie mit Adminbereich arbeiten, melden Sie sich an,
 geben Sie ihre Email-Adresse und das Passwort ein.
-![logIn-site](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/anmeldung.JPG)
 
 ### Übersicht<a name="admintool-home"></a>
+![statistik-1](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/statistik_1.JPG)
+![statistik-2](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/statistik_2.JPG)
+
 Den Adminbereich begrüsst Sie mit Statistiken.
 Eine Statistik zeigt an, wie viele Antworten der Chatbot zurückgegeben hat 
 in Tagen, Wochen, Monate, Jahren und seit der letzten Anmeldung.
-Ebenfalls sehen Sie die Anzahl der beantworteten Antworten und die Menge von unbeantwortet Antworten.
+Ebenfalls sehen Sie die Anzahl der beantworteten Fragen und die Menge von unbeantwortet Fragen.
 Links davon sehen Sie die Menüleiste.
+Falls Sie nur die beantwortete Fragen ansehen wollen, können Sie bei der Legende auf Anzahl unbeantworteter Fragen klicken.
+Somit streichen Sie es durch, dasselbe können Sie mit dem unbeantwortete Fragen machen.
 Wenn Sie mit der Maus durch die Menüleiste durchstreifen, sehen Sie, was die Icons bedeuten.
 Das erste ist Home die Übersicht mit Statistiken.
 
