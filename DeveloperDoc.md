@@ -344,7 +344,8 @@ Diese holen wir über folgenden Fetch Befehl
 ```javascript
 let response = await fetch(`${server}/services/get/questionSuggestions?amountQuestions=3`);
 ```
-
+Die Variable <code>server</code> ist unser gesetzter Servername. Ein Beispiel, die Adresse zum Chatbot sieht wie folgt aus: <code>http://localhost:8080/chatbot/</code>.
+In diesem Fall ist <code
 
 ### Char counter laden<a name="load-char-counter"></a>
 Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir den Char counter.
@@ -374,8 +375,8 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy0xODY1NzM3Njc2LDM5MzE1MzQ5NCwxOTYz
-ODgwODgsMTM4OTIxODYwMywxNTE2MzMwOTc4LC03MjU5MjU0Nj
-MsLTEwNDk4MjI5NzQsODcwMjc2ODExLC0zNDM3NDMwMjIsLTQ2
-MTAxMTMxMF19
+wiaGlzdG9yeSI6WzkxMDAyMTA1OSwzOTMxNTM0OTQsMTk2Mzg4
+MDg4LDEzODkyMTg2MDMsMTUxNjMzMDk3OCwtNzI1OTI1NDYzLC
+0xMDQ5ODIyOTc0LDg3MDI3NjgxMSwtMzQzNzQzMDIyLC00NjEw
+MTEzMTBdfQ==
 -->
