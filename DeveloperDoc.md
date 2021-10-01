@@ -564,6 +564,25 @@ TODO wo diese setzen? java und typescript
 In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich
 funktioniert.
 
+Das Admintool ist dazu da, alles mögliche am Chatbot zu verwalten z.B. dem Hinzufügen von Antworten
+
+### Seiten Laden
+
+Um Seiten zu Laden haben wir die Methode `loadPage()`, sie hat folgende Parameter:
+
+- fileName: der Name der Datei, welche geladen werden soll
+- newActiveButtonID: die ID des Buttons in der Navigation welcher highlighted werden soll
+- specificDataNeeded: Ob zusätzliche daten aus der Datenbank gelesen werden müssen
+- dataID: die ID des Eintrags in der Datenbank, falls `specificDataNeeded = true` ist
+- forcecReload: ob die Seite neu geladen werden soll
+
+Mit dem folgenden Code Beispiel kann man zum Beispiel die Antwort Details zur Antwort mit der ID 1 in der Datenbank
+anzeigen:
+
+```typescript
+    await loadPage("answersDetails.html", "answersButton", true, 1);
+```
+
 ---
 
 <sup>Autor: [Tim Irmler](https://github.com/zwazel) </sup>
