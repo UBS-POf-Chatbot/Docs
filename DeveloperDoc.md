@@ -280,7 +280,9 @@ Hier werden Ideen aufgelistet welche wir noch für den Chatbot hatten aber nicht
 - Dateien, vorallem Bilder sind sehr gross und man kann leicht den Text der Nachricht übersehen. Man könnte es so machen das alle Dateien ausklapbar sind und anfangs zuerst eingeklappt sind.
 - Ein Darkmode für das Admintool
 - Wenn der Bot eine längere Nachricht schickt diese automatisch unterteilen in kleinere einzelne Nachrichten, sieht besser/übersichtlicher aus
-- 
+- Alle ManyToMany Beziehungen in Hibernate von List<> zu Set<> ändern
+- Stored Procedures verwenden, z.B. für Levenshtein direkt in der DB anstelle in Java. Wäre schneller
+- Der Kunde w
 
 ---
 
@@ -336,5 +338,5 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wzg0MzgzOTYwXX0=
+wiaGlzdG9yeSI6Wy0xMjc0Mjc0MDRdfQ==
 -->
