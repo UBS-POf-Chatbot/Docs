@@ -78,8 +78,8 @@ In diesem Abschnitt zählen wir die einzelnen Technologien auf damit klar ist wa
 
 #### Datenbank
 
-In unserem Projekt verwenden wir **[Hibernate](#hibernate-konfigurieren)** für die Datenbank verbindung und alle
-Abfragen. Für das connection pooling und die sicherstellung dass connections wieder geschlossen werden benutzen wir **[C3PO](#c3po-konfigurieren)**.
+In unserem Projekt verwenden wir [**Hibernate**](#hibernate-konfigurieren) für die Datenbank verbindung und alle
+Abfragen. Für das connection pooling und die sicherstellung dass connections wieder geschlossen werden benutzen wir [**C3PO**](#c3po-konfigurieren).
 
 ##### Hibernate konfigurieren
 
@@ -418,7 +418,7 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy0xMDg5MDc1MTU2LC05MTcwODUxNzIsLTE4
+wiaGlzdG9yeSI6Wy0xMjk0MTY5MjM2LC05MTcwODUxNzIsLTE4
 NjMxMjcwODEsMzkzMTUzNDk0LDE5NjM4ODA4OCwxMzg5MjE4Nj
 AzLDE1MTYzMzA5NzgsLTcyNTkyNTQ2MywtMTA0OTgyMjk3NCw4
 NzAyNzY4MTEsLTM0Mzc0MzAyMiwtNDYxMDExMzEwXX0=
