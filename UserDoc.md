@@ -18,8 +18,8 @@ Sie können die Dokumentation jederzeit auch in Adminbereich öffnen.
 7. [Blacklist](#admintool-blacklist)
 8. [Dateien](#admintool-file)
 9. [Fragen](#admintool-question)
-10.[Einstellung](#admintool-setting)
-11.[Ausloggen](#admintool-exit)
+10. [Einstellung](#admintool-setting)
+11. [Ausloggen](#admintool-exit)
 
 ## Chatbot<a name="chatbot"></a>
 ### Einleitung<a name="chatbot-introduction"></a>
