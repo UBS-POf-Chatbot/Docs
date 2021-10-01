@@ -26,7 +26,7 @@ der Chatbot an sich und den Adminbereich.
         3. [Datenbank Abfragen](#datenbank-abfragen)
     2. [Datenbank mit Testdaten befüllen](#datenbank-mit-testdaten-befüllen)
         1. [Testdaten ändern oder hinzufügen](#testdaten-ändern-oder-hinzufügen)
-    3. []
+    3. [Chatbot Server Adresse definieren](#chatbot-server-adresse-definieren)
 4. [Ideen für die Weiterentwicklung](#ideen-für-weiterentwicklung)
 
 ---
@@ -326,7 +326,7 @@ Wenn das **Persistence** entsprechend angepasst wurde, kann man jetzt
 In der Datei <code>com/ubs/backend/demo/DBData.java</code> sind alle Testdaten welche nachher in die Datenbank
 gespeichert werden. In dieser Datei müssen jetzt nur noch Inhalte gelöscht, bearbeitet oder hinzugefügt werden.
 
-### Chatbot Server Adresse definieren
+#### Chatbot Server Adresse definieren
 
 Ein Beispiel, die Adresse zum Chatbot sieht wie folgt aus:
 <code>http://localhost:8080/chatbot/</code>. In diesem Fall ist
