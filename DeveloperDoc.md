@@ -13,21 +13,21 @@ Einmal allgemein, der Chatbot an sich und den Adminbereich.
 
 1. [Einleitung](#general-introduction)
 2. [Technologien](#technologies)
-    1. [Allgemein](#projekt-allgemein)
-    2. [Backend](#backend)
-    3. [Frontend](#frontend)
+   1. [Allgemein](#projekt-allgemein)
+   2. [Backend](#backend)
+   3. [Frontend](#frontend)
 3. [Allgemein wichtige Informationen](#allgemeine-wichtige-informationen)
-    1. [Datenbank](#datenbank)
-        1. [Hibernate konfigurieren](#hibernate-konfigurieren)
-            1. [Verbindung zu Datenbank](#verbindung-zu-datenbank)
-            2. [Weitere Konfigurationen](#weitere-konfigurationen)
-        2. [C3PO konfigurieren](#c3po-konfigurieren)
-            1. [Grösse des Pools](#die-grösse-des-pools-definieren)
-            2. [Debug](#debug)
-        3. [Datenbank Abfragen](#datenbank-abfragen)
-    2. [Datenbank mit Testdaten befüllen](#datenbank-mit-testdaten-befüllen)
-        1. [Testdaten ändern oder hinzufügen](#testdaten-ändern-oder-hinzufügen)
-    3. [Ideen für die Weiterentwicklung](#ideen-für-weiterentwicklung)
+   1. [Datenbank](#datenbank)
+      1. [Hibernate konfigurieren](#hibernate-konfigurieren)
+         1. [Verbindung zu Datenbank](#verbindung-zu-datenbank)
+         2. [Weitere Konfigurationen](#weitere-konfigurationen)
+      2. [C3PO konfigurieren](#c3po-konfigurieren)
+         1. [Grösse des Pools](#die-grösse-des-pools-definieren)
+         2. [Debug](#debug)
+      3. [Datenbank Abfragen](#datenbank-abfragen)
+   2. [Datenbank mit Testdaten befüllen](#datenbank-mit-testdaten-befüllen)
+      1. [Testdaten ändern oder hinzufügen](#testdaten-ändern-oder-hinzufügen)
+   3. [Ideen für die Weiterentwicklung](#ideen-für-weiterentwicklung)
 
 ---
 
@@ -93,7 +93,6 @@ Im **pom.xml** haben wir Hibernate eingebunden, wir verwenden die Version
 5.4.29.
 
 ```xml
-
 <dependencies>
     <dependency>
         <groupId>org.hibernate</groupId>
@@ -120,7 +119,6 @@ Um die Verbindung zur Datenbank einzustellen, müssen folgende Stellen im
 Persistence abgeändert werden.
 
 ```xml
-
 <properties>
     <property name="hibernate.dialect" value=""/>
     <property name="javax.persistence.jdbc.url" value=""/>
@@ -139,7 +137,6 @@ man verwendet. Eine Liste mit möglichen Dialekten findet man
 Ein Beispiel für MySQL 8 wäre folgend.
 
 ```xml
-
 <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
 ```
 
@@ -154,7 +151,6 @@ anzeigen, welche ihr nur noch kopieren müsst.
 Ein Beispiel für eine Verbindung zu einer lokalen MySQL Datenbank.
 
 ```XML
-
 <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/db"/>
 ```
 
@@ -170,7 +166,6 @@ der Benutzer nur leserechte hat, kann hibernate auch nur lesen.
 Ein Beispiel für einen Benutzer ohne Passwort.
 
 ```xml
-
 <property name="javax.persistence.jdbc.user" value="root"/>
 <property name="javax.persistence.jdbc.password" value=""/>
 ```
@@ -186,7 +181,6 @@ Herunterladen und in das Projekt einbinden, bevorzugt ist es hier das über
 Ein Beispiel für das Einbinden eines MySQL Treibers.
 
 ```xml
-
 <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
 ```
 
@@ -195,7 +189,6 @@ Ein Beispiel für das Einbinden eines MySQL Treibers.
 Das fertige Persistence würde jetzt also wie folgt aussehen.
 
 ```xml
-
 <properties>
     <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
     <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/db"/>
@@ -213,7 +206,6 @@ Nach der Konfiguration der Verbindung zur Datenbank haben wir noch zwei weitere
 Linien
 
 ```xml
-
 <property name="hibernate.show_sql" value=""/>
 <property name="hibernate.hbm2ddl.auto" value=""/>
 ```
@@ -263,7 +255,6 @@ als mit Hibernate selber.
 Mit den Linien 21 - 23 können wir den pool konfigurieren.
 
 ```xml
-
 <property name="hibernate.c3po.min_size" value="10"/>
 <property name="hibernate.c3p0.max_size" value="100"/>
 <property name="hibernate.c3p0.acquire_increment" value="5"/>
@@ -280,7 +271,6 @@ grösse des pools wäre jetzt 15.
 ###### Debug
 
 ```xml
-
 <property name="hibernate.c3p0.unreturnedConnectionTimeout" value="30"/>
 <property name="hibernate.c3po.debugUnreturnedConnectionStackTraces" value="true"/>
 ```
@@ -313,8 +303,8 @@ und verwendet ihre Methoden. Als Beispiel, wenn man alle Antworten aus der
 Datenbank holen möchte würde das wie folgt aussehen.
 
 ```java
-AnswerDAO answerDAO=new AnswerDAO();
-        List<Answer> answersFromDB=answerDAO.select();
+AnswerDAO answerDAO = new AnswerDAO();
+List<Answer> answersFromDB = answerDAO.select();
 ```
 
 ---
@@ -473,7 +463,7 @@ Im Service werden zuerst die aktuell im Monat best bewerteten Benutzer Fragen
 geholt.
 
 ```java
-List<TempAnsweredQuestionTimesResult> answeredQuestions=answeredQuestionTimesResultDAO.selectMonthlyOrderedByUpvotes(new StatistikTimes(new Date()),amountQuestions);
+List<TempAnsweredQuestionTimesResult> answeredQuestions = answeredQuestionTimesResultDAO.selectMonthlyOrderedByUpvotes(new StatistikTimes(new Date()), amountQuestions);
 ```
 
 Übergeben wird dabei eine
@@ -525,10 +515,9 @@ Benutzer können jetzt auf die vorschlage Fragen drauf drücken und es wird als
 normale Frage behandelt.
 
 ### Char counter laden<a name="load-char-counter"></a>
-
-Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir den Char counter. Der Char
-counter ist einfach ein kleines Tool welches durch ein Fetch Befehl die maximal erlaubten Charakter für ein Eingabe Feld
-lädt. Beim Chatbot sehen wir so wieviele Zeichen der Benutzer als Frage eingeben kann.
+Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir den Char counter.
+Der Char counter ist einfach ein kleines Tool welches durch ein Fetch Befehl die maximal erlaubten Charakter für ein Eingabe Feld lädt.
+Beim Chatbot sehen wir so wieviele Zeichen der Benutzer als Frage eingeben kann.
 ![Good State welcome](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/charCounterUserInputChatbot.jpg)
 
 Der Fetch Befehl sieht wie folgt aus:
@@ -574,25 +563,6 @@ TODO wo diese setzen? java und typescript
 
 In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich
 funktioniert.
-
-Das Admintool ist dazu da, alles mögliche am Chatbot zu verwalten z.B. dem Hinzufügen von Antworten
-
-### Seiten Laden
-
-Um Seiten zu Laden haben wir die Methode `loadPage()`, sie hat folgende Parameter:
-
-- fileName: der Name der Datei, welche geladen werden soll
-- newActiveButtonID: die ID des Buttons in der Navigation welcher highlighted werden soll
-- specificDataNeeded: Ob zusätzliche daten aus der Datenbank gelesen werden müssen
-- dataID: die ID des Eintrags in der Datenbank, falls `specificDataNeeded = true` ist
-- forcecReload: ob die Seite neu geladen werden soll
-
-Mit dem folgenden Code Beispiel kann man zum Beispiel die Antwort Details zur Antwort mit der ID 1 in der Datenbank
-anzeigen:
-
-```typescript
-    await loadPage("answersDetails.html", "answersButton", true, 1);
-```
 
 ---
 
