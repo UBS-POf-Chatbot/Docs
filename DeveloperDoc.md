@@ -347,7 +347,7 @@ In der Datei <code>com/ubs/backend/demo/DBData.java</code> sind alle Testdaten
 welche nachher in die Datenbank gespeichert werden. In dieser Datei müssen jetzt
 nur noch Inhalte gelöscht, bearbeitet oder hinzugefügt werden.
 
-#### Ideen für die Weiterentwicklung
+### Ideen für die Weiterentwicklung
 
 Hier werden Ideen aufgelistet welche wir noch für den Chatbot hatten aber nicht
 genug Zeit hatten sie zu realisieren.
@@ -589,9 +589,9 @@ anzeigen:
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy04MDgxMjc2MjUsLTE5OTU4NTcyMzYsLTEy
-OTQxNjkyMzYsLTkxNzA4NTE3MiwtMTg2MzEyNzA4MSwzOTMxNT
-M0OTQsMTk2Mzg4MDg4LDEzODkyMTg2MDMsMTUxNjMzMDk3OCwt
-NzI1OTI1NDYzLC0xMDQ5ODIyOTc0LDg3MDI3NjgxMSwtMzQzNz
-QzMDIyLC00NjEwMTEzMTBdfQ==
+wiaGlzdG9yeSI6WzEzOTI0MDkwODIsLTgwODEyNzYyNSwtMTk5
+NTg1NzIzNiwtMTI5NDE2OTIzNiwtOTE3MDg1MTcyLC0xODYzMT
+I3MDgxLDM5MzE1MzQ5NCwxOTYzODgwODgsMTM4OTIxODYwMywx
+NTE2MzMwOTc4LC03MjU5MjU0NjMsLTEwNDk4MjI5NzQsODcwMj
+c2ODExLC0zNDM3NDMwMjIsLTQ2MTAxMTMxMF19
 -->
