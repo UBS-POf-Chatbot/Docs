@@ -34,7 +34,8 @@ der Chatbot an sich und den Adminbereich.
 
  1. [Einleitung](#chatbot-introduction)
  2. [Den Status überprüfen](#check-state)
-	 1. [Guter S]()
+	 1. [Guter Status](#guter-status)
+	 2. [Schlechter Status](#schlechter-status)
 4. [Char counter laden](#load-char-counter)
 5. [Den Chatbot initialisieren](#init-chatbot)
 
@@ -346,6 +347,6 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6WzU1NjM5MjM4MCwtMzQzNzQzMDIyLC00NjEw
+wiaGlzdG9yeSI6WzU4NDM3NjM5NSwtMzQzNzQzMDIyLC00NjEw
 MTEzMTBdfQ==
 -->
