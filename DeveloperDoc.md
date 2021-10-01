@@ -17,16 +17,16 @@ Einmal allgemein, der Chatbot an sich und den Adminbereich.
    2. [Backend](#backend)
    3. [Frontend](#frontend)
 3. [Allgemein wichtige Informationen](#allgemeine-wichtige-informationen)
-   1. [Datenbank](#datenbank)
-      1. [Hibernate konfigurieren](#hibernate-konfigurieren)
-         1. [Verbindung zu Datenbank](#verbindung-zu-datenbank)
-         2. [Weitere Konfigurationen](#weitere-konfigurationen)
-      2. [C3PO konfigurieren](#c3po-konfigurieren)
+	1. [Datenbank](#datenbank)
+		 1. [Hibernate konfigurieren](#hibernate-konfigurieren)
+	       1. [Verbindung zu Datenbank](#verbindung-zu-datenbank)
+		 2. [Weitere Konfigurationen](#weitere-konfigurationen)
+	  2. [C3PO konfigurieren](#c3po-konfigurieren)
          1. [Grösse des Pools](#die-grösse-des-pools-definieren)
          2. [Debug](#debug)
-      3. [Datenbank Abfragen](#datenbank-abfragen)
-   2. [Datenbank mit Testdaten befüllen](#datenbank-mit-testdaten-befüllen)
-      1. [Testdaten ändern oder hinzufügen](#testdaten-ändern-oder-hinzufügen)
+	  3. [Datenbank Abfragen](#datenbank-abfragen)
+	  4. [Datenbank mit Testdaten befüllen](#datenbank-mit-testdaten-befüllen)
+	  5. [Testdaten ändern oder hinzufügen](#testdaten-ändern-oder-hinzufügen)
    3. 
    4. [Ideen für die Weiterentwicklung](#ideen-für-weiterentwicklung)
 
@@ -589,9 +589,9 @@ anzeigen:
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy0xNDI3Njg3NDczLC0xOTk1ODU3MjM2LC0x
-Mjk0MTY5MjM2LC05MTcwODUxNzIsLTE4NjMxMjcwODEsMzkzMT
-UzNDk0LDE5NjM4ODA4OCwxMzg5MjE4NjAzLDE1MTYzMzA5Nzgs
-LTcyNTkyNTQ2MywtMTA0OTgyMjk3NCw4NzAyNzY4MTEsLTM0Mz
-c0MzAyMiwtNDYxMDExMzEwXX0=
+wiaGlzdG9yeSI6Wy04MDgxMjc2MjUsLTE5OTU4NTcyMzYsLTEy
+OTQxNjkyMzYsLTkxNzA4NTE3MiwtMTg2MzEyNzA4MSwzOTMxNT
+M0OTQsMTk2Mzg4MDg4LDEzODkyMTg2MDMsMTUxNjMzMDk3OCwt
+NzI1OTI1NDYzLC0xMDQ5ODIyOTc0LDg3MDI3NjgxMSwtMzQzNz
+QzMDIyLC00NjEwMTEzMTBdfQ==
 -->
