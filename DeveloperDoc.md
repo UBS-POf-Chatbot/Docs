@@ -36,6 +36,7 @@ der Chatbot an sich und den Adminbereich.
  2. [Den Status überprüfen](#check-state)
 	 1. [Guter Status](#guter-status)
 	 2. [Schlechter Status](#schlechter-status)
+3. [Vorschlage Fragen laden](#vorschlage-fragen.)
 4. [Char counter laden](#load-char-counter)
 5. [Den Chatbot initialisieren](#init-chatbot)
 
@@ -337,6 +338,9 @@ Bei einem schlechten Status geben wir einen Fehler aus.
 ![Good State welcome](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/badStateError.jpg)
 Das Textfeld bleibt deaktiviert und es passiert nichts mehr.
 
+### Vorschlage Fragen laden
+
+
 ### Char counter laden<a name="load-char-counter"></a>
 Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir den Char counter.
 Der Charc counter ist einfach ein kleines Tool welches durch ein Fetch Befehl die maximal erlaubten Charakter für ein Eingabe Feld lädt.
@@ -361,7 +365,7 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy0xMDE0OTY3MzEzLDM5MzE1MzQ5NCwxOTYz
+wiaGlzdG9yeSI6Wy0xOTQwODg1MjQzLDM5MzE1MzQ5NCwxOTYz
 ODgwODgsMTM4OTIxODYwMywxNTE2MzMwOTc4LC03MjU5MjU0Nj
 MsLTEwNDk4MjI5NzQsODcwMjc2ODExLC0zNDM3NDMwMjIsLTQ2
 MTAxMTMxMF19
