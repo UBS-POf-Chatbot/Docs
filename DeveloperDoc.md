@@ -269,7 +269,11 @@ In der Datei <code>com/ubs/backend/demo/DBData.java</code> sind alle Testdaten w
 In dieser Datei müssen jetzt nur noch Inhalte gelöscht, bearbeitet oder hinzugefügt werden.
 
 #### Ideen für weiterentwicklung
-Hier werden Ideen aufgelistet welche wir n
+Hier werden Ideen aufgelistet welche wir noch für den Chatbot hatten aber nicht genug Zeit hatten sie zu realisieren.
+
+- Statistiken
+	- Den Typ des Charts bei den Statistiken ändern können (von Linie zu Säulen etc)
+	- Gute vs schlechte B
 
 ---
 
@@ -325,5 +329,5 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy0zMzg2MjkzNjFdfQ==
+wiaGlzdG9yeSI6Wy00MjMyMDMyNDZdfQ==
 -->
