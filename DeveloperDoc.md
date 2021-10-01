@@ -341,8 +341,7 @@ Das Textfeld bleibt deaktiviert und es passiert nichts mehr.
 Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir den Char counter.
 Der Charc counter ist einfach ein kleines Tool welches durch ein Fetch Befehl die maximal erlaubten Charakter für ein Eingabe Feld lädt.
 Beim Chatbot sehen wir so wieviele Zeichen der Benutzer als Frage eingeben kann.
-
-
+![Good State welcome](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/charCounterUserInputChatbot.jpg)
 
 ### Chatbot initialisieren<a name="init-chatbot"></a>
 
@@ -360,7 +359,7 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6WzE5NjM4ODA4OCwxMzg5MjE4NjAzLDE1MTYz
-MzA5NzgsLTcyNTkyNTQ2MywtMTA0OTgyMjk3NCw4NzAyNzY4MT
-EsLTM0Mzc0MzAyMiwtNDYxMDExMzEwXX0=
+wiaGlzdG9yeSI6WzM5MzE1MzQ5NCwxOTYzODgwODgsMTM4OTIx
+ODYwMywxNTE2MzMwOTc4LC03MjU5MjU0NjMsLTEwNDk4MjI5Nz
+QsODcwMjc2ODExLC0zNDM3NDMwMjIsLTQ2MTAxMTMxMF19
 -->
