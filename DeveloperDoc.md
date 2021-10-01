@@ -32,10 +32,11 @@ der Chatbot an sich und den Adminbereich.
 
 ### [Chatbot](#chatbot-section-start)<a name="tableofcontent-chatbot"></a>
 
-1. [Einleitung](#chatbot-introduction)
-2. [Den Status überprüfen](#check-state)
-3. [Char counter laden](#load-char-counter)
-4. [Den Chatbot initialisieren](#init-chatbot)
+ 1. [Einleitung](#chatbot-introduction)
+ 2. [Den Status überprüfen](#check-state)
+	 1. [Guter S]()
+4. [Char counter laden](#load-char-counter)
+5. [Den Chatbot initialisieren](#init-chatbot)
 
 ---
 
@@ -322,9 +323,10 @@ folgende weitere Methoden auf.
 1. [<code>questionSuggestions(String amountQuestionsString)</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#questionSuggestions(java.lang.String))
 2. [<code>search(String input, boolean affectStatistics)</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/IntentFinderNew.html#search(java.lang.String,boolean))
 
-Der Aufruf der beiden Methoden ist in einem try catch Block. Sobald wir einen Fehler bekommen, wissen wir das wir ein Problem haben und kriegen einen schlechten Status. Wenn wir kein Fehler haben kriegen wir einen guten Status
+Der Aufruf der beiden Methoden ist in einem try catch Block. Sobald wir einen Fehler bekommen, wissen wir das wir ein Problem haben und kriegen einen schlechten Status. Wenn wir kein Fehler haben kriegen wir einen guten Status-
 
 #### Guter Status
+#### Schlechter Status
 
 ### Char counter laden<a name="load-char-counter"></a>
 
@@ -344,6 +346,6 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy02NDM4MjQ3MiwtMzQzNzQzMDIyLC00NjEw
+wiaGlzdG9yeSI6WzU1NjM5MjM4MCwtMzQzNzQzMDIyLC00NjEw
 MTEzMTBdfQ==
 -->
