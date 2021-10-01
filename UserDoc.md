@@ -71,7 +71,6 @@ Bevor Sie mit Adminbereich arbeiten, melden Sie sich an,
 geben Sie ihre Email-Adresse und das Passwort ein.
 
 ### Übersicht<a name="admintool-home"></a>
-![statistik-1](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/statistik_1.JPG)
 ![statistik-2](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/statistik_2.JPG)
 
 Den Adminbereich begrüsst Sie mit Statistiken.
