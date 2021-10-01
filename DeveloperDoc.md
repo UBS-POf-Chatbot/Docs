@@ -76,7 +76,7 @@ benötigt wird um starten zu können.
 
 #### Frontend
 
-- Typescript
+- TypeScript
 
 ### Allgemeine wichtige Informationen
 
@@ -520,13 +520,6 @@ Der Char counter ist einfach ein kleines Tool welches durch ein Fetch Befehl die
 Beim Chatbot sehen wir so wieviele Zeichen der Benutzer als Frage eingeben kann.
 ![Good State welcome](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/charCounterUserInputChatbot.jpg)
 
-Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben
-laden wir den Char counter. Der Char counter ist einfach ein kleines Tool
-welches durch ein Fetch Befehl die maximal erlaubten Charakter für ein Eingabe
-Feld lädt. Beim Chatbot sehen wir so wieviele Zeichen der Benutzer als Frage
-eingeben kann.
-![Good State welcome](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/charCounterUserInputChatbot.jpg)
-
 Der Fetch Befehl sieht wie folgt aus:
 
 ```javascript
@@ -579,8 +572,9 @@ funktioniert.
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy05MTcwODUxNzIsLTE4NjMxMjcwODEsMzkz
-MTUzNDk0LDE5NjM4ODA4OCwxMzg5MjE4NjAzLDE1MTYzMzA5Nz
-gsLTcyNTkyNTQ2MywtMTA0OTgyMjk3NCw4NzAyNzY4MTEsLTM0
-Mzc0MzAyMiwtNDYxMDExMzEwXX0=
+wiaGlzdG9yeSI6Wy0xOTk1ODU3MjM2LC0xMjk0MTY5MjM2LC05
+MTcwODUxNzIsLTE4NjMxMjcwODEsMzkzMTUzNDk0LDE5NjM4OD
+A4OCwxMzg5MjE4NjAzLDE1MTYzMzA5NzgsLTcyNTkyNTQ2Mywt
+MTA0OTgyMjk3NCw4NzAyNzY4MTEsLTM0Mzc0MzAyMiwtNDYxMD
+ExMzEwXX0=
 -->
