@@ -322,7 +322,7 @@ folgende weitere Methoden auf.
 1. [<code>questionSuggestions(String amountQuestionsString)</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#questionSuggestions(java.lang.String))
 2. [<code>search(String input, boolean affectStatistics)</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/IntentFinderNew.html#search(java.lang.String,boolean))
 
-TODO ALLES DANACH
+Der Aufruf der b
 
 #### Guter Status
 
@@ -344,5 +344,6 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy0zNDM3NDMwMjIsLTQ2MTAxMTMxMF19
+wiaGlzdG9yeSI6WzIzNzcyMzU3MywtMzQzNzQzMDIyLC00NjEw
+MTEzMTBdfQ==
 -->
