@@ -343,6 +343,8 @@ Der Charc counter ist einfach ein kleines Tool welches durch ein Fetch Befehl di
 Beim Chatbot sehen wir so wieviele Zeichen der Benutzer als Frage eingeben kann.
 ![Good State welcome](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/charCounterUserInputChatbot.jpg)
 
+Der
+
 ### Chatbot initialisieren<a name="init-chatbot"></a>
 
 ---
@@ -359,7 +361,8 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6WzM5MzE1MzQ5NCwxOTYzODgwODgsMTM4OTIx
-ODYwMywxNTE2MzMwOTc4LC03MjU5MjU0NjMsLTEwNDk4MjI5Nz
-QsODcwMjc2ODExLC0zNDM3NDMwMjIsLTQ2MTAxMTMxMF19
+wiaGlzdG9yeSI6Wy0xMDE0OTY3MzEzLDM5MzE1MzQ5NCwxOTYz
+ODgwODgsMTM4OTIxODYwMywxNTE2MzMwOTc4LC03MjU5MjU0Nj
+MsLTEwNDk4MjI5NzQsODcwMjc2ODExLC0zNDM3NDMwMjIsLTQ2
+MTAxMTMxMF19
 -->
