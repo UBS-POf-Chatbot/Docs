@@ -268,7 +268,7 @@ Wenn das **Persistence** entsprechend angepasst wurde, kann man jetzt <code>Crea
 In der Datei <code>com/ubs/backend/demo/DBData.java</code> sind alle Testdaten welche nachher in die Datenbank gespeichert werden.
 In dieser Datei müssen jetzt nur noch Inhalte gelöscht, bearbeitet oder hinzugefügt werden.
 
-#### Ideen für weiterentwicklung
+#### Ideen für die Weiterentwicklung
 Hier werden Ideen aufgelistet welche wir noch für den Chatbot hatten aber nicht genug Zeit hatten sie zu realisieren.
 
 - Statistiken
@@ -344,5 +344,5 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy00NjEwMTEzMTBdfQ==
+wiaGlzdG9yeSI6Wy0zNDM3NDMwMjIsLTQ2MTAxMTMxMF19
 -->
