@@ -329,9 +329,11 @@ Der Aufruf der beiden Methoden ist in einem try catch Block. Sobald wir einen Fe
 #### Guter Status
 Bei einem guten Status ändern wir die Nachricht des Bots zu einer Begrüssung.
 ![Checking state of server](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/goodStateWelcome.jpg)
-
+Danach geht es weiter.
 
 #### Schlechter Status
+Bei einem schlechten Status geben wir einen Fehler aus.
+
 
 ### Char counter laden<a name="load-char-counter"></a>
 
@@ -351,6 +353,6 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wzk5NjA4NDc0Myw4NzAyNzY4MTEsLTM0Mzc0
-MzAyMiwtNDYxMDExMzEwXX0=
+wiaGlzdG9yeSI6Wy0xMDQ5ODIyOTc0LDg3MDI3NjgxMSwtMzQz
+NzQzMDIyLC00NjEwMTEzMTBdfQ==
 -->
