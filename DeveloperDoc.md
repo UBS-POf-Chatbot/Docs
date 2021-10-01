@@ -391,7 +391,7 @@ Der Service ist hier zu finden: [<code>com.ubs.backend.services.Get#getMaxLength
 
 Hier ist wie der Service funktioniert.
 Wir haben die Java Klasse [<code>com/ubs/backend/classes/enums/DataTypeInfo.java</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/DataTypeInfo.html) definiert. Diese Java Klasse ist ein Enum in welchem wir die verschiedenen Typen an Daten definiert haben. 
-Zum Beispiel haben wir <code></code>
+Zum Beispiel haben wir [<code>USER_QUESTION_INPUT</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/DataTypeInfo.html#USER_QUESTION_INPUT) welcher wir für das Eingabe Feld des Chatbots verwenden. Jedes Enum hat zwei Werte. Einmal <code>maxLength</code> und einmal den <code>name</code>.
 
 
 ### Chatbot initialisieren<a name="init-chatbot"></a>
@@ -417,8 +417,8 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy0yMzE0MjU1ODYsLTE4NjMxMjcwODEsMzkz
-MTUzNDk0LDE5NjM4ODA4OCwxMzg5MjE4NjAzLDE1MTYzMzA5Nz
-gsLTcyNTkyNTQ2MywtMTA0OTgyMjk3NCw4NzAyNzY4MTEsLTM0
-Mzc0MzAyMiwtNDYxMDExMzEwXX0=
+wiaGlzdG9yeSI6WzQ2MDE0MTQ5OSwtMTg2MzEyNzA4MSwzOTMx
+NTM0OTQsMTk2Mzg4MDg4LDEzODkyMTg2MDMsMTUxNjMzMDk3OC
+wtNzI1OTI1NDYzLC0xMDQ5ODIyOTc0LDg3MDI3NjgxMSwtMzQz
+NzQzMDIyLC00NjEwMTEzMTBdfQ==
 -->
