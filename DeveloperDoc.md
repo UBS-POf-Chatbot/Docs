@@ -339,7 +339,7 @@ Bei einem schlechten Status geben wir einen Fehler aus.
 Das Textfeld bleibt deaktiviert und es passiert nichts mehr.
 
 ### Vorschlage Fragen laden
-
+Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir die drei vorschlage 
 
 ### Char counter laden<a name="load-char-counter"></a>
 Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir den Char counter.
@@ -365,7 +365,7 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6WzE0NTAwMzg2MDgsMzkzMTUzNDk0LDE5NjM4
+wiaGlzdG9yeSI6WzE3NjI5NjQ3MjUsMzkzMTUzNDk0LDE5NjM4
 ODA4OCwxMzg5MjE4NjAzLDE1MTYzMzA5NzgsLTcyNTkyNTQ2My
 wtMTA0OTgyMjk3NCw4NzAyNzY4MTEsLTM0Mzc0MzAyMiwtNDYx
 MDExMzEwXX0=
