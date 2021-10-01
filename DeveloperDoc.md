@@ -283,7 +283,8 @@ Hier werden Ideen aufgelistet welche wir noch für den Chatbot hatten aber nicht
 - Alle ManyToMany Beziehungen in Hibernate von List<> zu Set<> ändern
 - Stored Procedures verwenden, z.B. für Levenshtein direkt in der DB anstelle in Java. Wäre schneller
 - Der Kunde wollte ursprünglich das der Benutzer die Möglichkeit hat, auf eine unbeantwortete Frage selber eine Antwort zu schreiben. Diese Antwort muss zunächst von einem Admin akzeptiert werden. Der Admin kann die Antwort selber aber auch bearbeiten und dann akzeptieren.
-- Tags die zu einer versteckten (hid
+- Tags die zu einer versteckten (hidden) Antwort gehören sollten nicht in der Autocompletion des Benutzers vorkommen
+- Eigene Konsole für DB Abfragen im Admintool. So könnte man als Admin ohne direkten Zugang auf die Datenbank im Admintool einige Abfragen machen und herausfinden was das Problem ist
 
 ---
 
@@ -339,5 +340,5 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy0xNDIzODUyMjMyXX0=
+wiaGlzdG9yeSI6Wy0xNzI3OTExMzA2XX0=
 -->
