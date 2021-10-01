@@ -339,7 +339,12 @@ Bei einem schlechten Status geben wir einen Fehler aus.
 Das Textfeld bleibt deaktiviert und es passiert nichts mehr.
 
 ### Vorschlage Fragen laden
-Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir die drei vorschlage 
+Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir die drei vorschlage Fragen.
+Diese holen wir über folgenden Fetch Befehl
+```javascript
+let response = await fetch(`${server}/services/get/questionSuggestions?amountQuestions=3`);
+```
+
 
 ### Char counter laden<a name="load-char-counter"></a>
 Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir den Char counter.
@@ -350,6 +355,10 @@ Beim Chatbot sehen wir so wieviele Zeichen der Benutzer als Frage eingeben kann.
 Der
 
 ### Chatbot initialisieren<a name="init-chatbot"></a>
+
+
+## Chatbot Server Adresse definieren
+
 
 ---
 
@@ -365,8 +374,8 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6WzE3NjI5NjQ3MjUsMzkzMTUzNDk0LDE5NjM4
-ODA4OCwxMzg5MjE4NjAzLDE1MTYzMzA5NzgsLTcyNTkyNTQ2My
-wtMTA0OTgyMjk3NCw4NzAyNzY4MTEsLTM0Mzc0MzAyMiwtNDYx
-MDExMzEwXX0=
+wiaGlzdG9yeSI6Wy0xODY1NzM3Njc2LDM5MzE1MzQ5NCwxOTYz
+ODgwODgsMTM4OTIxODYwMywxNTE2MzMwOTc4LC03MjU5MjU0Nj
+MsLTEwNDk4MjI5NzQsODcwMjc2ODExLC0zNDM3NDMwMjIsLTQ2
+MTAxMTMxMF19
 -->
