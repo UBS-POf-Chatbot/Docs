@@ -365,6 +365,7 @@ List<AnsweredQuestionTimesResult> answeredQuestionTimesResults = em.createQuery(
   .setParameter("year", year).setMaxResults(max).getResultList();
 ```
 Einfach erklärt sagen wir hibernate es soll eine neue Instanz der Klasse [<code>AnsweredQuestionTimesResult</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/questions/AnsweredQuestionTimesResult.html) mit den aus der Datenbank geholten Daten erstellen. Die Daten bestehen einmal aus der [<code>AnsweredQuestionStatistik</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/statistik/AnsweredQuestionStatistik.html), der [<code>AnsweredQuestionResult</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/questions/AnsweredQuestionResult.html), der Summe der Upvotes (Daumen hoch) sowie der Summe der Downvotes (Daumen runter) der Frage.
+Wir selektieren also alle [<code>AnsweredQuestionTimesResult</code>]()
 
 ### Char counter laden<a name="load-char-counter"></a>
 Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir den Char counter.
@@ -397,8 +398,8 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6WzE3MjUwODg0NiwzOTMxNTM0OTQsMTk2Mzg4
-MDg4LDEzODkyMTg2MDMsMTUxNjMzMDk3OCwtNzI1OTI1NDYzLC
-0xMDQ5ODIyOTc0LDg3MDI3NjgxMSwtMzQzNzQzMDIyLC00NjEw
-MTEzMTBdfQ==
+wiaGlzdG9yeSI6Wy0xMjU1MTQzNzY4LDM5MzE1MzQ5NCwxOTYz
+ODgwODgsMTM4OTIxODYwMywxNTE2MzMwOTc4LC03MjU5MjU0Nj
+MsLTEwNDk4MjI5NzQsODcwMjc2ODExLC0zNDM3NDMwMjIsLTQ2
+MTAxMTMxMF19
 -->
