@@ -328,7 +328,7 @@ Der Aufruf der beiden Methoden ist in einem try catch Block. Sobald wir einen Fe
 
 #### Guter Status
 Bei einem guten Status ändern wir die Nachricht des Bots zu einer Begrüssung.
-![Checking state of server](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/goodStateWelcome.jpg)
+![Good State welcome](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/goodStateWelcome.jpg)
 Danach geht es weiter.
 
 #### Schlechter Status
@@ -353,6 +353,6 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy0xMDQ5ODIyOTc0LDg3MDI3NjgxMSwtMzQz
-NzQzMDIyLC00NjEwMTEzMTBdfQ==
+wiaGlzdG9yeSI6Wy03MjU5MjU0NjMsLTEwNDk4MjI5NzQsODcw
+Mjc2ODExLC0zNDM3NDMwMjIsLTQ2MTAxMTMxMF19
 -->
