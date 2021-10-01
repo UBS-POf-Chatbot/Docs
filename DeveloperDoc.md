@@ -36,6 +36,7 @@ der Chatbot an sich und den Adminbereich.
  2. [Den Status überprüfen](#check-state)
 	 1. [Guter Status](#guter-status)
 	 2. [Schlechter Status](#schlechter-status)
+3. [Vorschlage Fragen laden](#vorschlage-fragen-laden)
 4. [Char counter laden](#load-char-counter)
 5. [Den Chatbot initialisieren](#init-chatbot)
 
@@ -281,6 +282,7 @@ Hier werden Ideen aufgelistet welche wir noch für den Chatbot hatten aber nicht
 		- Wie oft um welche zeit wurde diese Antwort versendet
 		- wie viele gute vs schlechte bewertungen
 		- ...
+	- Bei einem Tag alle matches anzeigen die zu diesem Tag übersetzt werden
 - Nach dem löschen eines Tags checken ob eine beantwortete Frage nicht mehr beantwortet werden kann und entsprechend als unbeantwortet markieren
 - Im moment wird bei den vorschlage Fragen nicht verhindert das Fragen mit der selben Antwort angezeigt werden. Idee ist es die besten Fragen einer Antwort zu zeigen, so wird garantiert das man 3 unterschiedliche Fragen als Vorschlag hat
 - Dateien, vorallem Bilder sind sehr gross und man kann leicht den Text der Nachricht übersehen. Man könnte es so machen das alle Dateien ausklapbar sind und anfangs zuerst eingeklappt sind.
@@ -333,11 +335,74 @@ Danach geht es weiter.
 
 #### Schlechter Status
 Bei einem schlechten Status geben wir einen Fehler aus.
+![Good State welcome](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/badStateError.jpg)
+Das Textfeld bleibt deaktiviert und es passiert nichts mehr.
 
+### Vorschlage Fragen laden
+Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir die drei vorschlage Fragen.
+Diese holen wir über folgenden Fetch Befehl
+```javascript
+let response = await fetch(`${server}/services/get/questionSuggestions?amountQuestions=3`);
+```
+Die Variable <code>server</code> ist unser gesetzter Servername. Mehr dazu im Abschnitt [Chatbot Server Adresse definieren](#chatbot-server-adresse-definieren) 
+Dieser Service erwartet einen Parameter, <code>amountQuestions</code>. Dieser Parameter definiert wieviele Fragen wir laden wollen, in diesem Fall sind es 3.
+Der Service ist hier zu finden: [<code>com.ubs.backend.services.Get#questionSuggestions</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#questionSuggestions(java.lang.String)).
+Im Service werden zuerst die aktuell im Monat best bewerteten Benutzer Fragen geholt.
+```java
+List<TempAnsweredQuestionTimesResult> answeredQuestions = answeredQuestionTimesResultDAO.selectMonthlyOrderedByUpvotes(new StatistikTimes(new Date()), amountQuestions);
+```
+Übergeben wird dabei eine [<code>StatistikTimes</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/statistik/times/StatistikTimes.html) welche dem jetzigen Datum entspricht und die vorab definierte Anzahl an Fragen.
+Der HQL Befehl für die Abfrage sieht wie folgt aus:
+```java
+List<AnsweredQuestionTimesResult> answeredQuestionTimesResults = em.createQuery("select new AnsweredQuestionTimesResult(aqtr.answeredQuestionStatistik, aqtr.answeredQuestionResult, sum(aqtr.upvote), sum(aqtr.downvote)) from AnsweredQuestionTimesResult aqtr " +  
+                        "where aqtr.answeredQuestionStatistik.statistikTimes.month.myDate = :month" +  
+                        " and aqtr.answeredQuestionStatistik.statistikTimes.year.myDate = :year " +  
+                        " and aqtr.answeredQuestionStatistik.answeredQuestion.isHidden = false" +  
+                        " group by aqtr.answeredQuestionStatistik.answeredQuestion" +  
+                        " order by sum(aqtr.upvote) desc",  
+  AnsweredQuestionTimesResult.class)  
+  .setParameter("month", month)  
+  .setParameter("year", year).setMaxResults(max).getResultList();
+```
+Einfach erklärt sagen wir hibernate es soll eine neue Instanz der Klasse [<code>AnsweredQuestionTimesResult</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/questions/AnsweredQuestionTimesResult.html) mit den aus der Datenbank geholten Daten erstellen. Die Daten bestehen einmal aus der [<code>AnsweredQuestionStatistik</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/statistik/AnsweredQuestionStatistik.html), der [<code>AnsweredQuestionResult</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/questions/AnsweredQuestionResult.html), der Summe der Upvotes (Daumen hoch) sowie der Summe der Downvotes (Daumen runter) der Frage.
+Wir selektieren also alle [<code>AnsweredQuestionTimesResult</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/questions/AnsweredQuestionTimesResult.html) bei welchen das Jahr und der Monat der selbe ist wie bei der [<code>StatistikTimes</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/statistik/times/StatistikTimes.html) die wir übergeben und gruppieren dann alle gefundene Einträge mit der Frage an sich und sortieren sie nach den Upvotes.
+Wir müssen dann nur noch den Monat und das Jahr sowie die maximal zu findenden Einträge setzen und schon fertig.
+
+Es kann sein das es in der Datenbank nicht genügend Fragen hat, bei denen die Kriterien zutreffen. In diesem Fall werden die fehlenden Plätzen mit den [<code>Standardfragen</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/questions/DefaultQuestion.html) gefüllt.
+
+**Beispiel**: In der Datenbank existiert nur eine passende Frage, wir wollen aber 3. In diesem Fall füllen wir die restlichen 2 Plätze mit zufällig ausgewählten Standardfragen.
+
+Am Ende konstruieren wir noch ein JSON und geben dieses zurück.
+In Typescript wandeln wir dieses JSON dann um in HTML und zeigen es an.
+
+Benutzer können jetzt auf die vorschlage Fragen drauf drücken und es wird als normale Frage behandelt.
 
 ### Char counter laden<a name="load-char-counter"></a>
+Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir den Char counter.
+Der Char counter ist einfach ein kleines Tool welches durch ein Fetch Befehl die maximal erlaubten Charakter für ein Eingabe Feld lädt.
+Beim Chatbot sehen wir so wieviele Zeichen der Benutzer als Frage eingeben kann.
+![Good State welcome](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/charCounterUserInputChatbot.jpg)
+
+Der Fetch Befehl sieht wie folgt aus:
+```javascript
+const response = await fetch(`${server}/services/get/maxInputLength`);
+```
+Der Service ist hier zu finden: [<code>com.ubs.backend.services.Get#getMaxLength</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#getMaxLength()).
+
+Hier ist wie der Service funktioniert.
+Wir haben die Java Klasse [<code>com/ubs/backend/classes/enums/DataTypeInfo.java</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/DataTypeInfo.html) definiert. Diese Java Klasse ist ein Enum in welchem wir die verschiedenen Typen an Daten definiert haben. 
+Zum Beispiel haben wir [<code>USER_QUESTION_INPUT</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/DataTypeInfo.html#USER_QUESTION_INPUT) welcher wir für das Eingabe Feld des Chatbots verwenden. Jedes Enum hat zwei Werte. Einmal [<code>maxLength</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/DataTypeInfo.html#maxLength), welcher die maximale länge in Charakteren definiert und einmal [<code>name</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/DataTypeInfo.html#name) welches in TypeScript verwendet wird um herauszufinden wo diese Information gebraucht wird.
+
+Im Service konstruieren wir jetzt noch ein JSON und geben dieses zurück. In TypeScript wird das JSON ausgelesen und in HTML umgewandelt.
 
 ### Chatbot initialisieren<a name="init-chatbot"></a>
+
+
+## Chatbot Server Adresse definieren
+Ein Beispiel, die Adresse zum Chatbot sieht wie folgt aus: <code>http://localhost:8080/chatbot/</code>.
+In diesem Fall ist <code>chatbot</code> die Adresse des Servers.
+
+TODO wo diese setzen? java und typescript
 
 ---
 
@@ -353,6 +418,8 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy03MjU5MjU0NjMsLTEwNDk4MjI5NzQsODcw
-Mjc2ODExLC0zNDM3NDMwMjIsLTQ2MTAxMTMxMF19
+wiaGlzdG9yeSI6Wy05MTcwODUxNzIsLTE4NjMxMjcwODEsMzkz
+MTUzNDk0LDE5NjM4ODA4OCwxMzg5MjE4NjAzLDE1MTYzMzA5Nz
+gsLTcyNTkyNTQ2MywtMTA0OTgyMjk3NCw4NzAyNzY4MTEsLTM0
+Mzc0MzAyMiwtNDYxMDExMzEwXX0=
 -->
