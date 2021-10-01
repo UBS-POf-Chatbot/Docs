@@ -389,6 +389,9 @@ const response = await fetch(`${server}/services/get/maxInputLength`);
 ```
 Der Service ist hier zu finden: [<code>com.ubs.backend.services.Get#getMaxLength</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#getMaxLength()).
 
+Hier ist wie der Service funktioniert.
+Wir haben die Java Klasse <code><
+
 
 ### Chatbot initialisieren<a name="init-chatbot"></a>
 
@@ -413,8 +416,8 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy0xODYzMTI3MDgxLDM5MzE1MzQ5NCwxOTYz
-ODgwODgsMTM4OTIxODYwMywxNTE2MzMwOTc4LC03MjU5MjU0Nj
-MsLTEwNDk4MjI5NzQsODcwMjc2ODExLC0zNDM3NDMwMjIsLTQ2
-MTAxMTMxMF19
+wiaGlzdG9yeSI6WzE0ODAwNTU0NzIsLTE4NjMxMjcwODEsMzkz
+MTUzNDk0LDE5NjM4ODA4OCwxMzg5MjE4NjAzLDE1MTYzMzA5Nz
+gsLTcyNTkyNTQ2MywtMTA0OTgyMjk3NCw4NzAyNzY4MTEsLTM0
+Mzc0MzAyMiwtNDYxMDExMzEwXX0=
 -->
