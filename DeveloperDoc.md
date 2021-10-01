@@ -383,7 +383,10 @@ Der Char counter ist einfach ein kleines Tool welches durch ein Fetch Befehl die
 Beim Chatbot sehen wir so wieviele Zeichen der Benutzer als Frage eingeben kann.
 ![Good State welcome](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/charCounterUserInputChatbot.jpg)
 
-Der Fetch Befehl sie
+Der Fetch Befehl sieht wie folgt aus:
+```javascript
+
+```
 
 ### Chatbot initialisieren<a name="init-chatbot"></a>
 
@@ -408,8 +411,8 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy03NzQ4MTI5NzgsMzkzMTUzNDk0LDE5NjM4
-ODA4OCwxMzg5MjE4NjAzLDE1MTYzMzA5NzgsLTcyNTkyNTQ2My
-wtMTA0OTgyMjk3NCw4NzAyNzY4MTEsLTM0Mzc0MzAyMiwtNDYx
-MDExMzEwXX0=
+wiaGlzdG9yeSI6Wy0xMzg4NzgwMjAzLDM5MzE1MzQ5NCwxOTYz
+ODgwODgsMTM4OTIxODYwMywxNTE2MzMwOTc4LC03MjU5MjU0Nj
+MsLTEwNDk4MjI5NzQsODcwMjc2ODExLC0zNDM3NDMwMjIsLTQ2
+MTAxMTMxMF19
 -->
