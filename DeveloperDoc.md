@@ -275,7 +275,9 @@ Hier werden Ideen aufgelistet welche wir noch für den Chatbot hatten aber nicht
 	- Den Typ des Charts bei den Statistiken ändern können (von Linie zu Säulen etc)
 	- Gute vs schlechte Bewertungen pro Zeit
 	- Die aktuellen vorgeschlagenen Fragen direkt auf der Startseite anzeigen lassen, wenn eine Frage neu vorgeschlagen wird (neu = seit dem letzten login) hat die Frage ein "neu" label
-- Nach dem löschen eines Tags checken ob eine beantwortete Frage nicht mehr beantwortet werden kann 
+- Nach dem löschen eines Tags checken ob eine beantwortete Frage nicht mehr beantwortet werden kann und entsprechend als unbeantwortet markieren
+- Im moment wird bei den vorschlage Fragen nicht verhindert das Fragen mit der selben Antwort angezeigt werden. Idee ist es die besten Fragen einer Antwort zu zeigen, so wird garantiert das man 3 unterschiedliche Fragen als Vorschlag hat
+- Dateien, vor
 
 ---
 
@@ -331,5 +333,5 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6WzIwMTgwNzI1MzVdfQ==
+wiaGlzdG9yeSI6Wy0xMjU5OTYxMDI4XX0=
 -->
