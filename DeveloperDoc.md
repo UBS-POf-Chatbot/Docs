@@ -344,7 +344,8 @@ Diese holen wir über folgenden Fetch Befehl
 ```javascript
 let response = await fetch(`${server}/services/get/questionSuggestions?amountQuestions=3`);
 ```
-Die Variable <code>server</code> ist unser gesetzter Servername. 
+Die Variable <code>server</code> ist unser gesetzter Servername. Mehr dazu im Abschnitt [Chatbot Server Adresse definieren](#chatbot-server-adresse-definieren) 
+Dieser Rest
 
 ### Char counter laden<a name="load-char-counter"></a>
 Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir den Char counter.
@@ -361,7 +362,7 @@ Der
 Ein Beispiel, die Adresse zum Chatbot sieht wie folgt aus: <code>http://localhost:8080/chatbot/</code>.
 In diesem Fall ist <code>chatbot</code> die Adresse des Servers.
 
-TODO wo 
+TODO wo diese setzen? java und typescript
 
 ---
 
@@ -377,7 +378,7 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6WzE5MzQzNTYwNDksMzkzMTUzNDk0LDE5NjM4
+wiaGlzdG9yeSI6Wy0zMzc3NzczMDIsMzkzMTUzNDk0LDE5NjM4
 ODA4OCwxMzg5MjE4NjAzLDE1MTYzMzA5NzgsLTcyNTkyNTQ2My
 wtMTA0OTgyMjk3NCw4NzAyNzY4MTEsLTM0Mzc0MzAyMiwtNDYx
 MDExMzEwXX0=
