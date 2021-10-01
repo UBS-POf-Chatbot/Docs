@@ -269,7 +269,15 @@ In der Datei <code>com/ubs/backend/demo/DBData.java</code> sind alle Testdaten w
 In dieser Datei müssen jetzt nur noch Inhalte gelöscht, bearbeitet oder hinzugefügt werden.
 
 #### Ideen für weiterentwicklung
-Hier werden Ideen aufgelistet welche wir n
+Hier werden Ideen aufgelistet welche wir noch für den Chatbot hatten aber nicht genug Zeit hatten sie zu realisieren.
+
+- Statistiken
+	- Den Typ des Charts bei den Statistiken ändern können (von Linie zu Säulen etc)
+	- Gute vs schlechte Bewertungen pro Zeit
+	- Die aktuellen vorgeschlagenen Fragen direkt auf der Startseite anzeigen lassen, wenn eine Frage neu vorgeschlagen wird (neu = seit dem letzten login) hat die Frage ein "neu" label
+- Nach dem löschen eines Tags checken ob eine beantwortete Frage nicht mehr beantwortet werden kann und entsprechend als unbeantwortet markieren
+- Im moment wird bei den vorschlage Fragen nicht verhindert das Fragen mit der selben Antwort angezeigt werden. Idee ist es die besten Fragen einer Antwort zu zeigen, so wird garantiert das man 3 unterschiedliche Fragen als Vorschlag hat
+- Dateien, vor
 
 ---
 
@@ -325,5 +333,5 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy0zMzg2MjkzNjFdfQ==
+wiaGlzdG9yeSI6Wy0xMjU5OTYxMDI4XX0=
 -->
