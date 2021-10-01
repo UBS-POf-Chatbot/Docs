@@ -50,6 +50,7 @@ Falls ein Wort nicht da ist, können Sie es später in Adminbereich hinzufügen.
 
 #### Upvotes und Downvotes
 ![upvotes-downvotes](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/upvotes_downvotes.JPG)
+
 Nachdem Sie eine Frage gestellt haben, wird Ihnen eine Antwort geliefert. 
 Falls die Antwort behilflich war, können Sie einen Daumen hochdrücken.
 Wenn es die falsche Antwort gibt, können Sie einen Daumen runterklicken.
