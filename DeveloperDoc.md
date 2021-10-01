@@ -372,9 +372,14 @@ Es kann sein das es in der Datenbank nicht genügend Fragen hat, bei denen die K
 
 **Beispiel**: In der Datenbank existiert nur eine passende Frage, wir wollen aber 3. In diesem Fall füllen wir die restlichen 2 Plätze mit zufällig ausgewählten Standardfragen.
 
+Am Ende konstruieren wir noch ein JSON und geben dieses zurück.
+In Typescript wandeln wir dieses JSON dann um in HTML und zeigen es an.
+
+Benutzer können jetzt auf die vorschlage Fragen drauf drücken und es wird als normale Frage behandelt.
+
 ### Char counter laden<a name="load-char-counter"></a>
 Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir den Char counter.
-Der Charc counter ist einfach ein kleines Tool welches durch ein Fetch Befehl die maximal erlaubten Charakter für ein Eingabe Feld lädt.
+Der Char counter ist einfach ein kleines Tool welches durch ein Fetch Befehl die maximal erlaubten Charakter für ein Eingabe Feld lädt.
 Beim Chatbot sehen wir so wieviele Zeichen der Benutzer als Frage eingeben kann.
 ![Good State welcome](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/charCounterUserInputChatbot.jpg)
 
@@ -403,8 +408,8 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy0xMzI0Mzg1MTY1LDM5MzE1MzQ5NCwxOTYz
-ODgwODgsMTM4OTIxODYwMywxNTE2MzMwOTc4LC03MjU5MjU0Nj
-MsLTEwNDk4MjI5NzQsODcwMjc2ODExLC0zNDM3NDMwMjIsLTQ2
-MTAxMTMxMF19
+wiaGlzdG9yeSI6WzE5Njg0ODg5OTksMzkzMTUzNDk0LDE5NjM4
+ODA4OCwxMzg5MjE4NjAzLDE1MTYzMzA5NzgsLTcyNTkyNTQ2My
+wtMTA0OTgyMjk3NCw4NzAyNzY4MTEsLTM0Mzc0MzAyMiwtNDYx
+MDExMzEwXX0=
 -->
