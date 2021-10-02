@@ -53,7 +53,7 @@ Falls ein Wort nicht da ist, können Sie es später in Adminbereich hinzufügen.
 
 Nachdem Sie eine Frage gestellt haben, wird Ihnen eine Antwort geliefert. 
 Falls die Antwort behilflich war, können Sie einen Daumen hochdrücken.
-Wenn es die falsche Antwort gibt, können Sie einen Daumen runterklicken.
+Wenn es die falsche Antwort gibt, können Sie einen Daumen runter klicken.
 Mit dieser Hilfe können wir sehen, woran es liegt, dass es so schlecht bewertet wurde.
 
 ## Adminbereich<a name="admintool"></a>
@@ -68,7 +68,7 @@ Zuerst einmal wie kommt man zum Adminbereich hin.
 Sie fragen den Chatbot nach Admintool oder Admin.
 Mit dem Klick auf dem Link werden Sie dort gelangen.
 Bevor Sie mit Adminbereich arbeiten, melden Sie sich an,
-geben Sie ihre Email-Adresse und das Passwort ein.
+geben Sie ihre E-Mail-Adresse und das Passwort ein.
 
 ### Übersicht<a name="admintool-home"></a>
 ![statistik-2](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/statistik_2.JPG)
@@ -117,12 +117,12 @@ Sie können auch die  Daten löschen, indem Sie auf die Antwort klicken und nach
 ![answer-statistik](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/antwort_statistik.JPG)
 
 Die Daten können Sie bearbeiten, wenn Sie auf die Antwort klicken und Änderungen vornehmen.
-Sie können auch dort direkt auf einem Tag klicken und dies bearbeiten. 
-Bei der Bearbeitung von Antworten können Sie auch Statistik sehen, darin steht alle Fragen, die gestellt wurden um diese Antworten zu bekommen.
+Sie können auch dort direkt auf einen Tag klicken und dies bearbeiten. 
+Bei der Bearbeitung von Antworten können Sie auch Statistik sehen, darin steht alle Fragen, die gestellt wurden, um diese Antworten zu bekommen.
 ![answer-sort](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/antwort_sortieren.jpg)
 Nun kommen die Sortierfunktion, man kann nach Name, Bewertung und Aufrufe sortieren.
 Bei jeder Seite können Sie nach Name aufsteigend und absteigend sortieren.
-Sie können auch Bewertung und Aufrufe gleich wie Name sortieren.
+Sie können auch Bewertung und Aufrufe gleich, wie Name sortieren.
 
 Bewertung wird ausgerechnet mit Downvotes und Upvotes. 
 Wenn es kein Upvotes und Downvotes gab, ist es 50%.
@@ -150,6 +150,10 @@ Es ist gleich dargestellt wie die Antwortseite. Wenn Sie oben rechts auf den Kno
 Sie geben das Schlagwort ein und fügen es hinzu. Natürlich können Sie das Hinzufügen auch direkt auf der Antwortseite machen.
 Dasselbe hier Sie können hier sortieren nach Name, Bewertung  und Verwendung.
 Die Suchfunktion haben Sie für die Schlagwörter auch.
+![edit-tag](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/tag_bearbeiten.JPG)
+
+Wenn Sie auf ein Schlagwort klicken, können Sie die bearbeiten. Dazu sehen Sie die dazugehörige Antwort.
+Sie können die Antwort bearbeiten, indem Sie auf die Antwort klicken.
 
 ### Matches<a name="admintool-match"></a>
 Auf der Matches-Seite können Sie Matches zurücksetzen, nicht übersetzen, blacklisten.
@@ -164,7 +168,7 @@ Wenn es Wörter sind, welche man nicht auf dem Chatbot speichern will, kann man 
 Wenn Sie zurücksetzen, werden die Upvotes und Downvotes auf null gesetzt.
 
 Hier können Sie ebenfalls nach Name und Bewertung aufsteigend oder absteigend sortieren.
-Die Suchfunktion ist beim Matches auch verfügbar.
+Die Suchfunktion ist beim Matches auch verfügbar. Bei der Tabelle können Sie auf den Tag klicken und leitet Sie zum Tag bearbeiten.
  
 ### Blacklist<a name="admintool-blacklist"></a>
 Auf der Blacklistseite können Sie Wörter eintragen, welche nicht als Frage oder Wort gespeichert werden soll.
@@ -181,15 +185,19 @@ Mit Klick können Sie eine Einsicht haben. Sie können die Dateien löschen.
 Auf der Frageseite können Sie Fragen hinzufügen, bearbeiten und löschen.
 Oben sehen Sie die momentane vorgeschlagene Fragen. Sie können diese bearbeiten oder auch löschen.
 Unten sehen Sie benutzerdefinierte Fragen, die tauchen auf, wenn es noch keine beliebten Fragen von heute gibt.
-Sie können ebenfalls die beantworteten Fragen ansehen.
+![answered-question](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/fragen_beantwortete_fragen.JPG)
+
+Sie können ebenfalls die beantworteten Fragen ansehen. 
+Wenn Sie auf die Frage klicken, können diese bearbeiten und sehen, welche Antwort es liefert.
 Da sehen Sie, es wurde eingeteilt in Stunde, heute, Woche, Monat, Jahr, alle und seit letztem Login.
 Dasselbe bei unbeantwortete Fragen.
+
 
 ### Einstellung<a name="admintool-setting"></a>
 ![change-password](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/passwort_aendern.JPG)
 Wenn Sie keine Berechtigung zum Benutzer erstellen haben, sehen Sie nur die Funktion um Passwort zu ändern.
-Bei der Einstellungen können Sie Ihr Passwort ändern, Sie geben das gegebene Passwort und ändern mit Ihren neuen Passwort.
-Sie müssen wegen Sicherheit, dass Passwort ein zweites Mal eingeben für die Bestätigung.
+Bei der Einstellungen können Sie Ihr Passwort ändern, Sie geben das gegebene Passwort und ändern mit Ihrem neuen Passwort.
+Sie müssen wegen Sicherheit, das Passwort ein zweites Mal eingeben für die Bestätigung.
 
 Wenn Sie die Berechtigung haben Benutzer zu erstellen, können Sie Benutzer erstellen.
 Sie können auch ein Häkchen setzen, wenn die erstellte Benutzer auch das Recht zum Benutzer erstellen hat.
