@@ -1,9 +1,8 @@
 # Entwickler Dokumentation
 
-In diesem Dokument wird beschrieben wie der Chatbot funktioniert und wo was zu
-finden ist, damit zukünftige Entwickler ohne Probleme den Chatbot
-weiterentwickeln können. Dieses Dokument wird in drei Hauptteile aufgeteilt.
-Einmal allgemein, der Chatbot an sich und den Adminbereich.
+In diesem Dokument wird beschrieben wie der Chatbot funktioniert und wo was zu finden ist, damit zukünftige Entwickler
+ohne Probleme den Chatbot weiterentwickeln können. Dieses Dokument wird in drei Hauptteile aufgeteilt. Einmal allgemein,
+der Chatbot an sich und den Adminbereich.
 
 ---
 
@@ -13,33 +12,33 @@ Einmal allgemein, der Chatbot an sich und den Adminbereich.
 
 1. [Einleitung](#general-introduction)
 2. [Technologien](#technologies)
-   1. [Allgemein](#projekt-allgemein)
-   2. [Backend](#backend)
-   3. [Frontend](#frontend)
+    1. [Allgemein](#projekt-allgemein)
+    2. [Backend](#backend)
+    3. [Frontend](#frontend)
 3. [Allgemein wichtige Informationen](#allgemeine-wichtige-informationen)
-   1. [Datenbank](#datenbank)
-      1. [Hibernate konfigurieren](#hibernate-konfigurieren)
-         1. [Verbindung zu Datenbank](#verbindung-zu-datenbank)
-         2. [Weitere Konfigurationen](#weitere-konfigurationen)
-      2. [C3PO konfigurieren](#c3po-konfigurieren)
-         1. [Grösse des Pools](#die-grösse-des-pools-definieren)
-         2. [Debug](#debug)
-      3. [Datenbank Abfragen](#datenbank-abfragen)
-   2. [Datenbank mit Testdaten befüllen](#datenbank-mit-testdaten-befüllen)
-      1. [Testdaten ändern oder hinzufügen](#testdaten-ändern-oder-hinzufügen)
-   3. [Ideen für die Weiterentwicklung](#ideen-für-weiterentwicklung)
+    1. [Datenbank](#datenbank)
+        1. [Hibernate konfigurieren](#hibernate-konfigurieren)
+            1. [Verbindung zu Datenbank](#verbindung-zu-datenbank)
+            2. [Weitere Konfigurationen](#weitere-konfigurationen)
+        2. [C3PO konfigurieren](#c3po-konfigurieren)
+            1. [Grösse des Pools](#die-grösse-des-pools-definieren)
+            2. [Debug](#debug)
+        3. [Datenbank Abfragen](#datenbank-abfragen)
+    2. [Datenbank mit Testdaten befüllen](#datenbank-mit-testdaten-befüllen)
+        1. [Testdaten ändern oder hinzufügen](#testdaten-ändern-oder-hinzufügen)
+    3. [Chatbot Server Adresse definieren](#chatbot-server-adresse-definieren)
+4. [Ideen für die Weiterentwicklung](#ideen-für-weiterentwicklung)
 
 ---
 
 ### [Chatbot](#chatbot-section-start)<a name="tableofcontent-chatbot"></a>
 
-1.  [Einleitung](#chatbot-introduction)
-2.  [Den Status überprüfen](#check-state)
+1. [Einleitung](#chatbot-introduction)
+2. [Den Status überprüfen](#check-state)
     1. [Guter Status](#guter-status)
     2. [Schlechter Status](#schlechter-status)
-3.  [Vorschlage Fragen laden](#vorschlage-fragen-laden)
-4.  [Char counter laden](#load-char-counter)
-5.  [Den Chatbot initialisieren](#init-chatbot)
+3. [Vorschlage Fragen laden](#vorschlage-fragen-laden)
+4. [Char counter laden](#load-char-counter)
 
 ---
 
@@ -53,16 +52,13 @@ Einmal allgemein, der Chatbot an sich und den Adminbereich.
 
 ### Einleitung <a name="general-introduction"></a>
 
-In diesem Abschnitt des Dokumentes beschreiben wir das Projekt im allgemeinen.
-Wir zählen auf was für Technologien wir verwenden und wie man verschiedene Dinge
-macht, wie zum Beispiel wie man eine Datenbankverbindung aufbaut. Zudem
-schreiben wir noch auf was wir machen wollten, aber wegen zu weniger Zeit nicht
-machen konnten.
+In diesem Abschnitt des Dokumentes beschreiben wir das Projekt im allgemeinen. Wir zählen auf was für Technologien wir
+verwenden und wie man verschiedene Dinge macht, wie zum Beispiel wie man eine Datenbankverbindung aufbaut. Zudem
+schreiben wir noch auf was wir machen wollten, aber wegen zu weniger Zeit nicht machen konnten.
 
 ### Technologien <a name="technologies"></a>
 
-In diesem Abschnitt zählen wir die einzelnen Technologien auf damit klar ist was
-benötigt wird um starten zu können.
+In diesem Abschnitt zählen wir die einzelnen Technologien auf damit klar ist was benötigt wird um starten zu können.
 
 #### Projekt allgemein
 
@@ -82,17 +78,16 @@ benötigt wird um starten zu können.
 
 #### Datenbank
 
-In unserem Projekt verwenden wir **[Hibernate](#hibernate-konfigurieren)** für
-die Datenbank verbindung und alle Abfragen. Für das connection pooling und die
-sicherstellung dass connections wieder geschlossen werden benutzen wir
+In unserem Projekt verwenden wir **[Hibernate](#hibernate-konfigurieren)** für die Datenbank verbindung und alle
+Abfragen. Für das connection pooling und die sicherstellung dass connections wieder geschlossen werden benutzen wir
 **[C3PO](#c3po-konfigurieren)**.
 
 ##### Hibernate konfigurieren
 
-Im **pom.xml** haben wir Hibernate eingebunden, wir verwenden die Version
-5.4.29.
+Im **pom.xml** haben wir Hibernate eingebunden, wir verwenden die Version 5.4.29.
 
 ```xml
+
 <dependencies>
     <dependency>
         <groupId>org.hibernate</groupId>
@@ -104,21 +99,19 @@ Im **pom.xml** haben wir Hibernate eingebunden, wir verwenden die Version
 
 ---
 
-Hibernate wird dazu verwendet in den verschiedenen Dialekten, ohne Probleme eine
-verbindung zur Datenbank zu gewährleisten. Dies ermöglichte es, ohne viel Code
-zu ändern in verschiedenen Umgebungen zu arbeiten.
+Hibernate wird dazu verwendet in den verschiedenen Dialekten, ohne Probleme eine verbindung zur Datenbank zu
+gewährleisten. Dies ermöglichte es, ohne viel Code zu ändern in verschiedenen Umgebungen zu arbeiten.
 
-So konnten wir zum Beispiel lokal auf unseren Rechner **MySQL** verwenden
-während wir auf unserer Testumgebung, [Heroku](https://www.heroku.com/),
-**PostgreSQL** und auf unserer Production in der UBS Umgebung **Microsoft SQL
-Server** verwenden.
+So konnten wir zum Beispiel lokal auf unseren Rechner **MySQL** verwenden während wir auf unserer
+Testumgebung, [Heroku](https://www.heroku.com/),
+**PostgreSQL** und auf unserer Production in der UBS Umgebung **Microsoft SQL Server** verwenden.
 
 ###### Verbindung zu Datenbank
 
-Um die Verbindung zur Datenbank einzustellen, müssen folgende Stellen im
-Persistence abgeändert werden.
+Um die Verbindung zur Datenbank einzustellen, müssen folgende Stellen im Persistence abgeändert werden.
 
 ```xml
+
 <properties>
     <property name="hibernate.dialect" value=""/>
     <property name="javax.persistence.jdbc.url" value=""/>
@@ -130,57 +123,58 @@ Persistence abgeändert werden.
 
 ---
 
-In der ersten Linie konfiguriert man den Dialekt. Also welche Datenbank Sprache
-man verwendet. Eine Liste mit möglichen Dialekten findet man
+In der ersten Linie konfiguriert man den Dialekt. Also welche Datenbank Sprache man verwendet. Eine Liste mit möglichen
+Dialekten findet man
 [hier](https://www.javatpoint.com/dialects-in-hibernate).
 
 Ein Beispiel für MySQL 8 wäre folgend.
 
 ```xml
+
 <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
 ```
 
 ---
 
-In der zweiten Linie konfiguriert man die URL. Die URL erklärt Hibernate wo die
-Datenbank zu finden ist und noch einige weitere optionale Informationen kann man
-hinzufügen. Eine URL ist immer ein wenig anders, abhängig von eurem gewählten
-Dialekt. Euer Datenbank Anbieter sollte im Normalfall direkt die korrekte URL
-anzeigen, welche ihr nur noch kopieren müsst.
+In der zweiten Linie konfiguriert man die URL. Die URL erklärt Hibernate wo die Datenbank zu finden ist und noch einige
+weitere optionale Informationen kann man hinzufügen. Eine URL ist immer ein wenig anders, abhängig von eurem gewählten
+Dialekt. Euer Datenbank Anbieter sollte im Normalfall direkt die korrekte URL anzeigen, welche ihr nur noch kopieren
+müsst.
 
 Ein Beispiel für eine Verbindung zu einer lokalen MySQL Datenbank.
 
 ```XML
+
 <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/db"/>
 ```
 
 ---
 
-In den nächsten zwei Linien konfiguriert man den Benutzer, mit welchem man die
-Datenbank verwenden will. Zuerst schreibt man den Namen des Users und danach das
-Passwort. Falls der Benutzer kein Passwort hat, kann man es einfach leer lassen.
+In den nächsten zwei Linien konfiguriert man den Benutzer, mit welchem man die Datenbank verwenden will. Zuerst schreibt
+man den Namen des Users und danach das Passwort. Falls der Benutzer kein Passwort hat, kann man es einfach leer lassen.
 
-Bedenke das Hibernate nur sachen machen darf welche der Benutzer darf. Wenn also
-der Benutzer nur leserechte hat, kann hibernate auch nur lesen.
+Bedenke das Hibernate nur sachen machen darf welche der Benutzer darf. Wenn also der Benutzer nur leserechte hat, kann
+hibernate auch nur lesen.
 
 Ein Beispiel für einen Benutzer ohne Passwort.
 
 ```xml
+
 <property name="javax.persistence.jdbc.user" value="root"/>
 <property name="javax.persistence.jdbc.password" value=""/>
 ```
 
 ---
 
-In der letzten Linie definiert man den Treiber mit welchem Hibernate die
-Abfragen zur Datenbank macht. Im normalfall gibt es für jede Datenbank einen
-offiziellen Treiber. Sobald ein geeigneter Treiber gefunden wurde diesen
-Herunterladen und in das Projekt einbinden, bevorzugt ist es hier das über
+In der letzten Linie definiert man den Treiber mit welchem Hibernate die Abfragen zur Datenbank macht. Im normalfall
+gibt es für jede Datenbank einen offiziellen Treiber. Sobald ein geeigneter Treiber gefunden wurde diesen Herunterladen
+und in das Projekt einbinden, bevorzugt ist es hier das über
 **Maven** zu machen. Einfach ein Dependency in das **pom.xml** tun.
 
 Ein Beispiel für das Einbinden eines MySQL Treibers.
 
 ```xml
+
 <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
 ```
 
@@ -189,6 +183,7 @@ Ein Beispiel für das Einbinden eines MySQL Treibers.
 Das fertige Persistence würde jetzt also wie folgt aussehen.
 
 ```xml
+
 <properties>
     <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
     <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/db"/>
@@ -202,10 +197,10 @@ Das fertige Persistence würde jetzt also wie folgt aussehen.
 
 ###### Weitere Konfigurationen
 
-Nach der Konfiguration der Verbindung zur Datenbank haben wir noch zwei weitere
-Linien
+Nach der Konfiguration der Verbindung zur Datenbank haben wir noch zwei weitere Linien
 
 ```xml
+
 <property name="hibernate.show_sql" value=""/>
 <property name="hibernate.hbm2ddl.auto" value=""/>
 ```
@@ -215,28 +210,22 @@ Linien
 <code>show_sql</code> kann einen Wert von entweder <code>true</code> oder
 <code>false</code> nehmen.
 
-Wenn man diesen auf <code>true</code> setzt, gibt Hibernate alle SQL Befehle in
-die Konsole aus.
+Wenn man diesen auf <code>true</code> setzt, gibt Hibernate alle SQL Befehle in die Konsole aus.
 
 ---
 
-<code>hbm2ddl.auto</code> definiert die Art und Weise wie Hibernate mit
-Änderungen in der Datenbank umgehen soll. Folgende Werte können verwendet
-werden.
+<code>hbm2ddl.auto</code> definiert die Art und Weise wie Hibernate mit Änderungen in der Datenbank umgehen soll.
+Folgende Werte können verwendet werden.
 
-- <code>validate</code>: Validiert das Schema, macht keine Änderungen an der
-  Datenbank
-- <code>update</code>: Fügt neue Tabellen und Spalten hinzu, löscht aber nie
-  etwas.
-- <code>create</code>: Löscht immer das ganze Schema zuerst und erstellt es dann
-  neu.
-- <code>create-drop</code>: Zuerst gleich wie <code>create</code>, danach löscht
-  es das ganze Schema sobald das <code>SessionFactory</code> Objekt geschlossen
-  wurde. Typischerweise, sobald das Programm beendet wird.
+- <code>validate</code>: Validiert das Schema, macht keine Änderungen an der Datenbank
+- <code>update</code>: Fügt neue Tabellen und Spalten hinzu, löscht aber nie etwas.
+- <code>create</code>: Löscht immer das ganze Schema zuerst und erstellt es dann neu.
+- <code>create-drop</code>: Zuerst gleich wie <code>create</code>, danach löscht es das ganze Schema sobald das <code>
+  SessionFactory</code> Objekt geschlossen wurde. Typischerweise, sobald das Programm beendet wird.
 - <code>none</code>: Macht nichts.
 
-Es wird empfohlen in einer Testumgebung <code>update</code> zu verwenden und in
-der Production <code>none</code> zu verwenden.
+Es wird empfohlen in einer Testumgebung <code>update</code> zu verwenden und in der Production <code>none</code> zu
+verwenden.
 
 ---
 
@@ -247,39 +236,36 @@ Mehr zu Hibernate allgemein kann man
 
 ##### C3PO konfigurieren
 
-C3PO ist ein Tool, mit welchem man Connection-pooling besser unterstützen kann
-als mit Hibernate selber.
+C3PO ist ein Tool, mit welchem man Connection-pooling besser unterstützen kann als mit Hibernate selber.
 
 ###### Die Grösse des pools definieren
 
 Mit den Linien 21 - 23 können wir den pool konfigurieren.
 
 ```xml
+
 <property name="hibernate.c3po.min_size" value="10"/>
 <property name="hibernate.c3p0.max_size" value="100"/>
 <property name="hibernate.c3p0.acquire_increment" value="5"/>
 ```
 
-Die erste Linie definiert wie viele connections es im pool mindestens hat, die
-zweite wie viele es maximal haben kann. Mit der dritten Linie geben wir an um
-wie viel sich die aktuelle grösse des pools erhöht.
+Die erste Linie definiert wie viele connections es im pool mindestens hat, die zweite wie viele es maximal haben kann.
+Mit der dritten Linie geben wir an um wie viel sich die aktuelle grösse des pools erhöht.
 
-Beispiel. <br> Wir haben im Moment 10 verbundene connections und eine weitere
-möchte sich verbinden, increment ist auf 5 gestellt, das bedeutet die aktuelle
-grösse des pools wäre jetzt 15.
+Beispiel. <br> Wir haben im Moment 10 verbundene connections und eine weitere möchte sich verbinden, increment ist auf 5
+gestellt, das bedeutet die aktuelle grösse des pools wäre jetzt 15.
 
 ###### Debug
 
 ```xml
+
 <property name="hibernate.c3p0.unreturnedConnectionTimeout" value="30"/>
 <property name="hibernate.c3po.debugUnreturnedConnectionStackTraces" value="true"/>
 ```
 
-Die erste Linie definiert, wie lange eine Connection im Ganzen am Leben sein
-kann. In der aktuellen Konfiguration heisst das also das jede Verbindung maximal
-30 Sekunden überlebt. <br> Wenn man also eine Methode oder eine Abfrage
-ausführt, die länger braucht, kann es sein das diese nicht vollendet werden
-kann, in diesem Fall die Zeit höher stellen.
+Die erste Linie definiert, wie lange eine Connection im Ganzen am Leben sein kann. In der aktuellen Konfiguration heisst
+das also das jede Verbindung maximal 30 Sekunden überlebt. <br> Wenn man also eine Methode oder eine Abfrage ausführt,
+die länger braucht, kann es sein das diese nicht vollendet werden kann, in diesem Fall die Zeit höher stellen.
 
 ---
 
@@ -287,107 +273,98 @@ kann, in diesem Fall die Zeit höher stellen.
 
 Wir haben für Interaktionen mit der Datenbank eine generische Java Klasse namens
 <code>DAO</code>, zu finden in
-[<code>src/main/java/com/ubs/backend/classes/database/dao/DAO.java</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/dao/DAO.html).
-Diese Klasse wird für standard Befehle in der Datenbank wie z.B.
-[<code>select</code>](<https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/dao/DAO.html#select()>),
+[<code>src/main/java/com/ubs/backend/classes/database/dao/DAO.java</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/dao/DAO.html)
+. Diese Klasse wird für standard Befehle in der Datenbank wie z.B.
+[<code>select</code>](<https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/dao/DAO.html#select()>)
+,
 [<code>insert</code>](<https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/dao/DAO.html#insert(T)>)
 und
-[<code>remove</code>](<https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/dao/DAO.html#remove(long)>).
-<br> Für weitere Befehle, welche Klassenspezifisch sind haben wir jeweils ein
-eigenes DAO für die Datenklasse erstellt.
+[<code>remove</code>](<https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/dao/DAO.html#remove(long)>)
+.
+<br> Für weitere Befehle, welche Klassenspezifisch sind haben wir jeweils ein eigenes DAO für die Datenklasse erstellt.
 
-Wenn man eine Abfrage mit der Tabelle <code>Answers</code> interagieren möchte
-erstellt man eine Instanz der Klasse
+Wenn man eine Abfrage mit der Tabelle <code>Answers</code> interagieren möchte erstellt man eine Instanz der Klasse
 [<code>AnswerDao</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/dao/AnswerDAO.html)
-und verwendet ihre Methoden. Als Beispiel, wenn man alle Antworten aus der
-Datenbank holen möchte würde das wie folgt aussehen.
+und verwendet ihre Methoden. Als Beispiel, wenn man alle Antworten aus der Datenbank holen möchte würde das wie folgt
+aussehen.
 
 ```java
-AnswerDAO answerDAO = new AnswerDAO();
-List<Answer> answersFromDB = answerDAO.select();
+AnswerDAO answerDAO=new AnswerDAO();
+        List<Answer> answersFromDB=answerDAO.select();
 ```
 
 ---
 
 #### Datenbank mit Testdaten befüllen
 
-Um das Programm zu Testen möchte man vermutlich eine Datenbank mit Testdaten
-haben. Für diesen Zweck haben wir die Datei
-<code>com/ubs/backend/demo/CreateDB.java</code> für das tatsächliche befüllen
-der Datenbank und die Datei <code>com/ubs/backend/demo/DBData.java</code> mit
-den Daten die wir in die Datenbank laden wollen.
+Um das Programm zu Testen möchte man vermutlich eine Datenbank mit Testdaten haben. Für diesen Zweck haben wir die Datei
+<code>com/ubs/backend/demo/CreateDB.java</code> für das tatsächliche befüllen der Datenbank und die Datei <code>
+com/ubs/backend/demo/DBData.java</code> mit den Daten die wir in die Datenbank laden wollen.
 
 Wir empfehlen vor dem Ausführen der Datei <code>CreateDB</code> die
-**Persistence** konfiguration zu überprüfen und womöglich zu ändern. Auf
-folgendes sollte geachtet werden.
+**Persistence** konfiguration zu überprüfen und womöglich zu ändern. Auf folgendes sollte geachtet werden.
 
 - Ist **Persistence** mit der _richtigen_ Datenbank verbunden?
 - Ist <code>hbm2ddl.auto</code> auf <code>update</code> oder </code> create? [1]
 - Ist die Datenbank lokal oder online? [2]
 
-<sup>[1] Wir empfehlen es auf <code>create</code> zu stellen, da es zuerst alles
-löscht und danach neu erstellt. Mit <code>update</code> kriegt man doppelte
-Daten.</sup>
+<sup>[1] Wir empfehlen es auf <code>create</code> zu stellen, da es zuerst alles löscht und danach neu erstellt.
+Mit <code>update</code> kriegt man doppelte Daten.</sup>
 
-<sup>[2] In C3PO haben wir eine Zeit definiert mit welcher wir bestimmen wie
-lange eine einzelne Verbindung zur Datenbank bestehen kann. Bei Online
-Datenbanken kann es teilweise länger dauern diese zu befüllen, als was wir der
-Verbindung Zeit geben. Falls das der Fall ist, müssen wir C3PO kurz anpassen.
-Gehe dazu zum Abschnitt [C3PO konfigurieren - Debug](#debug).</sup>
+<sup>[2] In C3PO haben wir eine Zeit definiert mit welcher wir bestimmen wie lange eine einzelne Verbindung zur
+Datenbank bestehen kann. Bei Online Datenbanken kann es teilweise länger dauern diese zu befüllen, als was wir der
+Verbindung Zeit geben. Falls das der Fall ist, müssen wir C3PO kurz anpassen. Gehe dazu zum
+Abschnitt [C3PO konfigurieren - Debug](#debug).</sup>
 
 Wenn das **Persistence** entsprechend angepasst wurde, kann man jetzt
-<code>CreateDB</code> ausführen und warten bis es fertig ist mit dem befüllen
-der Datenbank.
+<code>CreateDB</code> ausführen und warten bis es fertig ist mit dem befüllen der Datenbank.
 
 ---
 
 ##### Testdaten ändern oder hinzufügen
 
-In der Datei <code>com/ubs/backend/demo/DBData.java</code> sind alle Testdaten
-welche nachher in die Datenbank gespeichert werden. In dieser Datei müssen jetzt
-nur noch Inhalte gelöscht, bearbeitet oder hinzugefügt werden.
+In der Datei <code>com/ubs/backend/demo/DBData.java</code> sind alle Testdaten welche nachher in die Datenbank
+gespeichert werden. In dieser Datei müssen jetzt nur noch Inhalte gelöscht, bearbeitet oder hinzugefügt werden.
 
-#### Ideen für die Weiterentwicklung
+#### Chatbot Server Adresse definieren
 
-Hier werden Ideen aufgelistet welche wir noch für den Chatbot hatten aber nicht
-genug Zeit hatten sie zu realisieren.
+Ein Beispiel, die Adresse zum Chatbot sieht wie folgt aus:
+<code>http://localhost:8080/chatbot/</code>. In diesem Fall ist
+<code>chatbot</code> die Adresse des Servers.
+
+TODO wo diese setzen? java und typescript
+
+### Ideen für die Weiterentwicklung
+
+Hier werden Ideen aufgelistet welche wir noch für den Chatbot hatten aber nicht genug Zeit hatten sie zu realisieren.
 
 - Statistiken
-  - Den Typ des Charts bei den Statistiken ändern können (von Linie zu Säulen
-    etc)
-  - Gute vs schlechte Bewertungen pro Zeit
-  - Die aktuellen vorgeschlagenen Fragen direkt auf der Startseite anzeigen
-    lassen, wenn eine Frage neu vorgeschlagen wird (neu = seit dem letzten
-    login) hat die Frage ein "neu" label
-  - Bei den einzelnen Antworten in der Statistik noch mehr Statistiken anzeigen
-    - Wie oft um welche zeit wurde diese Antwort versendet
-    - wie viele gute vs schlechte bewertungen
-    - ...
-  - Bei einem Tag alle matches anzeigen die zu diesem Tag übersetzt werden
-- Nach dem löschen eines Tags checken ob eine beantwortete Frage nicht mehr
-  beantwortet werden kann und entsprechend als unbeantwortet markieren
-- Im moment wird bei den vorschlage Fragen nicht verhindert das Fragen mit der
-  selben Antwort angezeigt werden. Idee ist es die besten Fragen einer Antwort
-  zu zeigen, so wird garantiert das man 3 unterschiedliche Fragen als Vorschlag
-  hat
-- Dateien, vorallem Bilder sind sehr gross und man kann leicht den Text der
-  Nachricht übersehen. Man könnte es so machen das alle Dateien ausklapbar sind
-  und anfangs zuerst eingeklappt sind.
+    - Den Typ des Charts bei den Statistiken ändern können (von Linie zu Säulen etc)
+    - Gute vs schlechte Bewertungen pro Zeit
+    - Die aktuellen vorgeschlagenen Fragen direkt auf der Startseite anzeigen lassen, wenn eine Frage neu vorgeschlagen
+      wird (neu = seit dem letzten login) hat die Frage ein "neu" label
+    - Bei den einzelnen Antworten in der Statistik noch mehr Statistiken anzeigen
+        - Wie oft um welche zeit wurde diese Antwort versendet
+        - wie viele gute vs schlechte bewertungen
+        - ...
+    - Bei einem Tag alle matches anzeigen die zu diesem Tag übersetzt werden
+- Nach dem löschen eines Tags checken ob eine beantwortete Frage nicht mehr beantwortet werden kann und entsprechend als
+  unbeantwortet markieren
+- Im moment wird bei den vorschlage Fragen nicht verhindert das Fragen mit der selben Antwort angezeigt werden. Idee ist
+  es die besten Fragen einer Antwort zu zeigen, so wird garantiert das man 3 unterschiedliche Fragen als Vorschlag hat
+- Dateien, vorallem Bilder sind sehr gross und man kann leicht den Text der Nachricht übersehen. Man könnte es so machen
+  das alle Dateien ausklapbar sind und anfangs zuerst eingeklappt sind.
 - Ein Darkmode für das Admintool
-- Wenn der Bot eine längere Nachricht schickt diese automatisch unterteilen in
-  kleinere einzelne Nachrichten, sieht besser/übersichtlicher aus
+- Wenn der Bot eine längere Nachricht schickt diese automatisch unterteilen in kleinere einzelne Nachrichten, sieht
+  besser/übersichtlicher aus
 - Alle ManyToMany Beziehungen in Hibernate von List<> zu Set<> ändern
-- Stored Procedures verwenden, z.B. für Levenshtein direkt in der DB anstelle in
-  Java. Wäre schneller
-- Der Kunde wollte ursprünglich das der Benutzer die Möglichkeit hat, auf eine
-  unbeantwortete Frage selber eine Antwort zu schreiben. Diese Antwort muss
-  zunächst von einem Admin akzeptiert werden. Der Admin kann die Antwort selber
-  aber auch bearbeiten und dann akzeptieren.
-- Tags die zu einer versteckten (hidden) Antwort gehören sollten nicht in der
-  Autocompletion des Benutzers vorkommen
-- Eigene Konsole für DB Abfragen im Admintool. So könnte man als Admin ohne
-  direkten Zugang auf die Datenbank im Admintool einige Abfragen machen und
-  herausfinden was das Problem ist
+- Stored Procedures verwenden, z.B. für Levenshtein direkt in der DB anstelle in Java. Wäre schneller
+- Der Kunde wollte ursprünglich das der Benutzer die Möglichkeit hat, auf eine unbeantwortete Frage selber eine Antwort
+  zu schreiben. Diese Antwort muss zunächst von einem Admin akzeptiert werden. Der Admin kann die Antwort selber aber
+  auch bearbeiten und dann akzeptieren.
+- Tags die zu einer versteckten (hidden) Antwort gehören sollten nicht in der Autocompletion des Benutzers vorkommen
+- Eigene Konsole für DB Abfragen im Admintool. So könnte man als Admin ohne direkten Zugang auf die Datenbank im
+  Admintool einige Abfragen machen und herausfinden was das Problem ist
 
 ---
 
@@ -395,12 +372,10 @@ genug Zeit hatten sie zu realisieren.
 
 ### Einleitung <a name="chatbot-introduction"></a>
 
-In diesem Abschnitt des Dokumentes beschreiben wir wie der Chatbot funktioniert.
-Der Chatbot ist die Hauptfunktion dieses Projektes. Es ist die erste Seite die
-ein Admin sieht und die einzige Seite die ein normaler Benutzer sehen soll.
+In diesem Abschnitt des Dokumentes beschreiben wir wie der Chatbot funktioniert. Der Chatbot ist die Hauptfunktion
+dieses Projektes. Es ist die erste Seite die ein Admin sieht und die einzige Seite die ein normaler Benutzer sehen soll.
 
-Folgend wird beschrieben was beim laden der Seite in welcher Reihenfolge
-passiert.
+Folgend wird beschrieben was beim laden der Seite in welcher Reihenfolge passiert.
 
 1. [Den Status überprüfen](#check-state)
 2. [Char counter laden](#load-char-counter)
@@ -408,15 +383,14 @@ passiert.
 
 ### Status überprüfen <a name="check-state"></a>
 
-Wenn der Chatbot geöffnet wird wird als erstes eine Test Abfrage zum Server
-geschickt und auf seine Antwort gewartet. Solange auf die Antwort gewartet wird,
-zeigt der Chatbot eine Nachricht an mit der Information das die "Verbindung zum
+Wenn der Chatbot geöffnet wird wird als erstes eine Test Abfrage zum Server geschickt und auf seine Antwort gewartet.
+Solange auf die Antwort gewartet wird, zeigt der Chatbot eine Nachricht an mit der Information das die "Verbindung zum
 Server aufgebaut wird".
 ![Checking state of server](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/checkStatus.jpg)
 Um den Status zu überprüfen verwenden wir unseren Service
 [<code>getStatus()</code>](<https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#getStatus()>)
-. Diese Methode rufen wir über eine Rest Schnittstelle auf. Der Path zu dieser
-Schnittstelle ist <code> services/get/status</code>.
+. Diese Methode rufen wir über eine Rest Schnittstelle auf. Der Path zu dieser Schnittstelle ist <code>
+services/get/status</code>.
 
 [<code>getStatus()</code>](<https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#getStatus()>)
 ruft folgende weitere Methoden auf.
@@ -424,9 +398,8 @@ ruft folgende weitere Methoden auf.
 1. [<code>questionSuggestions(String amountQuestionsString)</code>](<https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#questionSuggestions(java.lang.String)>)
 2. [<code>search(String input, boolean affectStatistics)</code>](<https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/IntentFinderNew.html#search(java.lang.String,boolean)>)
 
-Der Aufruf der beiden Methoden ist in einem try catch Block. Sobald wir einen
-Fehler bekommen, wissen wir das wir ein Problem haben und kriegen einen
-schlechten Status. Wenn wir kein Fehler haben kriegen wir einen guten Status-
+Der Aufruf der beiden Methoden ist in einem try catch Block. Sobald wir einen Fehler bekommen, wissen wir das wir ein
+Problem haben und kriegen einen schlechten Status. Wenn wir kein Fehler haben kriegen wir einen guten Status-
 
 #### Guter Status
 
@@ -442,83 +415,75 @@ Das Textfeld bleibt deaktiviert und es passiert nichts mehr.
 
 ### Vorschlage Fragen laden
 
-Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben
-laden wir die drei vorschlage Fragen. Diese holen wir über folgenden Fetch
-Befehl
+Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir die drei vorschlage Fragen.
+Diese holen wir über folgenden Fetch Befehl
 
 ```javascript
 let response = await fetch(
-  `${server}/services/get/questionSuggestions?amountQuestions=3`
+    `${server}/services/get/questionSuggestions?amountQuestions=3`
 );
 ```
 
-Die Variable <code>server</code> ist unser gesetzter Servername. Mehr dazu im
-Abschnitt
-[Chatbot Server Adresse definieren](#chatbot-server-adresse-definieren) Dieser
-Service erwartet einen Parameter, <code>amountQuestions</code>. Dieser Parameter
-definiert wieviele Fragen wir laden wollen, in diesem Fall sind es 3. Der
+Die Variable <code>server</code> ist unser gesetzter Servername. Mehr dazu im Abschnitt
+[Chatbot Server Adresse definieren](#chatbot-server-adresse-definieren) Dieser Service erwartet einen Parameter, <code>
+amountQuestions</code>. Dieser Parameter definiert wieviele Fragen wir laden wollen, in diesem Fall sind es 3. Der
 Service ist hier zu finden:
-[<code>com.ubs.backend.services.Get#questionSuggestions</code>](<https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#questionSuggestions(java.lang.String)>).
-Im Service werden zuerst die aktuell im Monat best bewerteten Benutzer Fragen
-geholt.
+[<code>com.ubs.backend.services.Get#questionSuggestions</code>](<https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#questionSuggestions(java.lang.String)>)
+. Im Service werden zuerst die aktuell im Monat best bewerteten Benutzer Fragen geholt.
 
 ```java
-List<TempAnsweredQuestionTimesResult> answeredQuestions = answeredQuestionTimesResultDAO.selectMonthlyOrderedByUpvotes(new StatistikTimes(new Date()), amountQuestions);
+List<TempAnsweredQuestionTimesResult> answeredQuestions=answeredQuestionTimesResultDAO.selectMonthlyOrderedByUpvotes(new StatistikTimes(new Date()),amountQuestions);
 ```
 
 Übergeben wird dabei eine
 [<code>StatistikTimes</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/statistik/times/StatistikTimes.html)
-welche dem jetzigen Datum entspricht und die vorab definierte Anzahl an Fragen.
-Der HQL Befehl für die Abfrage sieht wie folgt aus:
+welche dem jetzigen Datum entspricht und die vorab definierte Anzahl an Fragen. Der HQL Befehl für die Abfrage sieht wie
+folgt aus:
 
 ```java
-List<AnsweredQuestionTimesResult> answeredQuestionTimesResults = em.createQuery("select new AnsweredQuestionTimesResult(aqtr.answeredQuestionStatistik, aqtr.answeredQuestionResult, sum(aqtr.upvote), sum(aqtr.downvote)) from AnsweredQuestionTimesResult aqtr " +
-                        "where aqtr.answeredQuestionStatistik.statistikTimes.month.myDate = :month" +
-                        " and aqtr.answeredQuestionStatistik.statistikTimes.year.myDate = :year " +
-                        " and aqtr.answeredQuestionStatistik.answeredQuestion.isHidden = false" +
-                        " group by aqtr.answeredQuestionStatistik.answeredQuestion" +
-                        " order by sum(aqtr.upvote) desc",
-  AnsweredQuestionTimesResult.class)
-  .setParameter("month", month)
-  .setParameter("year", year).setMaxResults(max).getResultList();
+List<AnsweredQuestionTimesResult> answeredQuestionTimesResults=em.createQuery("select new AnsweredQuestionTimesResult(aqtr.answeredQuestionStatistik, aqtr.answeredQuestionResult, sum(aqtr.upvote), sum(aqtr.downvote)) from AnsweredQuestionTimesResult aqtr "+
+        "where aqtr.answeredQuestionStatistik.statistikTimes.month.myDate = :month"+
+        " and aqtr.answeredQuestionStatistik.statistikTimes.year.myDate = :year "+
+        " and aqtr.answeredQuestionStatistik.answeredQuestion.isHidden = false"+
+        " group by aqtr.answeredQuestionStatistik.answeredQuestion"+
+        " order by sum(aqtr.upvote) desc",
+        AnsweredQuestionTimesResult.class)
+        .setParameter("month",month)
+        .setParameter("year",year).setMaxResults(max).getResultList();
 ```
 
 Einfach erklärt sagen wir hibernate es soll eine neue Instanz der Klasse
 [<code>AnsweredQuestionTimesResult</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/questions/AnsweredQuestionTimesResult.html)
-mit den aus der Datenbank geholten Daten erstellen. Die Daten bestehen einmal
-aus der
-[<code>AnsweredQuestionStatistik</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/statistik/AnsweredQuestionStatistik.html),
-der
-[<code>AnsweredQuestionResult</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/questions/AnsweredQuestionResult.html),
-der Summe der Upvotes (Daumen hoch) sowie der Summe der Downvotes (Daumen
-runter) der Frage. Wir selektieren also alle
+mit den aus der Datenbank geholten Daten erstellen. Die Daten bestehen einmal aus der
+[<code>AnsweredQuestionStatistik</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/statistik/AnsweredQuestionStatistik.html)
+, der
+[<code>AnsweredQuestionResult</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/questions/AnsweredQuestionResult.html)
+, der Summe der Upvotes (Daumen hoch) sowie der Summe der Downvotes (Daumen runter) der Frage. Wir selektieren also alle
 [<code>AnsweredQuestionTimesResult</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/questions/AnsweredQuestionTimesResult.html)
 bei welchen das Jahr und der Monat der selbe ist wie bei der
 [<code>StatistikTimes</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/statistik/times/StatistikTimes.html)
-die wir übergeben und gruppieren dann alle gefundene Einträge mit der Frage an
-sich und sortieren sie nach den Upvotes. Wir müssen dann nur noch den Monat und
-das Jahr sowie die maximal zu findenden Einträge setzen und schon fertig.
+die wir übergeben und gruppieren dann alle gefundene Einträge mit der Frage an sich und sortieren sie nach den Upvotes.
+Wir müssen dann nur noch den Monat und das Jahr sowie die maximal zu findenden Einträge setzen und schon fertig.
 
-Es kann sein das es in der Datenbank nicht genügend Fragen hat, bei denen die
-Kriterien zutreffen. In diesem Fall werden die fehlenden Plätzen mit den
+Es kann sein das es in der Datenbank nicht genügend Fragen hat, bei denen die Kriterien zutreffen. In diesem Fall werden
+die fehlenden Plätzen mit den
 [<code>Standardfragen</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/questions/DefaultQuestion.html)
 gefüllt.
 
-**Beispiel**: In der Datenbank existiert nur eine passende Frage, wir wollen
-aber 3. In diesem Fall füllen wir die restlichen 2 Plätze mit zufällig
-ausgewählten Standardfragen.
+**Beispiel**: In der Datenbank existiert nur eine passende Frage, wir wollen aber 3. In diesem Fall füllen wir die
+restlichen 2 Plätze mit zufällig ausgewählten Standardfragen.
 
-Am Ende konstruieren wir noch ein JSON und geben dieses zurück. In Typescript
-wandeln wir dieses JSON dann um in HTML und zeigen es an.
+Am Ende konstruieren wir noch ein JSON und geben dieses zurück. In Typescript wandeln wir dieses JSON dann um in HTML
+und zeigen es an.
 
-Benutzer können jetzt auf die vorschlage Fragen drauf drücken und es wird als
-normale Frage behandelt.
+Benutzer können jetzt auf die vorschlage Fragen drauf drücken und es wird als normale Frage behandelt.
 
 ### Char counter laden<a name="load-char-counter"></a>
-Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir den Char counter.
-Der Char counter ist einfach ein kleines Tool welches durch ein Fetch Befehl die maximal erlaubten Charakter für ein Eingabe Feld lädt.
-Beim Chatbot sehen wir so wieviele Zeichen der Benutzer als Frage eingeben kann.
-![Good State welcome](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/charCounterUserInputChatbot.jpg)
+
+Wenn wir beim [überprüfen des Status](#check-state) keinen Fehler bekommen haben laden wir den Char counter. Der Char
+counter ist einfach ein kleines Tool welches durch ein Fetch Befehl die maximal erlaubten Charakter für ein Eingabe Feld
+lädt. Beim Chatbot sehen wir so wieviele Zeichen der Benutzer als Frage eingeben kann.
+![char counter userinput](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/charCounterUserInputChatbot.jpg)
 
 Der Fetch Befehl sieht wie folgt aus:
 
@@ -527,33 +492,22 @@ const response = await fetch(`${server}/services/get/maxInputLength`);
 ```
 
 Der Service ist hier zu finden:
-[<code>com.ubs.backend.services.Get#getMaxLength</code>](<https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#getMaxLength()>).
+[<code>com.ubs.backend.services.Get#getMaxLength</code>](<https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#getMaxLength()>)
+.
 
 Hier ist wie der Service funktioniert. Wir haben die Java Klasse
 [<code>com/ubs/backend/classes/enums/DataTypeInfo.java</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/DataTypeInfo.html)
-definiert. Diese Java Klasse ist ein Enum in welchem wir die verschiedenen Typen
-an Daten definiert haben. Zum Beispiel haben wir
+definiert. Diese Java Klasse ist ein Enum in welchem wir die verschiedenen Typen an Daten definiert haben. Zum Beispiel
+haben wir
 [<code>USER_QUESTION_INPUT</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/DataTypeInfo.html#USER_QUESTION_INPUT)
-welcher wir für das Eingabe Feld des Chatbots verwenden. Jedes Enum hat zwei
-Werte. Einmal
-[<code>maxLength</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/DataTypeInfo.html#maxLength),
-welcher die maximale länge in Charakteren definiert und einmal
+welcher wir für das Eingabe Feld des Chatbots verwenden. Jedes Enum hat zwei Werte. Einmal
+[<code>maxLength</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/DataTypeInfo.html#maxLength)
+, welcher die maximale länge in Charakteren definiert und einmal
 [<code>name</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/DataTypeInfo.html#name)
-welches in TypeScript verwendet wird um herauszufinden wo diese Information
-gebraucht wird.
+welches in TypeScript verwendet wird um herauszufinden wo diese Information gebraucht wird.
 
-Im Service konstruieren wir jetzt noch ein JSON und geben dieses zurück. In
-TypeScript wird das JSON ausgelesen und in HTML umgewandelt.
-
-### Chatbot initialisieren<a name="init-chatbot"></a>
-
-## Chatbot Server Adresse definieren
-
-Ein Beispiel, die Adresse zum Chatbot sieht wie folgt aus:
-<code>http://localhost:8080/chatbot/</code>. In diesem Fall ist
-<code>chatbot</code> die Adresse des Servers.
-
-TODO wo diese setzen? java und typescript
+Im Service konstruieren wir jetzt noch ein JSON und geben dieses zurück. In TypeScript wird das JSON ausgelesen und in
+HTML umgewandelt.
 
 ---
 
@@ -561,8 +515,7 @@ TODO wo diese setzen? java und typescript
 
 ### Einleitung <a name="admintool-introduction"></a>
 
-In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich
-funktioniert.
+In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktioniert.
 
 Das Admintool ist dazu da, alles mögliche am Chatbot zu verwalten z.B. dem Hinzufügen von Antworten
 
@@ -591,9 +544,9 @@ anzeigen:
 eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
 1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
 LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6Wy0xOTk1ODU3MjM2LC0xMjk0MTY5MjM2LC05
-MTcwODUxNzIsLTE4NjMxMjcwODEsMzkzMTUzNDk0LDE5NjM4OD
-A4OCwxMzg5MjE4NjAzLDE1MTYzMzA5NzgsLTcyNTkyNTQ2Mywt
-MTA0OTgyMjk3NCw4NzAyNzY4MTEsLTM0Mzc0MzAyMiwtNDYxMD
-ExMzEwXX0=
+wiaGlzdG9yeSI6WzEzOTI0MDkwODIsLTgwODEyNzYyNSwtMTk5
+NTg1NzIzNiwtMTI5NDE2OTIzNiwtOTE3MDg1MTcyLC0xODYzMT
+I3MDgxLDM5MzE1MzQ5NCwxOTYzODgwODgsMTM4OTIxODYwMywx
+NTE2MzMwOTc4LC03MjU5MjU0NjMsLTEwNDk4MjI5NzQsODcwMj
+c2ODExLC0zNDM3NDMwMjIsLTQ2MTAxMTMxMF19
 -->
