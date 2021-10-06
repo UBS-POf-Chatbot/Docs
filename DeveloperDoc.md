@@ -35,7 +35,7 @@ der Chatbot an sich und den Adminbereich.
             4. [Statistics](#statisticshttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmlstatistics)
             5. [Error](#errorhttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmlerror)
         2. [Tagtypen](#tagtypen)
-4. [Ideen für die Weiterentwicklung](#ideen-für-weiterentwicklung)
+4. [Ideen für die Weiterentwicklung](#ideen-für-die-weiterentwicklung)
 
 ---
 
