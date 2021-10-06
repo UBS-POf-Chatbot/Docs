@@ -329,14 +329,63 @@ gespeichert werden. In dieser Datei müssen jetzt nur noch Inhalte gelöscht, be
 #### Chatbot Server Adresse definieren
 
 Ein Beispiel, die Adresse zum Chatbot sieht wie folgt aus:
-<code>http://localhost:8080/chatbot/</code>. In diesem Fall ist
+<code>http://localhost:8080/chatbot/ </code>. In diesem Fall ist
 <code>chatbot</code> die Adresse des Servers.
 
-TODO wo diese setzen? java und typescript
+Um den Server zu ändern muss einmal in JavaScript sowie in Java bei jeweils einer Datei etwas geändert werden.
+
+##### JavaScript
+
+In der Datei <code>src/main/webapp/assets/js/utilities/variables.ts</code> einfach die Variable <code>server</code>
+abändern.
+
+Im Beispiel von vorhin würde es so aussehen:
+<br>
+Vorher:
+
+```javascript
+const server = window.location.origin;
+```
+
+Nachher:
+
+```javascript
+const server = window.location.origin + "/chatbot";
+```
+
+##### Java
+
+In der
+Datei [<code>com/ubs/backend/util/Variables.java</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/util/Variables.html)
+einfach den
+String [<code>serverDirectory</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/util/Variables.html#serverDirectory)
+anpassen.
+
+Im Beispiel von vorhin würde es wie folgt aussehen:
+<br>
+Vorher:
+
+```java
+public class Variables {
+    public static String serverDirectory = "";
+}
+
+```
+
+Nachher:
+
+```java
+public class Variables {
+    public static String serverDirectory = "/chatbot";
+}
+
+```
+
+Nachdem die Anpassungen vorgenommen wurde, sollte der Chatbot ohne Probleme laufen.
 
 ### Ideen für die Weiterentwicklung
 
-Hier werden Ideen aufgelistet welche wir noch für den Chatbot hatten aber nicht genug Zeit hatten sie zu realisieren.
+Hier werden Ideen aufgelistet, welche wir noch für den Chatbot hatten aber nicht genug Zeit hatten sie zu realisieren.
 
 - Statistiken
     - Den Typ des Charts bei den Statistiken ändern können (von Linie zu Säulen etc)
