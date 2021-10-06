@@ -57,7 +57,7 @@ der Chatbot an sich und den Adminbereich.
 
 ### Einleitung <a name="general-introduction"></a>
 
-In diesem Abschnitt des Dokumentes beschreiben wir das Projekt im allgemeinen. Wir zählen auf was für Technologien wir
+In diesem Abschnitt des Dokumentes beschreiben wir das Projekt im Allgemeinen. Wir zählen auf was für Technologien wir
 verwenden und wie man verschiedene Dinge macht, wie zum Beispiel wie man eine Datenbankverbindung aufbaut. Zudem
 schreiben wir noch auf was wir machen wollten, aber wegen zu weniger Zeit nicht machen konnten.
 
@@ -337,7 +337,7 @@ Ein Beispiel, die Adresse zum Chatbot sieht wie folgt aus:
 <code>http://localhost:8080/chatbot/ </code>. In diesem Fall ist
 <code>chatbot</code> die Adresse des Servers.
 
-Um den Server zu ändern muss einmal in JavaScript sowie in Java bei jeweils einer Datei etwas geändert werden.
+Um den Server zu ändern, muss einmal in JavaScript sowie in Java bei jeweils einer Datei etwas geändert werden.
 
 ##### JavaScript
 
@@ -410,6 +410,17 @@ Im Chatbot verwenden wir folgende Antworttypen:
 - [Statistics](#statisticshttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmlstatistics)
 - [Error](#errorhttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmlerror)
 
+Eine kurze Zusammenfassung der Typen:
+
+|  | Default | Joke | Facts | Statistics | Error |
+| :--- | --- | --- | --- | --- | --- |
+| Generierte Antworten | Nein | Nein | Nein | Ja | Ja |
+| Antworten aus der Datenbank | Ja | Ja | Ja | Nein | Nein | 
+| [Gruppierte Tags](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#groupedTags) | Nein | Ja | Ja | Ja | Nein |
+| [Nutzer kann bearbeiten](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#canBeUserMade) | Ja | Ja | Ja | Nein | Nein |
+| [Ist standard versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#hidden) | Nein | Ja | Ja | Ja | Ja |
+| [Ist erzwungen versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#forceHidden) | Nein | Ja | Ja | Ja | Ja | 
+
 ###### [Default](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#DEFAULT)
 
 | Was | Ist so |
@@ -421,7 +432,8 @@ Im Chatbot verwenden wir folgende Antworttypen:
 | [Ist standard versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#hidden) | Nein |
 | [Ist erzwungen versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#forceHidden) | Nein |
 
-Der [<code>Default</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#DEFAULT) Typ ist der normale/standard Typ. Alle Antworten mit diesem Typen haben ihre eigenen Tags.
+Der [<code>Default</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#DEFAULT)
+Typ ist der normale/standard Typ. Alle Antworten mit diesem Typen haben ihre eigenen Tags.
 <br>
 Weitere Antworten können von Administratoren hinzugefügt werden.
 <br>
@@ -438,7 +450,8 @@ Antworten mit diesem Typen sind standardmässig nicht versteckt, können aber ve
 | [Ist standard versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#hidden) | Ja |
 | [Ist erzwungen versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#forceHidden) | Ja |
 
-Der [<code>Joke</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#JOKE) Typ ist gedacht für Witze. Alle Antworten mit diesem Typen teilen sich die Tags.
+Der [<code>Joke</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#JOKE)
+Typ ist gedacht für Witze. Alle Antworten mit diesem Typen teilen sich die Tags.
 <br>
 Alle Antworten mit diesem Typen sind standardmässig versteckt und müssen versteckt bleiben.
 <br>
@@ -455,8 +468,9 @@ Weitere Antworten können von Administratoren hinzugefügt werden.
 | [Ist standard versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#hidden) | Ja |
 | [Ist erzwungen versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#forceHidden) | Ja |
 
-Der [<code>Facts</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#FACTS) Typ ist gedacht für Fakten über den Chatbot, kann aber auch für andere Arten von Fakten verwendet
-werden. Alle Antworten mit diesem Typen teilen sich die Tags.
+Der [<code>Facts</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#FACTS)
+Typ ist gedacht für Fakten über den Chatbot, kann aber auch für andere Arten von Fakten verwendet werden. Alle Antworten
+mit diesem Typen teilen sich die Tags.
 <br>
 Alle Antworten mit diesem Typen sind standardmässig versteckt und müssen versteckt bleiben.
 <br>
@@ -473,8 +487,9 @@ Weitere Antworten können von Administratoren hinzugefügt werden.
 | [Ist standard versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#hidden) | Ja |
 | [Ist erzwungen versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#forceHidden) | Ja |
 
-Der [<code>Statistics</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#STATISTICS) Typ ist gedacht für Statistiken über den Chatbot, kann aber auch für andere Arten von
-Statistiken verwendet werden. Alle Antworten mit diesem Typen teilen sich die Tags.
+Der [<code>Statistics</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#STATISTICS)
+Typ ist gedacht für Statistiken über den Chatbot, kann aber auch für andere Arten von Statistiken verwendet werden. Alle
+Antworten mit diesem Typen teilen sich die Tags.
 <br>
 Alle Antworten mit diesem Typen sind standardmässig versteckt und müssen versteckt bleiben.
 <br>
@@ -503,9 +518,10 @@ Für jede generierte Antwort holen wir die entsprechenden Daten aus der Datenban
 | [Ist standard versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#hidden) | Ja |
 | [Ist erzwungen versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#forceHidden) | Ja |
 
-Der [<code>Error</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#ERROR) Typ ist gedacht für Fehler beim Versenden oder suchen einer passenden Antwort. Diese Antwort
-sollte keine Tags besitzen da diese nie gebraucht werden. Dieser Typ wird nur zum Benutzer zurückgeschickt, wenn der
-Chatbot keine passende Antwort findet oder es einen Fehler gibt.
+Der [<code>Error</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#ERROR)
+Typ ist gedacht für Fehler beim Versenden oder suchen einer passenden Antwort. Diese Antwort sollte keine Tags besitzen
+da diese nie gebraucht werden. Dieser Typ wird nur zum Benutzer zurückgeschickt, wenn der Chatbot keine passende Antwort
+findet oder es einen Fehler gibt.
 <br>
 Diese Antwort generiert keine Statistiken
 <br>
@@ -515,6 +531,41 @@ Es können keine weiteren Antworten von Administratoren über das Admintool hinz
 generieren zu können, muss man weitere Antwortmöglichkeiten zum Code hinzufügen.
 
 ##### Tagtypen
+
+Unsere Tags werden in zwei Arten aufgeteilt.
+
+- [Result](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/Result.html)
+- [TypeTag](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/TypeTag.html)
+
+Der Unterschied zwischen den beiden Typen ist einfach: Gehört der Tag zu einer einzelnen Antwort ist er ein <code>
+Result</code>, aber gehört der Tag zu einer Gruppe von Antworten so ist er ein <code>TypeTag</code>. Je nach Typ werden
+die Tags in einer anderen Tabelle gespeichert.
+<code>Result</code> wird in der Tabelle <code>results</code> gespeichert. <code>TypeTag</code> in <code>typetag</code>.
+
+Antworten mit dem
+Typen [<code>Default</code>](#defaulthttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmldefault)
+haben Tags mit dem Typen <code>Result</code> weil die Antwort nicht gruppierte Tags hat. Allerdings Antworten mit zum
+Beispiel dem Typen
+[<code>Joke</code>](#jokehttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmljoke) haben Tags mit
+dem Typen <code>TypeTag</code>
+
+Der Unterschied in der Datenbank sieht wie folgt aus.
+
+| | Result | TypeTag
+| :--- | --- | --- |
+| Upvotes | Ja | Ja |
+| Downvotes | Ja | Ja |
+| Anzahl Verwendungen | Ja | Ja |
+| Referenz zu Tag | Ja | Ja |
+| Referenz zu Antwort | Ja | Nein |
+| AntwortTyp | Nein | Ja |
+
+Wie man also sehen kann, <code>Result</code> braucht nicht zu wissen was für ein Typ die Antwort ist, da wir eine
+direkte referenz zu der Antwort haben und direkt von ihr diese Information beziehen können.
+<br>
+<code>TypeTag</code> hat diese Referenz nicht weswegen wir den Typen abspeichern müssen. Dadurch können wir im Code alle
+Antworten welche gruppierte Tags haben nehmen und mit der Tabelle vergleichen. Dann nehmen wir alle Tags mit demselben
+Typen und wissen genau welche Antwort welche Tags hat.
 
 ---
 
@@ -566,8 +617,8 @@ dieses Projektes. Es ist die erste Seite die ein Admin sieht und die einzige Sei
 Folgend wird beschrieben was beim laden der Seite in welcher Reihenfolge passiert.
 
 1. [Den Status überprüfen](#check-state)
-2. [Char counter laden](#load-char-counter)
-3. [Den Chatbot initialisieren](#init-chatbot)
+2. [Vorschlage Fragen laden](#vorschlage-fragen-laden)
+3. [Char counter laden](#load-char-counter)
 
 ### Status überprüfen <a name="check-state"></a>
 
@@ -613,8 +664,9 @@ let response = await fetch(
 ```
 
 Die Variable <code>server</code> ist unser gesetzter Servername. Mehr dazu im Abschnitt
-[Chatbot Server Adresse definieren](#chatbot-server-adresse-definieren) Dieser Service erwartet einen Parameter, <code>
-amountQuestions</code>. Dieser Parameter definiert wieviele Fragen wir laden wollen, in diesem Fall sind es 3. Der
+[Chatbot Server Adresse definieren](#chatbot-server-adresse-definieren). Dieser Service, den wir hier aufrufen, erwartet
+den Parameter <code>
+amountQuestions</code>. Dieser Parameter definiert wie viele Fragen wir laden wollen, in diesem Fall sind es 3. Der
 Service ist hier zu finden:
 [<code>com.ubs.backend.services.Get#questionSuggestions</code>](<https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/Get.html#questionSuggestions(java.lang.String)>)
 . Im Service werden zuerst die aktuell im Monat best bewerteten Benutzer Fragen geholt.
@@ -734,3 +786,5 @@ anzeigen:
 ---
 
 <sup>Autor: [Tim Irmler](https://github.com/zwazel) </sup>
+<br>
+<sup>Zuletzt bearbeitet: 06.10.2021</sup>
