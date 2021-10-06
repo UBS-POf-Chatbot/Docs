@@ -575,7 +575,7 @@ Hier werden Ideen aufgelistet, welche wir noch für den Chatbot hatten aber nich
     - Den Typ des Charts bei den Statistiken ändern können (von Linie zu Säulen etc)
     - Gute vs schlechte Bewertungen pro Zeit
     - Die aktuellen vorgeschlagenen Fragen direkt auf der Startseite anzeigen lassen, wenn eine Frage neu vorgeschlagen
-      wird (neu = seit dem letzten login) hat die Frage ein "neu" label
+      wird hat die Frage ein "neu" label [1]
     - Bei den einzelnen Antworten in der Statistik noch mehr Statistiken anzeigen
         - Wie oft um welche Zeit wurde diese Antwort versendet
         - wie viele gute vs schlechte bewertungen
@@ -603,6 +603,8 @@ Hier werden Ideen aufgelistet, welche wir noch für den Chatbot hatten aber nich
 - Eigene Konsole für DB Abfragen im Admintool. So könnte man als Admin ohne direkten Zugang auf die Datenbank im
   Admintool einige Abfragen machen und herausfinden was das Problem ist
 - Benutzer Detail Seite Design anpassen, da es noch veraltet und unschön ist.
+
+[1] neu = seit dem letzten login des jeweiligen Benutzers neu, davor wurde diese Frage noch nicht vorgeschlagen.
 
 ---
 
