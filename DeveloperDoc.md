@@ -602,14 +602,3 @@ anzeigen:
 ---
 
 <sup>Autor: [Tim Irmler](https://github.com/zwazel) </sup>
-
-<!--stackedit_data:
-eyJwcm9wZXJ0aWVzIjoidGl0bGU6IEVudHdpY2tsZXIgRG9rdW
-1lbnRhdGlvbiAtIFNUSU1BXG5hdXRob3I6ICdUaW0gSXJtbGVy
-LCBNYXJjIEFuZHJpIEZ1Y2hzJ1xuc3RhdHVzOiBkcmFmdFxuIi
-wiaGlzdG9yeSI6WzEzOTI0MDkwODIsLTgwODEyNzYyNSwtMTk5
-NTg1NzIzNiwtMTI5NDE2OTIzNiwtOTE3MDg1MTcyLC0xODYzMT
-I3MDgxLDM5MzE1MzQ5NCwxOTYzODgwODgsMTM4OTIxODYwMywx
-NTE2MzMwOTc4LC03MjU5MjU0NjMsLTEwNDk4MjI5NzQsODcwMj
-c2ODExLC0zNDM3NDMwMjIsLTQ2MTAxMTMxMF19
--->
