@@ -596,13 +596,13 @@ Problem haben und kriegen einen schlechten Status. Wenn wir kein Fehler haben kr
 #### Guter Status
 
 Bei einem guten Status ändern wir die Nachricht des Bots zu einer Begrüssung.
-![Good State welcome](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/goodStateWelcome.jpg)
+![Good State message](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/goodStateWelcome.jpg)
 Danach geht es weiter.
 
 #### Schlechter Status
 
 Bei einem schlechten Status geben wir einen Fehler aus.
-![Good State welcome](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/badStateError.jpg)
+![Bad State message](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/chatbot/badStateError.jpg)
 Das Textfeld bleibt deaktiviert und es passiert nichts mehr.
 
 ### Vorschlage Fragen laden
