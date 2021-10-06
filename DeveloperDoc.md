@@ -412,7 +412,7 @@ Im Chatbot verwenden wir folgende Antworttypen:
 
 Eine kurze Zusammenfassung der Typen:
 
-|  | Default | Joke | Facts | Statistics | Error |
+|  | [Default](#default) | [Joke](#joke) | [Facts](#facts) | [Statistics](#statistics) | [Error](#error) |
 | :--- | --- | --- | --- | --- | --- |
 | Generierte Antworten | Nein | Nein | Nein | Ja | Ja |
 | Antworten aus der Datenbank | Ja | Ja | Ja | Nein | Nein | 
