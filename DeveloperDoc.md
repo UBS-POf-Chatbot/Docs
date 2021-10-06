@@ -37,8 +37,6 @@ der Chatbot an sich und den Adminbereich.
         2. [Tagtypen](#tagtypen)
 4. [Ideen für die Weiterentwicklung](#ideen-für-die-weiterentwicklung)
 
----
-
 ### [Chatbot](#chatbot-section-start)<a name="tableofcontent-chatbot"></a>
 
 1. [Einleitung](#chatbot-introduction)
@@ -48,8 +46,6 @@ der Chatbot an sich und den Adminbereich.
 3. [Vorschlage Fragen laden](#vorschlage-fragen-laden)
 4. [Char counter laden](#load-char-counter)
 5. [Passende Antwort finden](#suchen-nach-der-passenden-antwort)
-
----
 
 ### [Adminbereich](#admintool-section-start)<a name="tableofcontent-admintool"></a>
 
