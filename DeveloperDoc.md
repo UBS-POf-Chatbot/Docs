@@ -402,27 +402,28 @@ Hier werden Ideen aufgelistet, welche wir noch für den Chatbot hatten aber nich
     - Die aktuellen vorgeschlagenen Fragen direkt auf der Startseite anzeigen lassen, wenn eine Frage neu vorgeschlagen
       wird (neu = seit dem letzten login) hat die Frage ein "neu" label
     - Bei den einzelnen Antworten in der Statistik noch mehr Statistiken anzeigen
-        - Wie oft um welche zeit wurde diese Antwort versendet
+        - Wie oft um welche Zeit wurde diese Antwort versendet
         - wie viele gute vs schlechte bewertungen
         - ...
     - Bei einem Tag alle matches anzeigen die zu diesem Tag übersetzt werden
-- Nach dem löschen eines Tags checken ob eine beantwortete Frage nicht mehr beantwortet werden kann und entsprechend als
+- Nach dem Löschen eines Tags checken, ob eine beantwortete Frage nicht mehr beantwortet werden kann und entsprechend als
   unbeantwortet markieren
-- Im moment wird bei den vorschlage Fragen nicht verhindert das Fragen mit der selben Antwort angezeigt werden. Idee ist
+- Im moment wird bei den vorschlage Fragen nicht verhindert das Fragen mit derselben Antwort angezeigt werden. Idee ist
   es die besten Fragen einer Antwort zu zeigen, so wird garantiert das man 3 unterschiedliche Fragen als Vorschlag hat
-- Dateien, vorallem Bilder sind sehr gross und man kann leicht den Text der Nachricht übersehen. Man könnte es so machen
-  das alle Dateien ausklapbar sind und anfangs zuerst eingeklappt sind.
+- Dateien, vor allem Bilder sind sehr gross und man kann leicht den Text der Nachricht übersehen. Man könnte es so machen
+  das alle Dateien ausklappbar sind und anfangs zuerst eingeklappt sind.
 - Ein Darkmode für das Admintool
 - Wenn der Bot eine längere Nachricht schickt diese automatisch unterteilen in kleinere einzelne Nachrichten, sieht
   besser/übersichtlicher aus
 - Alle ManyToMany Beziehungen in Hibernate von List<> zu Set<> ändern
 - Stored Procedures verwenden, z.B. für Levenshtein direkt in der DB anstelle in Java. Wäre schneller
-- Der Kunde wollte ursprünglich das der Benutzer die Möglichkeit hat, auf eine unbeantwortete Frage selber eine Antwort
+- Der Kunde wollte ursprünglich, dass der Benutzer die Möglichkeit hat, auf eine unbeantwortete Frage selber eine Antwort
   zu schreiben. Diese Antwort muss zunächst von einem Admin akzeptiert werden. Der Admin kann die Antwort selber aber
   auch bearbeiten und dann akzeptieren.
 - Tags die zu einer versteckten (hidden) Antwort gehören sollten nicht in der Autocompletion des Benutzers vorkommen
 - Eigene Konsole für DB Abfragen im Admintool. So könnte man als Admin ohne direkten Zugang auf die Datenbank im
   Admintool einige Abfragen machen und herausfinden was das Problem ist
+- Benutzer Detail Seite Design anpassen, da es noch veraltet und unschön ist.
 
 ---
 
