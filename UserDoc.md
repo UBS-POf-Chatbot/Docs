@@ -211,3 +211,7 @@ Sie können sich selber kein Recht geben oder nehmen und Ihr Passwort können Si
 
 ### Ausloggen<a name="admintool-exit"></a>
 Wenn Sie ausloggen, werden Sie direkt auf der Anmeldungsseite geleitet.
+
+---
+
+<sup>Autor: [Sarah Ambi](https://github.com/SarahAmbi) </sup>
