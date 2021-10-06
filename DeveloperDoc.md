@@ -411,47 +411,67 @@ Im Chatbot verwenden wir folgende Antworttypen.
 ###### [Default](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#DEFAULT)
 
 | Was | Ist so |
-| --- | ---: |
+| :--- | ---: |
 | Generierte Antworten | Nein |
 | Antworten aus der Datenbank | Ja |
-| Jede Antwort eigene Tags | Ja |
-| Gruppierte Tags | Nein |
+| [Gruppierte Tags](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#groupedTags) | Nein |
+| [Nutzer kann bearbeiten](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#canBeUserMade) | Ja |
+| [Ist standard versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#hidden) | Nein |
+| [Ist erzwungen versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#forceHidden) | Nein |
+
+Der <code>Default</code> Typ ist der normale/standard Typ. Alle Antworten mit diesem Typen haben ihre eigenen Tags.
+<br>
+Weitere Antworten können von Administratoren hinzugefügt werden.
+<br>
+Antworten mit diesem Typen sind standardmässig nicht versteckt, können aber versteckt werden.
 
 ###### [Joke](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#JOKE)
 
 | Was | Ist so |
-| --- | ---: |
+| :--- | ---: |
 | Generierte Antworten | Nein |
 | Antworten aus der Datenbank | Ja |
-| Jede Antwort eigene Tags | Nein |
-| Gruppierte Tags | Ja |
+| [Gruppierte Tags](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#groupedTags) | Ja |
+| [Nutzer kann bearbeiten](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#canBeUserMade) | Ja |
+| [Ist standard versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#hidden) | Ja |
+| [Ist erzwungen versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#forceHidden) | Ja |
+
+Der <code>Joke</code> Typ ist gedacht für Witze. Alle Antworten mit diesem Typen teilen sich die Tags.
+<br>
+Alle Antworten mit diesem Typen sind standardmässig versteckt und müssen versteckt bleiben.
 
 ###### [Facts](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#FACTS)
 
 | Was | Ist so |
-| --- | ---: |
+| :--- | ---: |
 | Generierte Antworten | Nein |
 | Antworten aus der Datenbank | Ja |
-| Jede Antwort eigene Tags | Nein |
-| Gruppierte Tags | Ja |
+| [Gruppierte Tags](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#groupedTags) | Ja |
+| [Nutzer kann bearbeiten](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#canBeUserMade) | Ja |
+| [Ist standard versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#hidden) | Ja |
+| [Ist erzwungen versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#forceHidden) | Ja |
 
 ###### [Statistics](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#STATISTICS)
 
 | Was | Ist so |
-| --- | ---: |
+| :--- | ---: |
 | Generierte Antworten | Ja |
 | Antworten aus der Datenbank | Nein |
-| Jede Antwort eigene Tags | Nein |
-| Gruppierte Tags | Ja |
+| [Gruppierte Tags](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#groupedTags) | Ja |
+| [Nutzer kann bearbeiten](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#canBeUserMade) | Nein |
+| [Ist standard versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#hidden) | Ja |
+| [Ist erzwungen versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#forceHidden) | Ja |
 
 ###### [Error](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#ERROR)
 
 | Was | Ist so |
-| --- | ---: |
+| :--- | ---: |
 | Generierte Antworten | Ja |
 | Antworten aus der Datenbank | Nein |
-| Jede Antwort eigene Tags | Nein |
-| Gruppierte Tags | Nein |
+| [Gruppierte Tags](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#groupedTags) | Nein |
+| [Nutzer kann bearbeiten](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#canBeUserMade) | Nein |
+| [Ist standard versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#hidden) | Ja |
+| [Ist erzwungen versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#forceHidden) | Ja |
 
 ##### Tagtypen
 
