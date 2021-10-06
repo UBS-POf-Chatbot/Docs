@@ -588,8 +588,9 @@ Hier werden Ideen aufgelistet, welche wir noch für den Chatbot hatten aber nich
       Antworten währen von Vorteil.
 - Nach dem Löschen eines Tags checken, ob eine beantwortete Frage nicht mehr beantwortet werden kann und entsprechend
   als unbeantwortet markieren
-- Im moment wird bei den vorschlage Fragen nicht verhindert das Fragen mit derselben Antwort angezeigt werden. Idee ist
-  es die besten Fragen einer Antwort zu zeigen, so wird garantiert das man 3 unterschiedliche Fragen als Vorschlag hat
+- Im moment wird bei den vorschlage Fragen nicht verhindert, dass Fragen mit derselben Antwort angezeigt werden. Idee
+  ist es die besten Fragen einer Antwort zu zeigen, so wird garantiert das man 3 unterschiedliche Fragen als Vorschlag
+  hat
 - Dateien, vor allem Bilder sind sehr gross und man kann leicht den Text der Nachricht übersehen. Man könnte es so
   machen das alle Dateien ausklappbar sind und anfangs zuerst eingeklappt sind.
 - Ein Darkmode für das Admintool
