@@ -28,6 +28,13 @@ der Chatbot an sich und den Adminbereich.
         1. [Testdaten ändern oder hinzufügen](#testdaten-ändern-oder-hinzufügen)
     3. [Chatbot Server Adresse definieren](#chatbot-server-adresse-definieren)
     4. [Antwort- und Tagtypen](#antwort--und-tagtypen)
+        1. [Antworttypen](#antworttypen)
+            1. [Default](#defaulthttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmldefault)
+            2. [Joke](#jokehttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmljoke)
+            3. [Facts](#factshttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmlfacts)
+            4. [Statistics](#statisticshttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmlstatistics)
+            5. [Error](#errorhttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmlerror)
+        2. [Tagtypen](#tagtypen)
 4. [Ideen für die Weiterentwicklung](#ideen-für-weiterentwicklung)
 
 ---
@@ -388,7 +395,65 @@ Nachdem die Anpassungen vorgenommen wurde, sollte der Chatbot ohne Probleme lauf
 ---
 
 #### Antwort- und Tagtypen
-TODO erklären von den verschiedenen antwort typen, welche generiert werden welche in der datenbank stehen, die verschiedenen tagtypen erklären, was ist der unterschied von denen etc
+
+Im Chatbot gibt es verschiedene Antworttypen sowie 2 verschiedene Tagtypen. In diesem Abschnitt erklären wir was der
+Unterschied zwischen diesen Typen ist und wie sie funktionieren.
+
+##### Antworttypen
+
+Wir haben unterschiedliche Typen von Antworten für unterschiedliche Zwecke.
+<br>
+Einige Typen werden durch Code generiert und sind dadurch dynamisch, während andere von der Datenbank geholt werden.
+Einige Typen teilen sich tags pro Antwort während andere Typen pro Antwort andere Tags haben.
+
+Im Chatbot verwenden wir folgende Antworttypen.
+
+###### [Default](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#DEFAULT)
+
+| Was | Ist so |
+| --- | ---: |
+| Generierte Antworten | Nein |
+| Antworten aus der Datenbank | Ja |
+| Jede Antwort eigene Tags | Ja |
+| Gruppierte Tags | Nein |
+
+###### [Joke](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#JOKE)
+
+| Was | Ist so |
+| --- | ---: |
+| Generierte Antworten | Nein |
+| Antworten aus der Datenbank | Ja |
+| Jede Antwort eigene Tags | Nein |
+| Gruppierte Tags | Ja |
+
+###### [Facts](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#FACTS)
+
+| Was | Ist so |
+| --- | ---: |
+| Generierte Antworten | Nein |
+| Antworten aus der Datenbank | Ja |
+| Jede Antwort eigene Tags | Nein |
+| Gruppierte Tags | Ja |
+
+###### [Statistics](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#STATISTICS)
+
+| Was | Ist so |
+| --- | ---: |
+| Generierte Antworten | Ja |
+| Antworten aus der Datenbank | Nein |
+| Jede Antwort eigene Tags | Nein |
+| Gruppierte Tags | Ja |
+
+###### [Error](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#ERROR)
+
+| Was | Ist so |
+| --- | ---: |
+| Generierte Antworten | Ja |
+| Antworten aus der Datenbank | Nein |
+| Jede Antwort eigene Tags | Nein |
+| Gruppierte Tags | Nein |
+
+##### Tagtypen
 
 ---
 
@@ -406,20 +471,20 @@ Hier werden Ideen aufgelistet, welche wir noch für den Chatbot hatten aber nich
         - wie viele gute vs schlechte bewertungen
         - ...
     - Bei einem Tag alle matches anzeigen die zu diesem Tag übersetzt werden
-- Nach dem Löschen eines Tags checken, ob eine beantwortete Frage nicht mehr beantwortet werden kann und entsprechend als
-  unbeantwortet markieren
+- Nach dem Löschen eines Tags checken, ob eine beantwortete Frage nicht mehr beantwortet werden kann und entsprechend
+  als unbeantwortet markieren
 - Im moment wird bei den vorschlage Fragen nicht verhindert das Fragen mit derselben Antwort angezeigt werden. Idee ist
   es die besten Fragen einer Antwort zu zeigen, so wird garantiert das man 3 unterschiedliche Fragen als Vorschlag hat
-- Dateien, vor allem Bilder sind sehr gross und man kann leicht den Text der Nachricht übersehen. Man könnte es so machen
-  das alle Dateien ausklappbar sind und anfangs zuerst eingeklappt sind.
+- Dateien, vor allem Bilder sind sehr gross und man kann leicht den Text der Nachricht übersehen. Man könnte es so
+  machen das alle Dateien ausklappbar sind und anfangs zuerst eingeklappt sind.
 - Ein Darkmode für das Admintool
 - Wenn der Bot eine längere Nachricht schickt diese automatisch unterteilen in kleinere einzelne Nachrichten, sieht
   besser/übersichtlicher aus
 - Alle ManyToMany Beziehungen in Hibernate von List<> zu Set<> ändern
 - Stored Procedures verwenden, z.B. für Levenshtein direkt in der DB anstelle in Java. Wäre schneller
-- Der Kunde wollte ursprünglich, dass der Benutzer die Möglichkeit hat, auf eine unbeantwortete Frage selber eine Antwort
-  zu schreiben. Diese Antwort muss zunächst von einem Admin akzeptiert werden. Der Admin kann die Antwort selber aber
-  auch bearbeiten und dann akzeptieren.
+- Der Kunde wollte ursprünglich, dass der Benutzer die Möglichkeit hat, auf eine unbeantwortete Frage selber eine
+  Antwort zu schreiben. Diese Antwort muss zunächst von einem Admin akzeptiert werden. Der Admin kann die Antwort selber
+  aber auch bearbeiten und dann akzeptieren.
 - Tags die zu einer versteckten (hidden) Antwort gehören sollten nicht in der Autocompletion des Benutzers vorkommen
 - Eigene Konsole für DB Abfragen im Admintool. So könnte man als Admin ohne direkten Zugang auf die Datenbank im
   Admintool einige Abfragen machen und herausfinden was das Problem ist
@@ -571,7 +636,9 @@ HTML umgewandelt.
 ---
 
 ### Suchen nach der passenden Antwort
-TODO, erklären was passiert beim abschicken eines textes, was passiert im backend und frontend, was passiert wenn keine antwort gefunden wird
+
+TODO, erklären was passiert beim abschicken eines textes, was passiert im backend und frontend, was passiert wenn keine
+antwort gefunden wird
 
 ---
 
