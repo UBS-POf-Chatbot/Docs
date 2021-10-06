@@ -29,11 +29,11 @@ der Chatbot an sich und den Adminbereich.
     3. [Chatbot Server Adresse definieren](#chatbot-server-adresse-definieren)
     4. [Antwort- und Tagtypen](#antwort--und-tagtypen)
         1. [Antworttypen](#antworttypen)
-            1. [Default](#defaulthttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmldefault)
-            2. [Joke](#jokehttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmljoke)
-            3. [Facts](#factshttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmlfacts)
-            4. [Statistics](#statisticshttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmlstatistics)
-            5. [Error](#errorhttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmlerror)
+            1. [Default](#default)
+            2. [Joke](#joke)
+            3. [Facts](#facts)
+            4. [Statistics](#statistic)
+            5. [Error](#error)
         2. [Tagtypen](#tagtypen)
 4. [Ideen für die Weiterentwicklung](#ideen-für-die-weiterentwicklung)
 
@@ -404,11 +404,11 @@ Einige Typen teilen sich tags pro Antwort während andere Typen pro Antwort ande
 
 Im Chatbot verwenden wir folgende Antworttypen:
 
-- [Default](#defaulthttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmldefault)
-- [Joke](#jokehttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmljoke)
-- [Facts](#factshttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmlfacts)
-- [Statistics](#statisticshttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmlstatistics)
-- [Error](#errorhttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmlerror)
+- [Default](#default)
+- [Joke](#joke)
+- [Facts](#facts)
+- [Statistics](#statistic)
+- [Error](#error)
 
 Eine kurze Zusammenfassung der Typen:
 
@@ -542,12 +542,10 @@ Result</code>, aber gehört der Tag zu einer Gruppe von Antworten so ist er ein 
 die Tags in einer anderen Tabelle gespeichert.
 <code>Result</code> wird in der Tabelle <code>results</code> gespeichert. <code>TypeTag</code> in <code>typetag</code>.
 
-Antworten mit dem
-Typen [<code>Default</code>](#defaulthttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmldefault)
+Antworten mit dem Typen [<code>Default</code>](#default)
 haben Tags mit dem Typen <code>Result</code> weil die Antwort nicht gruppierte Tags hat. Allerdings Antworten mit zum
 Beispiel dem Typen
-[<code>Joke</code>](#jokehttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmljoke) haben Tags mit
-dem Typen <code>TypeTag</code>
+[<code>Joke</code>](#joke) haben Tags mit dem Typen <code>TypeTag</code>
 
 Der Unterschied in der Datenbank sieht wie folgt aus.
 
