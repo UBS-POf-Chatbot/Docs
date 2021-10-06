@@ -421,7 +421,7 @@ Im Chatbot verwenden wir folgende Antworttypen:
 | [Ist standard versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#hidden) | Nein |
 | [Ist erzwungen versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#forceHidden) | Nein |
 
-Der <code>Default</code> Typ ist der normale/standard Typ. Alle Antworten mit diesem Typen haben ihre eigenen Tags.
+Der [<code>Default</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#DEFAULT) Typ ist der normale/standard Typ. Alle Antworten mit diesem Typen haben ihre eigenen Tags.
 <br>
 Weitere Antworten können von Administratoren hinzugefügt werden.
 <br>
@@ -438,7 +438,7 @@ Antworten mit diesem Typen sind standardmässig nicht versteckt, können aber ve
 | [Ist standard versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#hidden) | Ja |
 | [Ist erzwungen versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#forceHidden) | Ja |
 
-Der <code>Joke</code> Typ ist gedacht für Witze. Alle Antworten mit diesem Typen teilen sich die Tags.
+Der [<code>Joke</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#JOKE) Typ ist gedacht für Witze. Alle Antworten mit diesem Typen teilen sich die Tags.
 <br>
 Alle Antworten mit diesem Typen sind standardmässig versteckt und müssen versteckt bleiben.
 <br>
@@ -455,7 +455,7 @@ Weitere Antworten können von Administratoren hinzugefügt werden.
 | [Ist standard versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#hidden) | Ja |
 | [Ist erzwungen versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#forceHidden) | Ja |
 
-Der <code>Facts</code> Typ ist gedacht für Fakten über den Chatbot, kann aber auch für andere Arten von Fakten verwendet
+Der [<code>Facts</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#FACTS) Typ ist gedacht für Fakten über den Chatbot, kann aber auch für andere Arten von Fakten verwendet
 werden. Alle Antworten mit diesem Typen teilen sich die Tags.
 <br>
 Alle Antworten mit diesem Typen sind standardmässig versteckt und müssen versteckt bleiben.
@@ -473,7 +473,7 @@ Weitere Antworten können von Administratoren hinzugefügt werden.
 | [Ist standard versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#hidden) | Ja |
 | [Ist erzwungen versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#forceHidden) | Ja |
 
-Der <code>Statistics</code> Typ ist gedacht für Statistiken über den Chatbot, kann aber auch für andere Arten von
+Der [<code>Statistics</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#STATISTICS) Typ ist gedacht für Statistiken über den Chatbot, kann aber auch für andere Arten von
 Statistiken verwendet werden. Alle Antworten mit diesem Typen teilen sich die Tags.
 <br>
 Alle Antworten mit diesem Typen sind standardmässig versteckt und müssen versteckt bleiben.
@@ -503,7 +503,7 @@ Für jede generierte Antwort holen wir die entsprechenden Daten aus der Datenban
 | [Ist standard versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#hidden) | Ja |
 | [Ist erzwungen versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#forceHidden) | Ja |
 
-Der <code>Error</code> Typ ist gedacht für Fehler beim Versenden oder suchen einer passenden Antwort. Diese Antwort
+Der [<code>Error</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#ERROR) Typ ist gedacht für Fehler beim Versenden oder suchen einer passenden Antwort. Diese Antwort
 sollte keine Tags besitzen da diese nie gebraucht werden. Dieser Typ wird nur zum Benutzer zurückgeschickt, wenn der
 Chatbot keine passende Antwort findet oder es einen Fehler gibt.
 <br>
