@@ -583,7 +583,7 @@ Hier werden Ideen aufgelistet, welche wir noch für den Chatbot hatten aber nich
     - Bei einem Tag alle matches anzeigen die zu diesem Tag übersetzt werden
     - Im Moment gibt es gerade mal zwei Arten von generierten Antworten mit dem Typen <code>Statistics</code>, dadurch
       ist es recht langweilig und oft werden dieselben Antworten noch einmal geschickt. Mehr unterschiedlich generierte
-      Antworten währen von Vorteil.
+      Antworten währen von Vorteil. (Siehe [Statistics](#statistics)).
 - Nach dem Löschen eines Tags checken, ob eine beantwortete Frage nicht mehr beantwortet werden kann und entsprechend
   als unbeantwortet markieren
 - Im moment wird bei den vorschlage Fragen nicht verhindert, dass Fragen mit derselben Antwort angezeigt werden. Idee
