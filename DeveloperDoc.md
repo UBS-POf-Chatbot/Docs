@@ -27,6 +27,7 @@ der Chatbot an sich und den Adminbereich.
     2. [Datenbank mit Testdaten befüllen](#datenbank-mit-testdaten-befüllen)
         1. [Testdaten ändern oder hinzufügen](#testdaten-ändern-oder-hinzufügen)
     3. [Chatbot Server Adresse definieren](#chatbot-server-adresse-definieren)
+    4. [Antwort- und Tagtypen](#antwort--und-tagtypen)
 4. [Ideen für die Weiterentwicklung](#ideen-für-weiterentwicklung)
 
 ---
@@ -39,6 +40,7 @@ der Chatbot an sich und den Adminbereich.
     2. [Schlechter Status](#schlechter-status)
 3. [Vorschlage Fragen laden](#vorschlage-fragen-laden)
 4. [Char counter laden](#load-char-counter)
+5. [Passende Antwort finden](#suchen-nach-der-passenden-antwort)
 
 ---
 
@@ -383,6 +385,13 @@ public class Variables {
 
 Nachdem die Anpassungen vorgenommen wurde, sollte der Chatbot ohne Probleme laufen.
 
+---
+
+#### Antwort- und Tagtypen
+TODO erklären von den verschiedenen antwort typen, welche generiert werden welche in der datenbank stehen, die verschiedenen tagtypen erklären, was ist der unterschied von denen etc
+
+---
+
 ### Ideen für die Weiterentwicklung
 
 Hier werden Ideen aufgelistet, welche wir noch für den Chatbot hatten aber nicht genug Zeit hatten sie zu realisieren.
@@ -557,6 +566,11 @@ welches in TypeScript verwendet wird um herauszufinden wo diese Information gebr
 
 Im Service konstruieren wir jetzt noch ein JSON und geben dieses zurück. In TypeScript wird das JSON ausgelesen und in
 HTML umgewandelt.
+
+---
+
+### Suchen nach der passenden Antwort
+TODO, erklären was passiert beim abschicken eines textes, was passiert im backend und frontend, was passiert wenn keine antwort gefunden wird
 
 ---
 
