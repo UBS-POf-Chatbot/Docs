@@ -406,7 +406,13 @@ Wir haben unterschiedliche Typen von Antworten für unterschiedliche Zwecke.
 Einige Typen werden durch Code generiert und sind dadurch dynamisch, während andere von der Datenbank geholt werden.
 Einige Typen teilen sich tags pro Antwort während andere Typen pro Antwort andere Tags haben.
 
-Im Chatbot verwenden wir folgende Antworttypen.
+Im Chatbot verwenden wir folgende Antworttypen:
+
+- [Default](#defaulthttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmldefault)
+- [Joke](#jokehttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmljoke)
+- [Facts](#factshttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmlfacts)
+- [Statistics](#statisticshttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmlstatistics)
+- [Error](#errorhttpsubs-pof-chatbotgithubiojavadoccomubsbackendclassesenumsanswertypehtmlerror)
 
 ###### [Default](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#DEFAULT)
 
@@ -439,6 +445,8 @@ Antworten mit diesem Typen sind standardmässig nicht versteckt, können aber ve
 Der <code>Joke</code> Typ ist gedacht für Witze. Alle Antworten mit diesem Typen teilen sich die Tags.
 <br>
 Alle Antworten mit diesem Typen sind standardmässig versteckt und müssen versteckt bleiben.
+<br>
+Weitere Antworten können von Administratoren hinzugefügt werden.
 
 ###### [Facts](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#FACTS)
 
@@ -451,6 +459,13 @@ Alle Antworten mit diesem Typen sind standardmässig versteckt und müssen verst
 | [Ist standard versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#hidden) | Ja |
 | [Ist erzwungen versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#forceHidden) | Ja |
 
+Der <code>Facts</code> Typ ist gedacht für Fakten über den Chatbot, kann aber auch für andere Arten von Fakten verwendet
+werden. Alle Antworten mit diesem Typen teilen sich die Tags.
+<br>
+Alle Antworten mit diesem Typen sind standardmässig versteckt und müssen versteckt bleiben.
+<br>
+Weitere Antworten können von Administratoren hinzugefügt werden.
+
 ###### [Statistics](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#STATISTICS)
 
 | Was | Ist so |
@@ -462,6 +477,25 @@ Alle Antworten mit diesem Typen sind standardmässig versteckt und müssen verst
 | [Ist standard versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#hidden) | Ja |
 | [Ist erzwungen versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#forceHidden) | Ja |
 
+Der <code>Statistics</code> Typ ist gedacht für Statistiken über den Chatbot, kann aber auch für andere Arten von
+Statistiken verwendet werden. Alle Antworten mit diesem Typen teilen sich die Tags.
+<br>
+Alle Antworten mit diesem Typen sind standardmässig versteckt und müssen versteckt bleiben.
+<br>
+Alle Antworten mit diesem Typen werden vom Chatbot selber generiert.
+<br>
+Es können keine weiteren Antworten von Administratoren über das Admintool hinzugefügt werden. Um weitere Antworten
+generieren zu können, muss man weitere Antwortmöglichkeiten zum Code hinzufügen. Dazu muss
+der ['handler'](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#handler) der
+Antwort angepasst und bearbeitet werden.
+
+Im Moment generieren wir zwei Arten von Statistiken:
+
+- Seit wann ist der Chatbot aktiv
+- Wie viele Fragen wurden in {Zeitraum} beantwortet
+
+Für jede generierte Antwort holen wir die entsprechenden Daten aus der Datenbank und generieren daraus eine Antwort.
+
 ###### [Error](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#ERROR)
 
 | Was | Ist so |
@@ -472,6 +506,17 @@ Alle Antworten mit diesem Typen sind standardmässig versteckt und müssen verst
 | [Nutzer kann bearbeiten](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#canBeUserMade) | Nein |
 | [Ist standard versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#hidden) | Ja |
 | [Ist erzwungen versteckt](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#forceHidden) | Ja |
+
+Der <code>Error</code> Typ ist gedacht für Fehler beim Versenden oder suchen einer passenden Antwort. Diese Antwort
+sollte keine Tags besitzen da diese nie gebraucht werden. Dieser Typ wird nur zum Benutzer zurückgeschickt, wenn der
+Chatbot keine passende Antwort findet oder es einen Fehler gibt.
+<br>
+Diese Antwort generiert keine Statistiken
+<br>
+Alle Antworten mit diesem Typen werden vom Chatbot selber generiert.
+<br>
+Es können keine weiteren Antworten von Administratoren über das Admintool hinzugefügt werden. Um weitere Antworten
+generieren zu können, muss man weitere Antwortmöglichkeiten zum Code hinzufügen.
 
 ##### Tagtypen
 
@@ -491,6 +536,9 @@ Hier werden Ideen aufgelistet, welche wir noch für den Chatbot hatten aber nich
         - wie viele gute vs schlechte bewertungen
         - ...
     - Bei einem Tag alle matches anzeigen die zu diesem Tag übersetzt werden
+    - Im Moment gibt es gerade mal zwei Arten von generierten Antworten mit dem Typen <code>Statistics</code>, dadurch
+      ist es recht langweilig und oft werden dieselben Antworten noch einmal geschickt. Mehr unterschiedlich generierte
+      Antworten währen von Vorteil.
 - Nach dem Löschen eines Tags checken, ob eine beantwortete Frage nicht mehr beantwortet werden kann und entsprechend
   als unbeantwortet markieren
 - Im moment wird bei den vorschlage Fragen nicht verhindert das Fragen mit derselben Antwort angezeigt werden. Idee ist
