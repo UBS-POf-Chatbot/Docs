@@ -31,22 +31,20 @@ Wenn Sie Chatbot öffnen, sehen Sie dieses Bild.
 ![chatbot with function](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/chatbot.JPG)
 
 #### Vorschläge
-Als Erstes sehen Sie eine Begrüssung von Chatbot mit Vorschlagfragen.
-Diese Vorschläge werden anhand von den heute meist beliebte Fragen angezeigt.
+Als Erstes sehen Sie eine Begrüssung vom Chatbot mit Vorschlagfragen.
+Diese Vorschläge werden anhand von den meist gestellten Fragen dieses Monats.
 Die Fragestellung können Sie in Adminbereich ändern, dies werden Sie in einer späteren Zeit sehen.
 
 #### Chatverlauf
-Rechts von Stima den Namen des Chatbots, sehen Sie ein Pfeil, der nach unten zeigt.
-Mit dem Knopfklick laden Sie den Chatverlauf in Textdatei herunter.
+Oben rechts auf der Seite, sehen sie einen Pfeil, der nach unten zeigt.
+Mit einem Linksklick darauf laden Sie den Chatverlauf in Textdatei herunter.
 Wenn Sie die Datei öffnen, sehen Sie das Datum mit den genaueren Uhrzeiten und 
 wer geschrieben hat und was geschrieben wurde.
 
 #### Autovervollständigung
-Wir haben den Autovervollständigung eingerichtet wie es auf dem Bild zu erkennen ist.
-Wenn man in das Feld "ab" schreibt, werden zwei Vorschläge angezeigt.
-Sobald Sie auf das Eingabefeld anfangen zu schreiben, sehen Sie automatisch Schlagwörter, die passen würden.
-Sie können dies wählen und es gibt Ihnen eine Antwort dazu.
-Falls ein Wort nicht da ist, können Sie es später in Adminbereich hinzufügen.
+Wir haben die Autovervollständigung eingerichtet wie es auf dem Bild zu erkennen ist.
+Wenn man in das Feld etwas hinein schreibt, kommen Vorschläge unter dem Eingabefeld.
+Mit Tab und den Pfeiltasten oder mit einem Linksklick kann man einen Vorschlag auswählen.
 
 #### Upvotes und Downvotes
 ![upvotes-downvotes](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/upvotes_downvotes.JPG)
@@ -66,14 +64,14 @@ Damit Sie sich mit dem Adminbereich zurechtkommen.
 
 Zuerst einmal wie kommt man zum Adminbereich hin.
 Sie fragen den Chatbot nach Admintool oder Admin.
-Mit dem Klick auf dem Link werden Sie dort gelangen.
+Mit dem Klick auf dem Link werden Sie dorthin gelangen.
 Bevor Sie mit Adminbereich arbeiten, melden Sie sich an,
 geben Sie ihre E-Mail-Adresse und das Passwort ein.
 
 ### Übersicht<a name="admintool-home"></a>
 ![statistik-2](https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/userDoc/statistik_2.JPG)
 
-Den Adminbereich begrüsst Sie mit Statistiken.
+Im Admintool werden Sie direkt mit Statistiken begrüsst.
 Eine Statistik zeigt an, wie viele Antworten der Chatbot zurückgegeben hat 
 in Tagen, Wochen, Monate, Jahren und seit der letzten Anmeldung.
 Ebenfalls sehen Sie die Anzahl der beantworteten Fragen und die Menge von unbeantwortet Fragen.
@@ -86,9 +84,9 @@ Das erste ist Home die Übersicht mit Statistiken.
 ### Antworten<a name="admintool-tag"></a>
 Die zweite Seite ist für die Antworten zuständig.
 Hier können Sie Antworten hinzufügen, bearbeiten und löschen.
-Wenn Sie auf Antworten Hinzufügen klicken, zeigt es Ihnen das Eintragformular an.
-Sie können den Titel und Antwort geben.
-Es gibt ein Kästchen Versteckt, damit werden die Antworten versteckt.
+Wenn Sie auf "Antworten Hinzufügen" klicken, zeigt es Ihnen das Eintragformular an.
+Hier kann man der Antwort einen Titel und Antwort geben.
+Es gibt das Kästchen "Versteckt", damit werden für diese Antwort keine Statistiken erstellt.
 Das bedeutet, dass diese Antwort nicht zu Bewertung mitgezählt werden.
 Diese Antworte werden auch nicht bei der Statistiken vorkommen. 
 
