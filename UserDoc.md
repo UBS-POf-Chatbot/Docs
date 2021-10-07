@@ -40,7 +40,7 @@ Wenn Sie Chatbot öffnen, sehen Sie dieses Bild.
 #### Vorschläge
 
 Als Erstes sehen Sie eine Begrüssung vom Chatbot mit Vorschlagfragen. Diese Vorschläge werden anhand von den meist
-bewertete Fragen dieses Monats. Die Fragestellung können Sie in Adminbereich ändern, dies werden Sie in einer späteren
+bewerteten Fragen dieses Monats. Die Fragestellung können Sie in Adminbereich ändern, dies werden Sie in einer späteren
 Zeit sehen.
 
 #### Chatverlauf
