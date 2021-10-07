@@ -98,7 +98,7 @@ Wir nehmen als Beispiel den GTRS Link. Sie geben in Antwort diesen Link ein
 <a href="https://goto/gtrs">goto/gtrs</a>
 ``` 
 
-href="xxx" beim xxx schreiben Sie den Link auf. Sobald <code><a></code> schliesst, können Sie den Text schrieben, welche verlinkt wird.
+href="xxx" beim xxx schreiben Sie den Link auf. Sobald < a > schliesst, können Sie den Text schrieben, welche verlinkt wird.
 Falls Sie den Link auf einen neuen Tab öffnen wollen, schreiben Sie <code>target="_blank"</code> nach dem Link (href="xxx"). 
 Damit es keine Verwirrung gibt, ist hier ein Beispiel dazu 
 ```   html
