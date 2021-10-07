@@ -93,10 +93,10 @@ Menüleiste durchstreifen, sehen Sie, was die Icons bedeuten. Das erste ist Home
 Die zweite Seite ist für die Antworten zuständig. Hier können Sie Antworten hinzufügen, bearbeiten und löschen. Wenn Sie
 auf "Antworten Hinzufügen" klicken, zeigt es Ihnen das Eintragformular an. Hier kann man der Antwort einen Titel und
 Antwort geben. Wenn Sie einen Link zur Antwort hinzufügen wollen, müssen Sie ein wenig <code>html</code> schreiben.
-Wir nehmen als Beispiel den GTRS Link. Sie geben in Antwort dann ein diesen Link, ```<a href="https://goto/gtrs">goto/gtrs</a>``` 
-href="xxx" beim xxx schreiben Sie den Link auf. Sobald <a> schliesst, können Sie den Text schrieben, welche verlinkt wird.
+Wir nehmen als Beispiel den GTRS Link. Sie geben in Antwort diesen Link ein ```<a href="https://goto/gtrs">goto/gtrs</a>``` .
+href="xxx" beim xxx schreiben Sie den Link auf. Sobald ```<a>``` schliesst, können Sie den Text schrieben, welche verlinkt wird.
 Falls Sie den Link auf einen neuen Tab öffnen wollen, schreiben Sie ```target="_blank"``` nach dem Link (href="xxx"). 
-Damit es keine Verwirrung gibt, ist hier ein Beispiel dazu ```<a href="https://goto/gtrs" target="_blank">goto/gtrs</a>```. 
+Damit es keine Verwirrung gibt, ist hier ein Beispiel dazu ```<a href="https://goto/gtrs" target="_blank">GTRS</a>```. 
 Es gibt das Kästchen "Versteckt", damit werden für diese Antwort keine Statistiken erstellt. Das
 bedeutet, dass diese Antwort nicht zu Bewertung mitgezählt werden. Diese Antworte werden auch nicht bei der Statistiken
 vorkommen.
