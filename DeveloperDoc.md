@@ -1174,4 +1174,4 @@ Dabei wird auch der Knop mit der ID "answersButton" als aktiv gesetzt.
 
 <sup>Autor: [Tim Irmler](https://github.com/zwazel) </sup>
 <br>
-<sup>Zuletzt bearbeitet: 06.10.2021</sup>
+<sup>Zuletzt bearbeitet: 08.10.2021</sup>
