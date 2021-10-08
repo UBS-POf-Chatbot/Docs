@@ -225,4 +225,5 @@ selber zum Beispiel kein Recht geben oder nehmen und können sich selber nicht l
 Wenn Sie sich ausloggen, werden Sie direkt auf die Anmeldungsseite geleitet.
 
 <sup>Autor: [Sarah Ambi](https://github.com/SarahAmbi) </sup>
+<br>
 <sup>Zuletzt bearbeitet: 07.10.2021</sup>
