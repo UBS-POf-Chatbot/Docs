@@ -853,10 +853,9 @@ behalten können.
 So haben wir z.B. ein HTML file, `src/main/webapp/pages/adminTool/adminToolNavigation.html`, in welchem wir ganz einfach
 die linke Leiste, die Navigation, beschrieben haben.
 
-<div>
-    <img src="https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/adminTool/navigationShowcase.jpg" alt="adminTool Navigation" style="height:250px;float: left"/>
-    <p style="float: none">hallo</p>
-</div>
+<img src="https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/adminTool/navigationShowcase.jpg" alt="adminTool Navigation" style="height:300px;"/>
+
+Per Javascript legen wir dann fest welche dieser Knöpfe aktiv ist und welche Seite wir laden sollen.
 
 Um Seiten zu Laden haben wir die Methode `loadPage()`, sie hat folgende Parameter:
 
@@ -872,6 +871,8 @@ anzeigen:
 ```typescript
     await loadPage("answersDetails.html", "answersButton", true, 1);
 ```
+
+Dabei wird auch der Knop mit der ID "answersButton" als aktiv gesetzt.
 
 ---
 
