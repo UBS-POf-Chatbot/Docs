@@ -18,7 +18,9 @@ der Chatbot an sich und den Adminbereich.
 3. [Wichtige Klassen](#wichtige-klassen)
     1. [Datenbank Klassen](#datenbank-klassen)
     2. [Texte vorbereiten und reinigen](#texte-vorbereiten-und-reinigen)
-        1. [<code>prepareString()</code>](#preparestring)
+        1. [prepareString](#preparestring)
+        2. [shortenString](#shortenstring)
+        3. [stringTooLong](#stringtoolong)
 4. [Allgemein wichtige Informationen](#allgemeine-wichtige-informationen)
     1. [Datenbank](#datenbank)
         1. [Hibernate konfigurieren](#hibernate-konfigurieren)
@@ -114,23 +116,33 @@ Der erste Parameter ist ganz einfach der String, also z.B. die Benutzereingabe b
 soll.
 
 Der zweite Parameter definiert wie lange (Anzahl Zeichen) der String maximal sein darf. Wenn der gegebene String länger
-ist als dieser Parameter definiert, wird alles danach weggenommen.
-<br>
-Ein Beispiel:
+ist als dieser Parameter definiert, wird alles danach weggenommen. Für mehr Informationen gehe zu [shortenString](#shortenstring).
 
-```java
-String text="Hallo";
-String preparedText=prepareString(text,3);
-System.out.println(preparedText);
-```
-
-Die Ausgabe wäre dann <code>Hal</code>, die Länge des Textes wurde also von 5 auf 3 verkürzt da wir die maximale Länge auf 3 gesetzt haben.
 
 Der dritte Parameter ist ein boolean und definiert ob spezielle Charaktere entfernt werden sollen. Unter speziellen Charakteren meinen wir besonders HTML code. Dadurch verhindern wir Hackerangriffe.
 
 Der vierte Parameter ist ein boolean und definiert ob der Text in Kleinbuchstaben umgewandelt werden soll. Wenn der boolean false ist bleibt der Text so wie er ist.
 
 Der fünfte Parameter ist ein boolean und definiert ob alle vorkommenden Fragezeichen entfernt werden sollen oder nicht.
+
+##### [shortenString](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/util/PrepareString.html#shortenString(java.lang.String,int))
+
+Diese Methode verkürzt den angegebenen String auf die gegebene Länge.
+<br>
+Ein Beispiel:
+
+```java
+String text="Hallo";
+String shortenedText=shortenString(text,3);
+System.out.println(preparedText);
+```
+
+Die Ausgabe wäre dann <code>Hal</code>, die Länge des Textes wurde also von 5 auf 3 verkürzt da wir die maximale Länge auf 3 gesetzt haben.
+
+##### [stringTooLong](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/util/PrepareString.html#stringTooLong(java.lang.String,int))
+
+Diese Methode überprüft einfach ob der angegebene String länger ist als die angegebene maximale Länge.
+Gibt <code>true</code> zurück wenn der String länger ist und <code>false</code> wenn der String kürzer oder gleich lang ist.
 
 ### Allgemeine wichtige Informationen
 
@@ -348,7 +360,7 @@ aussehen.
 
 ```java
 AnswerDAO answerDAO=new AnswerDAO();
-        List<Answer> answersFromDB=answerDAO.select();
+List<Answer> answersFromDB=answerDAO.select();
 ```
 
 ---
