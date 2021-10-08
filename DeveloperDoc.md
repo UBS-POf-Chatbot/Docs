@@ -15,7 +15,11 @@ der Chatbot an sich und den Adminbereich.
     1. [Allgemein](#projekt-allgemein)
     2. [Backend](#backend)
     3. [Frontend](#frontend)
-3. [Allgemein wichtige Informationen](#allgemeine-wichtige-informationen)
+3. [Wichtige Klassen](#wichtige-klassen)
+    1. [Datenbank Klassen](#datenbank-klassen)
+    2. [Texte vorbereiten und reinigen](#texte-vorbereiten-und-reinigen)
+        1. [<code>prepareString()</code>](#preparestring)
+4. [Allgemein wichtige Informationen](#allgemeine-wichtige-informationen)
     1. [Datenbank](#datenbank)
         1. [Hibernate konfigurieren](#hibernate-konfigurieren)
             1. [Verbindung zu Datenbank](#verbindung-zu-datenbank)
@@ -35,7 +39,7 @@ der Chatbot an sich und den Adminbereich.
             4. [Statistics](#statistic)
             5. [Error](#error)
         2. [Tagtypen](#tagtypen)
-4. [Ideen für die Weiterentwicklung](#ideen-für-die-weiterentwicklung)
+5. [Ideen für die Weiterentwicklung](#ideen-für-die-weiterentwicklung)
 
 ### [Chatbot](#chatbot-section-start)<a name="tableofcontent-chatbot"></a>
 
@@ -78,6 +82,55 @@ In diesem Abschnitt zählen wir die einzelnen Technologien auf damit klar ist wa
 #### Frontend
 
 - TypeScript
+
+### Wichtige Klassen
+
+#### Datenbank Klassen
+
+Für mehr Informationen zum Abschnitt [Datenbank Abfragen](#datenbank-abfragen) gehen.
+
+#### Texte vorbereiten und reinigen
+
+Wir haben die Java
+Klasse [<code>com/ubs/backend/util/PrepareString.java</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/util/PrepareString.html)
+erstellt. In ihr haben wir unterschiedliche Methoden für das vorbereiten von Strings damit sie korrekt und ohne Gefahren
+in der Datenbank gespeichert werden können oder an den Benutzer geschickt werden können.
+
+Folgende Methoden hat die Klasse:
+
+- [<code>prepareString</code>](#preparestring)
+
+##### [prepareString()](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/util/PrepareString.html#prepareString(java.lang.String,int,boolean,boolean))
+
+Diese Methode bereitet den String vor. Sie akzeptiert folgende Parameter:
+
+1. <code>String string</code>
+2. <code>int maxStringlength</code>
+3. <code>boolean removeAllSpecialChars</code>
+4. <code>boolean toLowerCase</code>
+5. <code>removeQuestionMark</code>
+
+Der erste Parameter ist ganz einfach der String, also z.B. die Benutzereingabe beim Chatbot, welcher vorbereitet werden
+soll.
+
+Der zweite Parameter definiert wie lange (Anzahl Zeichen) der String maximal sein darf. Wenn der gegebene String länger
+ist als dieser Parameter definiert, wird alles danach weggenommen.
+<br>
+Ein Beispiel:
+
+```java
+String text="Hallo";
+String preparedText=prepareString(text,3);
+System.out.println(preparedText);
+```
+
+Die Ausgabe wäre dann <code>Hal</code>, die Länge des Textes wurde also von 5 auf 3 verkürzt da wir die maximale Länge auf 3 gesetzt haben.
+
+Der dritte Parameter ist ein boolean und definiert ob spezielle Charaktere entfernt werden sollen. Unter speziellen Charakteren meinen wir besonders HTML code. Dadurch verhindern wir Hackerangriffe.
+
+Der vierte Parameter ist ein boolean und definiert ob der Text in Kleinbuchstaben umgewandelt werden soll. Wenn der boolean false ist bleibt der Text so wie er ist.
+
+Der fünfte Parameter ist ein boolean und definiert ob alle vorkommenden Fragezeichen entfernt werden sollen oder nicht.
 
 ### Allgemeine wichtige Informationen
 
@@ -754,8 +807,18 @@ HTML umgewandelt.
 
 ### Suchen nach der passenden Antwort
 
-TODO, erklären was passiert beim abschicken eines textes, was passiert im backend und frontend, was passiert wenn keine
-antwort gefunden wird
+Wenn ein Nutzer eine Nachricht abschickt, rufen wir einen Service auf welcher nach der am besten passenden Antwort
+sucht.
+<br>
+Der Service findet man
+hier: [<code>com.ubs.backend.services.IntentFinderNew#findAnswer</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/IntentFinderNew.html#findAnswer(java.lang.String))
+.
+
+Der Service gibt ein Objekt des
+Types [<code>Response</code>](https://docs.oracle.com/javaee/7/api/javax/ws/rs/core/Response.html) zurück.
+<br>
+
+TODO
 
 ---
 
