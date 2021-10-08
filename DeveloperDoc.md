@@ -55,6 +55,8 @@ der Chatbot an sich und den Adminbereich.
 5. [Passende Antwort finden](#suchen-nach-der-passenden-antwort)
    1. [Vorbereiten des Textes](#vorbereiten-des-textes)
    2. [Matches suchen](#suchen-nach-matches)
+   3. [Suchen nach allen möglichen Antworten](#suchen-nach-allen-möglichen-antworten)
+   4. [Suchen nach der besten Antwort](#suchen-nach-der-besten-antwort)
 
 ### [Adminbereich](#admintool-section-start)<a name="tableofcontent-admintool"></a>
 
@@ -1026,7 +1028,105 @@ Jetzt überprüfen wir aber noch zusätzlich, ob der aktuelle Typ schon in unser
 
 Das Ganze wird jetzt wiederholt bis wir durch alle Wörter durch sind.
 
+---
 
+#### Suchen nach allen möglichen Antworten
+Nachdem wir alle möglichkeiten gefunden haben, geht es darum sich jetzt für die Beste zu entscheiden.
+<br>
+Im Moment haben wir aber noch das Problem, das wir nicht wirklich wissen welche Antwort wir von den gruppierten Typen schicken sollen.
+Alle Antworten mit einem 
+[AntwortTypen](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html) wie zum Beispiel
+den Typen 
+[`JOKE`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#JOKE) haben alle 
+dieselben Tags. Dadurch ist es für uns in diesem Bereich unmöglich herauszufinden welche jetzt die beste Antwort wär. 
+Deswegen nehmen wir einfach eine zufällige Antwort.
+
+Dazu gehen wir durch alle gefundenen Antworttypen und lassen eine zufällige Antwort finden und speichern diese zusammen 
+mit dem Typen der Antwort in einer 
+Hashmap< [AnswerType](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html), [Answer](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/Answer.html) >.
+
+```java
+HashMap<AnswerType, Answer> answerTypeAnswerHashMap = new HashMap<>();
+for (AnswerType answerType : foundAnswerTypes) {
+    answerTypeAnswerHashMap.put(answerType, answerType.handle(null));
+}
+```
+
+Jetzt wissen wir welche Antwort wir pro Typ schicken würden.
+
+Als Nächstes geht es darum alle möglichen Antworten zu finden. Denn bis jetzt haben wir zwar die unterschiedlichen 
+Results mit den Tags und den Bewertungen, aber diese sind nicht pro Antwort kombiniert. Also fügen wir jetzt alle 
+zusammen.
+
+Dafür erstellen wir zuerst eine neue ArrayList in welcher wir Instanzen der Klasse 
+[`PossibleAnswer`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/PossibleAnswer.html) speichern. 
+Danach gehen wir durch alle vorhin gefundenen `WordLevenshteinDistance` in unserer ArrayList `wordLevenshteinDistances`.
+Wir holen die aktuellen Up- sowie Downvotes von der aktuellen `WordLevenshteinDistance` Instanz und schauen welche Art
+das Result ist.
+
+Wenn es vom Typ `Result` ist nehmen wir einfach die aktuelle Antwort dieses Results und erstellen eine neue Instanz
+von `PossibleAnswer`.
+<br>
+Wenn es vom Typ `TypeTag` ist nehmen wir zwar die aktuellen up- und downvotes, aber wir können nicht die Antwort davon
+nehmen da `TypeTag` keine Referenz zu dieser hat. Aber genau aus diesem Grund haben wir vorhin zu den einzelnen 
+Antworttypen eine zufällige Antwort gesucht. Jetzt nehmen wir aus der Hashmap diese Antwort und erstellen eine neue 
+Instanz von `PossibleAnswer`.
+
+Als Nächstes wollen wir diese Instanz in unsere ArrayList speichern.
+<br>
+Dafür überprüfen wir zuerst, ob die Antwort schon in der Liste existiert. Falls ja erhöhen wir die up- und downvotes
+der bereits existierenden Antwort mit den Up- und Downvotes der aktuellen Antwort. 
+<br>
+Falls nein fügen wir die aktuelle Antwort zur Liste hinzu.
+
+#### Suchen nach der besten Antwort
+
+Jetzt gehen wir durch alle gefundenen möglichen Antworten und berechnen deren einzelnen Bewertungen.
+```java
+for (PossibleAnswer possibleAnswer : possibleAnswers) {
+    possibleAnswer.setRating();
+}
+```
+
+Die Methode 
+[`setRating()`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/PossibleAnswer.html#setRating())
+wird dafür verwendet.
+In dieser Methode gehen wir durch alle `WorldLevenshteinDistance` durch, welche die aktuelle Antwort besitzt. Dabei
+addieren wir immer die aktuelle Distanz zu einer einzelnen Variable.
+Dadurch haben wir am Ende die gesamte Distanz. Mit diesem Wert berechnen wir nun die Bewertung in dem wir
+[`com.ubs.backend.util.CalculateRating#getRating(int, int, float)`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/util/CalculateRating.html#getRating(int,int,float))
+aufrufen.
+
+Nachdem wir bei allen möglichen Antworten die Bewertung gesetzt haben gehen wir weiter und suchen die beste Antwort.
+<br>
+Dafür erstellen wir ein float namens `maxRating` und setzen den Wert auf -1f.
+dann gehen wir durch alle möglichen Antworten und schauen, ob deren Bewertung besser ist als das aktuelle `maxRating`.
+<br>
+Falls dies der Fall wäre, setzen wir das aktuelle `maxRating` auf diese Bewertung und die aktuelle `bestAnswer`setzen 
+wir auf die momentane Antwort.
+<br>
+Das machen wir dann so lange bis wir durch alle Antworten durch sind.
+
+Falls wir am Ende keine Antwort gefunden haben, erstellen wir selber eine Antwort mit dem Typen 
+[`ERROR`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html#ERROR) und 
+konstruieren daraus ein JSON welches wir zurückgeben.
+Gleichzeitig fügen wir eine neue
+[UnansweredQuestion](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/questions/UnansweredQuestion.html)
+in die Datenbank ein.
+
+Falls wir am Ende eine Antwort gefunden haben überprüfen wir, ob diese versteckt ist, falls dies der Fall ist wollen wir 
+keine Statistiken generieren.
+<br>
+Falls wir Statistiken generieren, erhöhen wir die Aufrufe der gefundenen Antwort um 1.
+Zusätzlich, unabhängig davon, ob wir Statistiken generieren oder nicht, erhöhen wir die Aufrufe jedes in der Antwort vorkommenden `Results`.
+<br>
+Danach, falls wir Statistiken generieren wollen, fügen wir eine neue 
+[`AnsweredQuestion`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/questions/AnsweredQuestion.html)
+zur Datenbank hinzu mit all den nötigen Informationen.
+
+Am Ende schliessen wir die Verbindung zur Datenbank und erstellen ein JSON mit unserer gefundenen Antwort, welche wir 
+dann an den Benutzer zurückschicken.
+Der Browser bekommt dann diese Antwort und zeigt sie dem Benutzer an.
 
 ---
 
