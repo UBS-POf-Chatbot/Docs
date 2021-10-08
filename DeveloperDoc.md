@@ -21,6 +21,7 @@ der Chatbot an sich und den Adminbereich.
         1. [prepareString](#preparestring)
         2. [shortenString](#shortenstring)
         3. [stringTooLong](#stringtoolong)
+    3. [Datentypen Informationen](#datentypen-informationen)
 4. [Allgemein wichtige Informationen](#allgemeine-wichtige-informationen)
     1. [Datenbank](#datenbank)
         1. [Hibernate konfigurieren](#hibernate-konfigurieren)
@@ -52,6 +53,8 @@ der Chatbot an sich und den Adminbereich.
 3. [Vorschlage Fragen laden](#vorschlage-fragen-laden)
 4. [Char counter laden](#load-char-counter)
 5. [Passende Antwort finden](#suchen-nach-der-passenden-antwort)
+   1. [Vorbereiten des Textes](#vorbereiten-des-textes)
+   2. [Matches suchen](#suchen-nach-matches)
 
 ### [Adminbereich](#admintool-section-start)<a name="tableofcontent-admintool"></a>
 
@@ -143,6 +146,16 @@ Die Ausgabe wäre dann <code>Hal</code>, die Länge des Textes wurde also von 5 
 
 Diese Methode überprüft einfach ob der angegebene String länger ist als die angegebene maximale Länge.
 Gibt <code>true</code> zurück wenn der String länger ist und <code>false</code> wenn der String kürzer oder gleich lang ist.
+
+#### Datentypen Informationen
+
+Wir haben eine Java Enum Datei namens [`com/ubs/backend/classes/enums/DataTypeInfo.java`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/DataTypeInfo.html).
+In dieser Datei haben wir die unterschiedlichen Datentypen definiert, wie zum Beispiel [`ANSWER_TEXT`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/DataTypeInfo.html#ANSWER_TEXT).
+Alle Enums in dieser Datei besitzen einmal eine [`maxLength`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/DataTypeInfo.html#maxLength) und einen [`name`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/DataTypeInfo.html#name).
+<br>
+`maxLength` definiert die maximale grösse des Types und `name` definiert einfach wie man es im Frontend anzeigen kann.
+
+Als Beispiel kann man da den [Charcounter](#load-char-counter) nehmen. Dort wird über einen Service die maximale Anzahl an Zeichen pro Input Feld geladen.
 
 ### Allgemeine wichtige Informationen
 
@@ -339,6 +352,34 @@ die länger braucht, kann es sein das diese nicht vollendet werden kann, in dies
 
 ---
 
+##### Verbindung zur Datenbank aufbauen
+
+Bevor man etwas mit der Datenbank machen kann brauchen wir eine Verbindung zu ihr. Hier ist wichtig das zuerst die
+Persistence richtig konfiguriert wurde damit wir auch die korrekte Datenbank ansprechen. Mehr dazu 
+[hier](#verbindung-zu-datenbank).
+
+Danach müssen wir dort wo wir eine Verbindung brauchen (z.B um eine [Abfrage](#datenbank-abfragen) zu machen) folgenden
+Code schreiben:
+
+```java
+EntityManager em = Connector.getInstance().open();
+em.getTransaction().begin();
+```
+
+Dadurch öffnen wir eine Verbindung zur Datenbank und mit der gerade geholten Instanz (bei uns heisst sie `em`) können 
+wir nun [Abfragen bei der Datenbank](#datenbank-abfragen) machen.
+
+Sehr wichtig ist das diese Verbindung auch wieder geschlossen wird! Und zwar direkt dann wenn man sie nicht mehr braucht. 
+Falls die Verbindung nicht geschlossen wird oder einfach zu lange offen ist können wir andere Anfragen blockieren da 
+irgendwann unser Pool an Connections voll ist.
+<br>
+Um die Verbindung wieder zu schliessen brauchen wir einfach folgende zwei Zeilen code.
+
+```java
+em.getTransaction().commit();
+em.close();
+```
+
 ##### Datenbank abfragen
 
 Wir haben für Interaktionen mit der Datenbank eine generische Java Klasse namens
@@ -362,6 +403,8 @@ aussehen.
 AnswerDAO answerDAO=new AnswerDAO();
 List<Answer> answersFromDB=answerDAO.select();
 ```
+
+
 
 ---
 
@@ -825,12 +868,165 @@ sucht.
 Der Service findet man
 hier: [<code>com.ubs.backend.services.IntentFinderNew#findAnswer</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/IntentFinderNew.html#findAnswer(java.lang.String))
 .
-
+<br>
 Der Service gibt ein Objekt des
 Types [<code>Response</code>](https://docs.oracle.com/javaee/7/api/javax/ws/rs/core/Response.html) zurück.
 <br>
 
-todo
+---
+
+#### Vorbereiten des Textes
+
+Im Service bereiten wir zuerst den Text den wir vom Benutzer bekommen vor. Dadurch verwenden wir unsere Methode 
+[<code>prepareString()</code>](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/util/PrepareString.html#prepareString(java.lang.String,int,boolean,boolean))
+bei welcher wir den Text übergeben. Das sieht dann wie folgt aus:
+```java
+input = prepareString(input, DataTypeInfo.USER_QUESTION_INPUT.getMaxLength(), true, false, false);
+```
+
+Beim Input des Benutzers entfernen wir also alle speziellen Zeichen, er wird nicht to lowercase gemacht und das 
+Fragezeichen wird auch nicht entfernt. Zudem wurde die Maximalgrösse auf den Wert des Datentypes 
+[`DataTypeInfo.USER_QUESTION_INPUT`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/DataTypeInfo.html#USER_QUESTION_INPUT) 
+gesetzt.
+Danach nehmen wir alle Wörter aus dem Input und speichern diese in ein Array namens `words`.
+
+```java
+String[] words = input.split("\\s");
+```
+
+Das Problem jetzt ist, in dem Text könnten doppelte Wörter vorkommen. Diese sind für uns unnötig und würden nur die Zeit
+erhöhen die wir brauchen würden, um eine passende Antwort zu finden. Deswegen nehmen wir diese durch die folgende Zeile
+Code raus.
+
+```java
+words = new HashSet<>(Arrays.asList(words)).toArray(new String[0]);
+```
+
+Durch diese Schwarze Magie werden doppelte Wörter aus dem Array entfernt.
+Nachdem wir den Text vorbereitet, in einzelne Wörter aufgeteilt und doppelte Wörter entfernt haben machen wir weiter mit
+dem Entfernen von Wörtern auf der Blacklist.
+
+Zuerst öffnen wir eine Verbindung zur Datenbank. [Hier](#verbindung-zur-datenbank-aufbauen) wird erklärt wie das geht.
+<br>
+Um jetzt die Wörter zu finden, die vollständig ignoriert werden sollen, gehen wir mit einer `for` loop durch alle Wörter
+durch und vergleichen diese mit der Datenbank.
+Falls wir in der Datenbank ein gleiches Wort finden entfernen wir dieses aus dem Text des Benutzers.
+<br>
+Falls es in der Datenbank nicht dasselbe Wort gibt fügen wir dieses Wort zu einer neuen ArrayList hinzu und entfernen 
+dort das Fragezeichen, falls es eines hat. In dieser Liste werden am Ende alle zu benutzenden Wörter sein.
+<br>
+Der Grund dafür das wir die Fragezeichen hier entfernen und nicht vorhin schon ist relativ einfach:
+Wir wollen die Eingabe des Benutzers so normal wie nur möglich behalten da diese Frage später ein Vorschlag werden 
+könnte. Da soll diese Frage einigermassen Sinn ergeben. Allerdings müssen wir das Fragezeichen aus dem Wort entfernen da
+es sonst die Suche verfälschen könnte da wir keine Tags haben mit Fragezeichen.
+
+Das ganze sieht wie folgt aus:
+```java
+ArrayList<String> filteredWords = new ArrayList<>();
+for (String word : words) {
+    if (isBlacklisted(word, blacklistEntryDAO, em)) {
+        BlacklistEntry blacklistEntryFromDB = blacklistEntryDAO.selectByWord(word, em);
+        input = input.replaceAll(blacklistEntryFromDB.getWord() + " ", ""); // replace the blacklist entry and its following space
+        input = input.replaceAll(blacklistEntryFromDB.getWord(), ""); // if the blacklist entry doesn't have a space afterwards, replace just the blacklist entry
+    } else {
+        filteredWords.add(word.replace("?", ""));
+    }
+}
+```
+
+Die Methode [`isBlacklisted`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/IntentFinderNew.html#isBlacklisted(java.lang.String,com.ubs.backend.classes.database.dao.BlacklistEntryDAO,javax.persistence.EntityManager))
+nimmt ein String als Parameter und überprüft ob dieser String bereits in der Datenbank Tabelle mit den Blacklists 
+existiert, wenn ja erhöhen wir die Verwendung dieses Eintrages und geben den Wert `true` zurück. Wenn dieser String 
+nicht bereits in der Datenbank existiert geben wir den Wert `false` zurück.
+
+---
+
+#### Suchen nach Matches
+
+Nach dem Rausfiltern der zu ignorierenden Wörter holen wir uns alle Tags aus der Datenbank.
+Zudem erstellen wir eine 
+ArrayList< [AnswerType](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/enums/AnswerType.html) >, 
+`foundAnswerTypes`, in welcher wir alle verschiedenen Antworttypen speichern, mehr dazu später.
+Als drittes brauchen wir eine ArrayList< [WordLevenshteinDistance](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/WordLevenshteinDistance.html) >,
+`wordLevenshteinDistances`.
+
+```java
+List<Tag> tags = tagDAO.select(em);
+ArrayList<AnswerType> foundAnswerTypes = new ArrayList<>();
+ArrayList<WordLevenshteinDistance> wordLevenshteinDistances = new ArrayList<>();
+```
+
+Jetzt kommen wir dazu mögliche Antworten zu finden.
+
+Wir gehen durch alle Wörter, welche wir am schluss noch haben, durch und dann durch alle gefundenen Tags.
+
+```java
+for (String word : filteredWords){
+    for(Tag tag : tags){
+    }
+}
+```
+
+Wir berechnen jetzt immer die Distanz (`dist`), also der Unterschied in der Länge und der Schreibweise zwischen dem 
+aktuellen Wort und dem aktuellen Tag.
+Dazu verwenden wir in unserer Klasse 
+[`com/ubs/backend/util/CalculateRating.java`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/util/CalculateRating.html)
+die Methode 
+[`getLevenshteinDistance()`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/util/CalculateRating.html#getLevenshteinDistance(int,int)).
+<br>
+Diese Methode erwartet zwei Werte, einmal `distanceRaw` und `stringLengthDifference`.
+Der erste Parameter berechnen wir durch die Methode 
+[`calculate`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/util/Levenshtein.html#calculate(java.lang.String,java.lang.String,boolean)) 
+in der Klasse [`Levenshtein`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/util/Levenshtein.html).
+Um den Levenshtein Algorithmus zu verstehen sieh [hier](https://de.wikipedia.org/wiki/Levenshtein-Distanz)
+Der zweite Parameter ist ganz einfach die länge des längeren Wortes.
+Wir vergleichen ja das aktuelle Wort mit dem aktuellen Tag, der zweite Parameter ist einfach die Länge des längeren.
+
+```java
+Math.max(tag.getTag().length(), word.length());
+```
+
+[`getLevenshteinDistance()`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/util/CalculateRating.html#getLevenshteinDistance(int,int)) 
+gibt dann einen Wert zwischen 0 und 1 zurück. Wir wissen jetzt also die Distanz zwischen Wort und Tag.
+
+Als Nächstes überprüfen wir, ob diese Distanz innerhalb unserer Werte liegen.
+<br>
+Falls die Distanz zu weit weg von unseren Werten ist, passt der aktuelle Tag nicht zu diesem Wort und wir gehen weiter 
+zum nächsten Tag.
+<br>
+Falls die Distanz innerhalb unserer Werte ist holen wir alle 
+[Results](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/Result.html) mit diesem Tag.
+Wir gehen durch alle gefundenen Results und erstellen ein neues 
+[WordLevenshteinDistance](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/WordLevenshteinDistance.html) 
+mit dem aktuellen Wort, dem aktuellen Result, der Distanz und 
+[`levenshteinCertain`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/services/IntentFinderNew.html#levenshteinCertain). 
+Zu letzteres kommen wir gleich. Zudem übergeben wir noch den aktuellen EntityManager da wir im Konstruktor noch eine Datenbank Abfrage machen müssen.
+
+Im Konstruktor des gerade erstellten `WordLevenshteinDistance` überprüfen wir, ob die Distanz die wir übergeben kleiner 
+ist als `levenshteinCertain`. `levenshteinCertain` definiert einfach wie gross die Distanz maximal sein darf damit das 
+Wort als 'absolut korrekt' gilt.
+<br>
+Falls die Distanz kleiner ist als `levenshteinCertain` definieren wir das aktuelle Wort als 
+[`Match`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/Match.html).
+Wenn es ein Match ist, müssen wir einen neuen Match erstellen und wenn nötig in der Datenbank speichern.
+Dafür rufen wir 
+[`newMatch`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/WordLevenshteinDistance.html#newMatch(com.ubs.backend.classes.database.Tag,java.lang.String,javax.persistence.EntityManager))
+auf. In dieser Methode überprüfen wir, ob es bereits dieser Match in der Datenbank gibt, wenn ja geben wir diesen zurück, wenn nein erstellen wir einen neuen in der Datenbank und geben diesen zurück.
+
+Nachdem wir durch alle Results dieses Tags durch sind, müssen wir noch kurz alle 
+[`TypeTags`](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/database/TypeTag.html) überprüfen.
+Wir suchen also in der Tabelle mit den TypeTags nach demselben Tag bei dem wir gerade sind.
+Jeder Tag kann nur einmal pro TypeTag vorkommen, aber da wir verschiedene Typen haben könnte der Tag öfters in der Tabelle vorkommen, weswegen wir eine Liste zurückbekommen.
+
+Wir gehen nun durch diese Liste durch und machen eigentlich dasselbe wie vorhin. Wir erstellen ein
+[WordLevenshteinDistance](https://ubs-pof-chatbot.github.io/JavaDoc/com/ubs/backend/classes/WordLevenshteinDistance.html)
+und übergeben die verschiedenen Parameter.
+<br>
+Jetzt überprüfen wir aber noch zusätzlich, ob der aktuelle Typ schon in unserer am Anfang erstellten ArrayList `wordLevenshteinDistances` existiert. Falls nicht fügen wir den Typen hinzu.
+
+Das Ganze wird jetzt wiederholt bis wir durch alle Wörter durch sind.
+
+
 
 ---
 
