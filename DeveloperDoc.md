@@ -830,7 +830,7 @@ Der Service gibt ein Objekt des
 Types [<code>Response</code>](https://docs.oracle.com/javaee/7/api/javax/ws/rs/core/Response.html) zurück.
 <br>
 
-TODO
+todo
 
 ---
 
@@ -843,6 +843,20 @@ In diesem Abschnitt des Dokumentes beschreiben wir wie der Adminbereich funktion
 Das Admintool ist dazu da, alles mögliche am Chatbot zu verwalten z.B. dem Hinzufügen von Antworten
 
 ### Seiten Laden
+
+Unser Admintool ist als eine Seite aufgebaut. Das bedeutet das wir ein Hauptfile, `src/main/webapp/pages/adminTool/adminTool.jsp`, 
+haben und bei diesem laden wir alle Seiten einfach rein.
+<br>
+Der Vorteil davon ist es das wir bei Javascript unterschiedliche Variablen und "states" zwischen den verschiedenen Seiten 
+behalten können. 
+<br>
+So haben wir z.B. ein HTML file, `src/main/webapp/pages/adminTool/adminToolNavigation.html`, in welchem wir ganz einfach
+die linke Leiste, die Navigation, beschrieben haben.
+
+<div>
+    <img src="https://raw.githubusercontent.com/UBS-POf-Chatbot/Docs/main/images/developerDoc/adminTool/navigationShowcase.jpg" alt="adminTool Navigation" style="height:250px;float: left"/>
+    <p style="float: none">hallo</p>
+</div>
 
 Um Seiten zu Laden haben wir die Methode `loadPage()`, sie hat folgende Parameter:
 
